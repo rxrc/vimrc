@@ -1,3 +1,6 @@
+set directory=~/.vim/backup
+set backupdir=~/.vim/backup
+
 set smartindent
 set tabstop=2
 set shiftwidth=2
@@ -7,7 +10,6 @@ set scrolloff=3 " keep 3 lines when scrolling
 set ai " set auto-indenting on for programming
 
 set showcmd " display incomplete commands
-set nobackup " do not keep a backup file
 set number " show line numbers
 
 set hlsearch " highlight searches
