@@ -5,7 +5,8 @@
 ## Installation
 
 1. Install [Vundle](https://github.com/gmarik/Vundle.vim).
-2. Create `~/.vimrc` with
+2. Create the `~/.vim/backup` directory.
+3. Create `~/.vimrc` with
 
 ````vim
 set nocompatible
