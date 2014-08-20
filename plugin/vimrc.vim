@@ -26,3 +26,7 @@ if has('gui_running')
 else
   set background=dark
 endif
+
+if has('gui_running')
+  set guifont=Inconsolata\ XL\ 10
+endif
