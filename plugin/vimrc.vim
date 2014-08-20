@@ -17,6 +17,9 @@ set mousemodel=popup_setpos
 
 let g:NERDTreeChDirMode=2
 
+let g:DeleteTrailingWhitespace = 1
+let g:DeleteTrailingWhitespace_Action = 'delete'
+
 if has('gui_running')
   colorscheme molokai
   set background=dark
