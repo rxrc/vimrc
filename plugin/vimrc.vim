@@ -15,6 +15,8 @@ set smartcase
 set spell spelllang=en_us
 set mousemodel=popup_setpos
 
+let g:NERDTreeChDirMode=2
+
 if has('gui_running')
   colorscheme molokai
   set background=dark
