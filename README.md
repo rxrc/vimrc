@@ -32,6 +32,12 @@ Run this twice to install
 $ vim +PluginInstall +qall
 ````
 
+Run this twice to update al plugins
+
+````bash
+$ vim -c VundleUpdate -c quitall
+````
+
 ## License
 
 This Vim configuration is licensed under the MIT license.
