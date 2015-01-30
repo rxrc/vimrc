@@ -16,3 +16,4 @@ Plugin 'heartsentwined/vim-emblem'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'tomasr/molokai'
 
+Plugin 'bling/vim-airline'
