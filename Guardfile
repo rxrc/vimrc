@@ -14,7 +14,7 @@ end
 guard :shell do
   watch 'plugins.vim' do |m|
     update_file m[0]
-    `vim -c VundleUpdate -c quitall 2>/dev/null`
+    `vim -i NONE +PluginInstall +qall 2>/dev/null`
   end
 
   watch %r{^plugin/(.+)\.vim} do |m|
