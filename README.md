@@ -4,9 +4,27 @@
 
 ## Installation
 
-1. Install [Vundle](https://github.com/gmarik/Vundle.vim).
+### Automatic Install
+
+You can install this via the command-line with either curl
+
+````bash
+curl -L https://io.evansosenko.com/vimrc/install.sh | sh
+````
+
+or wget
+
+````bash
+wget https://io.evansosenko.com/vimrc/install.sh -O - | sh
+````
+
+### Manual Install
+
+1. Install [Vundle].
 2. Create the `~/.vim/backup` directory.
 3. Create `~/.vimrc` with
+
+[Vundle]: https://github.com/gmarik/Vundle.vim
 
 ````vim
 set nocompatible
@@ -26,15 +44,10 @@ call vundle#end()
 filetype plugin indent on
 ````
 
-Run this twice to install
+and run this to install
 
 ````bash
-$ vim +PluginInstall +qall
-````
-
-Run this twice to update al plugins
-
-````bash
+$ vim -c VundleUpdate -c quitall
 $ vim -c VundleUpdate -c quitall
 ````
 
