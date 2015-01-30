@@ -51,6 +51,27 @@ $ vim -c VundleUpdate -c quitall
 $ vim -c VundleUpdate -c quitall
 ````
 
+## Development
+
+You can use Guard to watch for changes and automatically update
+the plugin locally when files in your development directory change.
+You will need [Ruby] ≥ 2 with [Bundler].
+
+Install the development dependences with
+
+````bash
+$ bundle
+````
+
+and then start guard with
+
+````bash
+$ guard
+````
+
+[Bundler]: http://bundler.io/
+[Ruby]: https://www.ruby-lang.org/en/
+
 ## License
 
 This Vim configuration is licensed under the MIT license.
