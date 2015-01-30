@@ -12,12 +12,12 @@ def update_file(path)
 end
 
 guard :shell, all_on_start: true do
+  watch %r{^plugin/(.+)\.vim} do |m|
+    update_file m[0]
+  end
+
   watch 'plugins.vim' do |m|
     update_file m[0]
     `vim -i NONE +PluginInstall +qall 2>/dev/null`
-  end
-
-  watch %r{^plugin/(.+)\.vim} do |m|
-    update_file m[0]
   end
 end
