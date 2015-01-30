@@ -15,6 +15,8 @@ set smartcase
 set spell spelllang=en_us
 set mousemodel=popup_setpos
 
+let g:powerline_loaded = 1
+
 let g:NERDTreeChDirMode = 2
 
 let g:DeleteTrailingWhitespace = 1
