@@ -2,6 +2,12 @@
 
 [![MIT License](http://img.shields.io/badge/license-MIT-red.svg?style=flat)](./LICENSE.txt)
 
+My complete Vim configuration as a Vim plugin.
+
+This configuration system works as a meta-plugin:
+all desired Vim plugins are loaded from `plugins.vim` using [Vundle].
+Overall configuration then follows a normal plugin structure.
+
 ## Installation
 
 ### Automatic Install
@@ -23,8 +29,6 @@ wget https://io.evansosenko.com/vimrc/install.sh -O - | sh
 1. Install [Vundle].
 2. Create the `~/.vim/backup` directory.
 3. Create `~/.vimrc` with
-
-[Vundle]: https://github.com/gmarik/Vundle.vim
 
 ````vim
 " razor-x/vimrc
@@ -53,6 +57,36 @@ and run this to install
 ````bash
 $ vim -c VundleUpdate -c quitall
 $ vim -c VundleUpdate -c quitall
+$ vim -c VundleClean -c quitall
+````
+
+## Updating
+
+Updating is handled via the normal [Vundle] update command.
+
+````bash
+$ vim -c VundleUpdate -c quitall
+$ vim -c VundleUpdate -c quitall
+$ vim -c VundleClean -c quitall
+````
+
+Note that `VundleUpdate` must be run twice: first to update this plugn,
+then again to correctly update any new plugins specified in `plugsin.vim`.
+
+## Customization
+
+You can customize this configuration or manage your own in the same way.
+
+1. Clone or fork this.
+2. Replace any instance of `razor-x/vimrc`
+   with the path to your repository's location.
+   If you do not host this on GitHub,
+   you may need to adjust the repository path appropriately.
+
+Here is an example of a command you can use to make the replacements:
+
+````bash
+git ls-files -z | xargs -0 sed -i 's/razor-x\/vimrc/username\/vimrc/g'
 ````
 
 ## Development
@@ -86,8 +120,18 @@ To switch out of development mode run
 $ gulp nodev
 ````
 
-[Gulp]: http://gulpjs.com/
-[npm]: https://www.ruby-lang.org/en/
+## Contributing
+
+Please submit and comment on bug reports and feature requests.
+
+To submit a patch:
+
+1. Fork it (https://github.com/razor-x/vimrc/fork).
+2. Create your feature branch (`git checkout -b my-new-feature`).
+3. Make changes. Write and run tests.
+4. Commit your changes (`git commit -am 'Add some feature'`).
+5. Push to the branch (`git push origin my-new-feature`).
+6. Create a new Pull Request.
 
 ## License
 
@@ -99,3 +143,7 @@ This software is provided "as is" and without any express or
 implied warranties, including, without limitation, the implied
 warranties of merchantibility and fitness for a particular
 purpose.
+
+[Gulp]: http://gulpjs.com/
+[npm]: https://www.ruby-lang.org/en/
+[Vundle]: https://github.com/gmarik/Vundle.vim
