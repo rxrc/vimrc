@@ -91,6 +91,7 @@ You can customize this configuration or manage your own in the same way.
    If you do not host this on GitHub,
    you may need to adjust the repository path appropriately.
  3. Customize `package.json`.
+ 4. Update `install.sh` on the `gh-pages` branch.
 
 Here is an example of a command you can use to make the replacements:
 
