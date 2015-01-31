@@ -9,8 +9,8 @@ $ = require('gulp-load-plugins')()
 remotePluginPath = 'razor-x/vimrc'
 pluginPath = "#{homePath}/.vim/bundle/vimrc"
 
-installBundle = () -> $.shell('vim -c PluginInstall -c quitall')
-cleanBundle = () -> $.shell('vim -c PluginClean -c quitall')
+installBundle = () -> $.shell("sh -c '</dev/tty vim -c PluginUpdate -c quitall'")
+cleanBundle = () -> $.shell("sh -c '</dev/tty vim -c PluginClean -c quitall'")
 
 gulp.task 'default', ['watch']
 
@@ -23,6 +23,7 @@ gulp.task 'dev', ->
   .pipe gulp.dest(homePath)
 
   gulp.src('')
+  .pipe installBundle()
   .pipe installBundle()
   .pipe cleanBundle()
 
