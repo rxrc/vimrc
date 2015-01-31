@@ -1,6 +1,6 @@
 set -e
 
-echo -e "\033[32m Installing!   \033[0m"
+echo -e "\033[32m➤ Installing!   \033[0m"
 
 hash git >/dev/null 2>&1 \
   && echo -e "\033[32m  ✔ Found         ❰ Git ❱   \033[0m" \
@@ -13,7 +13,7 @@ hash git >/dev/null 2>&1 \
 if [[ -d ~/.vim ]]; then
   echo -e "\033[32m  ✔ Exists        ❰ ~/.vim ❱   \033[0m"
 else
-  echo -e "   Creating       ❰ ~/.vim ❱   \033[0m"
+  echo -e "  ➤ Creating       ❰ ~/.vim ❱   \033[0m"
 
   mkdir -p ~/.vim
 
@@ -23,7 +23,7 @@ fi
 if [[ -d ~/.vim/backup ]]; then
   echo -e "\033[32m  ✔ Exists        ❰ ~/.vim/backup ❱   \033[0m"
 else
-  echo -e "   Creating       ❰ ~/.vim/backup ❱   \033[0m"
+  echo -e "  ➤ Creating       ❰ ~/.vim/backup ❱   \033[0m"
 
   mkdir -p ~/.vim/backup
 
@@ -33,7 +33,7 @@ fi
 if [[ -d ~/.vim/bundle/Vundle.vim ]]; then
   echo -e "\033[32m  ✔ Found         ❰ Vundle ❱   \033[0m"
 else
-  echo -e "   Installing     ❰ Vundle ❱   \033[0m"
+  echo -e "  ➤ Installing     ❰ Vundle ❱   \033[0m"
 
   hash git >/dev/null 2>&1 && \
     env git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim >/dev/null 2>&1
@@ -42,7 +42,7 @@ else
 fi
 
 if [ -f ~/.vimrc ] || [ -h ~/.vimrc ]; then
-  echo -e "    Exists        ❰ ~/.vimrc ❱   \033[0m"
+  echo -e "  ➤  Exists        ❰ ~/.vimrc ❱   \033[0m"
   if [ -f ~/.vimrc.pre-inst ] || [ -h ~/.vimrc.pre-inst ]; then
     echo -e "\033[32m    ✔  Exists      ❰ ~/.vimrc.pre-inst ❱   \033[0m"
   else
@@ -52,7 +52,7 @@ if [ -f ~/.vimrc ] || [ -h ~/.vimrc ]; then
   fi
 fi
 
-echo -e "   Installing     ❰ ~/.vimrc ❱   \033[0m"
+echo -e "  ➤ Installing     ❰ ~/.vimrc ❱   \033[0m"
 
 tee ~/.vimrc >/dev/null <<EOF
 set nocompatible
@@ -74,10 +74,10 @@ EOF
 
 echo -e "\033[32m    ✔ Installed   ❰ ~/.vim/vimrc ❱   \033[0m"
 
-echo -e "   Run            ❰ VundleUpdate ❱   \033[0m"
+echo -e "  ➤ Run            ❰ VundleUpdate ❱   \033[0m"
 
-vim -c VundleUpdate -c quitall
-vim -c VundleUpdate -c quitall
+sh -c '</dev/tty vim -c VundleUpdate -c quitall'
+sh -c '</dev/tty vim -c VundleUpdate -c quitall'
 
 echo -e "\033[32m    ✔ Completed   ❰ VundleUpdate ❱   \033[0m"
 
