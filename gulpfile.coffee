@@ -10,7 +10,7 @@ remotePluginPath = 'razor-x/vimrc'
 pluginPath = "#{homePath}/.vim/bundle/vimrc"
 
 installBundle = () -> $.shell('vim -c PluginInstall -c quitall')
-cleanBundle = () -> $.shell('vim -c VundleClean -c quitall')
+cleanBundle = () -> $.shell('vim -c PluginClean -c quitall')
 
 gulp.task 'default', ['watch']
 

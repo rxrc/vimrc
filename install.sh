@@ -13,7 +13,7 @@ hash git >/dev/null 2>&1 \
 if [[ -d ~/.vim ]]; then
   echo -e "\033[32m  ✔ Exists        ❰ ~/.vim ❱   \033[0m"
 else
-  echo -e "  ➤ Creating       ❰ ~/.vim ❱   \033[0m"
+  echo -e "  ➤ Creating      ❰ ~/.vim ❱   \033[0m"
 
   mkdir -p ~/.vim
 
@@ -23,7 +23,7 @@ fi
 if [[ -d ~/.vim/backup ]]; then
   echo -e "\033[32m  ✔ Exists        ❰ ~/.vim/backup ❱   \033[0m"
 else
-  echo -e "  ➤ Creating       ❰ ~/.vim/backup ❱   \033[0m"
+  echo -e "  ➤ Creating      ❰ ~/.vim/backup ❱   \033[0m"
 
   mkdir -p ~/.vim/backup
 
@@ -33,7 +33,7 @@ fi
 if [[ -d ~/.vim/bundle/Vundle.vim ]]; then
   echo -e "\033[32m  ✔ Found         ❰ Vundle ❱   \033[0m"
 else
-  echo -e "  ➤ Installing     ❰ Vundle ❱   \033[0m"
+  echo -e "  ➤ Installing    ❰ Vundle ❱   \033[0m"
 
   hash git >/dev/null 2>&1 && \
     env git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim >/dev/null 2>&1
@@ -79,13 +79,13 @@ EOF
 
 echo -e "\033[32m    ✔ Installed   ❰ ~/.vimrc ❱   \033[0m"
 
-echo -e "  ➤ Run           ❰ VundleUpdate ❱   \033[0m"
+echo -e "  ➤ Run           ❰ PluginUpdate ❱   \033[0m"
 
-sh -c '</dev/tty vim -c VundleUpdate -c quitall'
-sh -c '</dev/tty vim -c VundleUpdate -c quitall'
-sh -c '</dev/tty vim -c VundleClean -c quitall'
+sh -c '</dev/tty vim -c PluginUpdate -c quitall'
+sh -c '</dev/tty vim -c PluginUpdate -c quitall'
+sh -c '</dev/tty vim -c PluginClean -c quitall'
 
-echo -e "\033[32m    ✔ Completed   ❰ VundleUpdate ❱   \033[0m"
+echo -e "\033[32m    ✔ Completed   ❰ PluginUpdate ❱   \033[0m"
 
 echo -e "\033[32m✔ Install complete!   \033[0m"
 

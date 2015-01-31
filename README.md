@@ -55,23 +55,31 @@ filetype plugin indent on
 and run this to install
 
 ````bash
-$ vim -c VundleUpdate -c quitall
-$ vim -c VundleUpdate -c quitall
-$ vim -c VundleClean -c quitall
+$ vim -c PluginUpdate -c quitall
+$ vim -c PluginUpdate -c quitall
+$ vim -c PluginClean -c quitall
 ````
 
 ## Updating
 
-Updating is handled via the normal [Vundle] update command.
+Updating is handled via the normal [Vundle] update command
 
 ````bash
-$ vim -c VundleUpdate -c quitall
-$ vim -c VundleUpdate -c quitall
-$ vim -c VundleClean -c quitall
+$ vim -c PluginUpdate -c quitall
+$ vim -c PluginUpdate -c quitall
+$ vim -c PluginClean -c quitall
 ````
 
-Note that `VundleUpdate` must be run twice: first to update this plugn,
+Note that `PluginUpdate` must be run twice: first to update this plugn,
 then again to correctly update any new plugins specified in `plugsin.vim`.
+
+I recommend adding an alias to your shell
+
+````bash
+if [[ -d ~/.vim/bundle/Vundle.vim ]]; then
+  alias vimupg='vim -c PluginUpdate -c quitall && vim -c PluginUpdate -c quitall && vim -c PluginClean -c quitall'
+fi
+````
 
 ## Customization
 
