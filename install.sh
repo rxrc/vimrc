@@ -41,20 +41,22 @@ else
   echo -e "\033[32m    ✔ Installed   ❰ Vundle ❱   \033[0m"
 fi
 
-if [ -f ~/.vimrc ] || [ -h ~/.vimrc ]; then
-  echo -e "  ➤  Exists        ❰ ~/.vimrc ❱   \033[0m"
-  if [ -f ~/.vimrc.pre-inst ] || [ -h ~/.vimrc.pre-inst ]; then
-    echo -e "\033[32m    ✔  Exists      ❰ ~/.vimrc.pre-inst ❱   \033[0m"
-  else
-    mv ~/.vimrc ~/.vimrc.pre-inst
+if [[ -f ~/.vimrc ]] || [[ -h ~/.vimrc ]]; then
+  if [[ `head -n 1 ~/.vimrc` != '" razor-x/vimrc' ]]; then
+    echo -e "  ➤  Exists        ❰ ~/.vimrc ❱   \033[0m"
 
-    echo -e "\033[32m    ✔ Moved to    ❰ ~/.vimrc.pre-inst ❱   \033[0m"
+    mv ~/.vimrc ~/.vimrc.preinstall
+
+    echo -e "\033[32m    ✔ Moved to    ❰ ~/.vimrc.preinstall ❱   \033[0m"
   fi
+
+  rm ~/.vimrc
 fi
 
 echo -e "  ➤ Installing     ❰ ~/.vimrc ❱   \033[0m"
 
 tee ~/.vimrc >/dev/null <<EOF
+" razor-x/vimrc
 set nocompatible
 
 filetype off
@@ -72,7 +74,7 @@ call vundle#end()
 filetype plugin indent on
 EOF
 
-echo -e "\033[32m    ✔ Installed   ❰ ~/.vim/vimrc ❱   \033[0m"
+echo -e "\033[32m    ✔ Installed   ❰ ~/.vimrc ❱   \033[0m"
 
 echo -e "  ➤ Run            ❰ VundleUpdate ❱   \033[0m"
 
