@@ -83,6 +83,7 @@ echo -e "  ➤ Run           ❰ VundleUpdate ❱   \033[0m"
 
 sh -c '</dev/tty vim -c VundleUpdate -c quitall'
 sh -c '</dev/tty vim -c VundleUpdate -c quitall'
+sh -c '</dev/tty vim -c VundleClean -c quitall'
 
 echo -e "\033[32m    ✔ Completed   ❰ VundleUpdate ❱   \033[0m"
 
