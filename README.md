@@ -90,10 +90,11 @@ You can customize this configuration or manage your own in the same way.
    with the path to your repository's location.
    If you do not host this on GitHub,
    you may need to adjust the repository path appropriately.
- 3. Customize `package.json`.
- 4. Update `install.sh` on the `gh-pages` branch.
+3. Customize `package.json`.
+4. Update `install.sh` on the `gh-pages` branch.
+5. Update the urls for the install script in this README.
 
-Here is an example of a command you can use to make the replacements:
+Here is an example of a command you can use to make replacements:
 
 ````bash
 git ls-files -z | xargs -0 sed -i 's/razor-x\/vimrc/username\/vimrc/g'
