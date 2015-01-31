@@ -58,6 +58,7 @@ echo -e "  ➤ Installing     ❰ ~/.vimrc ❱   \033[0m"
 tee ~/.vimrc >/dev/null <<EOF
 " razor-x/vimrc
 set nocompatible
+let g:powerline_loaded = 1
 
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim

@@ -28,6 +28,7 @@ wget https://io.evansosenko.com/vimrc/install.sh -O - | sh
 
 ````vim
 set nocompatible
+let g:powerline_loaded = 1
 
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim

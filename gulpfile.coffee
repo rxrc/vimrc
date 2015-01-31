@@ -6,34 +6,49 @@ path = require('path')
 homePath = require('home-path')()
 $ = require('gulp-load-plugins')()
 
+pluginPath = "#{homePath}/.vim/bundle/vimrc"
+
+installBundle = () -> $.shell('vim -c PluginInstall -c quitall')
+
 gulp.task 'default', ['watch']
 
 gulp.task 'dev', ->
- gulp.src("#{homePath}/.vimrc")
-  .pipe $.replace("Plugin 'razor-x/vimrc'", "Plugin 'file://#{path.resolve()}/build'")
-  .pipe $.replace("~/.vim/bundle/vimrc/plugins.vim", "#{path.resolve()}/build/plugins.vim")
+  del(pluginPath, {force: true})
+
+  gulp.src("#{homePath}/.vimrc")
+  .pipe $.replace("Plugin 'razor-x/vimrc'", "Plugin 'file://#{path.resolve()}'")
+  .pipe $.replace("~/.vim/bundle/vimrc/plugins.vim", "#{path.resolve()}/plugins.vim")
   .pipe gulp.dest(homePath)
+
+  gulp.src('').pipe installBundle()
+  gulp.src('').pipe installBundle()
 
 gulp.task 'nodev', ->
- gulp.src("#{homePath}/.vimrc")
-  .pipe $.replace("Plugin 'file://#{path.resolve()}/build'", "Plugin 'razor-x/vimrc'")
-  .pipe $.replace("#{path.resolve()}/build/plugins.vim", "~/.vim/bundle/vimrc/plugins.vim")
+  del(pluginPath, {force: true})
+
+  gulp.src("#{homePath}/.vimrc")
+  .pipe $.replace("Plugin 'file://#{path.resolve()}'", "Plugin 'razor-x/vimrc'")
+  .pipe $.replace("#{path.resolve()}/plugins.vim", "~/.vim/bundle/vimrc/plugins.vim")
   .pipe gulp.dest(homePath)
 
+  gulp.src('').pipe installBundle()
+  gulp.src('').pipe installBundle()
+
 gulp.task 'clean', ->
-  del('build')
+  del(pluginPath, {force: true})
+
+gulp.task 'install', ['build'], ->
+  gulp.src('').pipe installBundle()
 
 gulp.task 'build', ['clean'], ->
   gulp.src('plugin/**/*.vim')
-  .pipe gulp.dest('build/plugin')
+  .pipe gulp.dest("#{pluginPath}/plugin")
 
   gulp.src('*.vim')
-  .pipe gulp.dest('build')
+  .pipe gulp.dest(pluginPath)
 
-gulp.task 'watch', ['build'], ->
+gulp.task 'watch', ['install'], ->
   $.watch ['./*.vim', './plugin/**/*.vim'], (file) ->
-    if file.event is 'unlink' then del(file.path)
-  .pipe gulp.dest('build')
-  .pipe $.if 'plugins.vim',
-    gulp.src('')
-    .pipe $.exec('vim +PluginInstall +qall')
+    if file.event is 'unlink' then del(file.path, {force: true})
+    if file.relative is 'plugins.vim' then gulp.src('').pipe installBundle()
+  .pipe gulp.dest(pluginPath)
