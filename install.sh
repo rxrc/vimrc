@@ -48,9 +48,9 @@ if [[ -f ~/.vimrc ]] || [[ -h ~/.vimrc ]]; then
     mv ~/.vimrc ~/.vimrc.preinstall
 
     echo -e "\033[32m    ✔ Moved to    ❰ ~/.vimrc.preinstall ❱   \033[0m"
+  else
+    rm ~/.vimrc
   fi
-
-  rm ~/.vimrc
 fi
 
 echo -e "  ➤ Installing    ❰ ~/.vimrc ❱   \033[0m"
