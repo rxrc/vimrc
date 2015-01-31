@@ -3,6 +3,7 @@ Plugin 'ervandew/supertab'
 Plugin 'vim-scripts/gitignore'
 Plugin 'vim-scripts/showtrailingwhitespace'
 Plugin 'vim-scripts/deletetrailingwhitespace'
+Plugin 'editorconfig/editorconfig-vim'
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
