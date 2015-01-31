@@ -53,11 +53,13 @@ if [[ -f ~/.vimrc ]] || [[ -h ~/.vimrc ]]; then
   rm ~/.vimrc
 fi
 
-echo -e "  ➤ Installing     ❰ ~/.vimrc ❱   \033[0m"
+echo -e "  ➤ Installing    ❰ ~/.vimrc ❱   \033[0m"
 
 tee ~/.vimrc >/dev/null <<EOF
 " razor-x/vimrc
 set nocompatible
+
+" Disable powerline by default.
 let g:powerline_loaded = 1
 
 filetype off
@@ -77,7 +79,7 @@ EOF
 
 echo -e "\033[32m    ✔ Installed   ❰ ~/.vimrc ❱   \033[0m"
 
-echo -e "  ➤ Run            ❰ VundleUpdate ❱   \033[0m"
+echo -e "  ➤ Run           ❰ VundleUpdate ❱   \033[0m"
 
 sh -c '</dev/tty vim -c VundleUpdate -c quitall'
 sh -c '</dev/tty vim -c VundleUpdate -c quitall'

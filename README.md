@@ -27,7 +27,10 @@ wget https://io.evansosenko.com/vimrc/install.sh -O - | sh
 [Vundle]: https://github.com/gmarik/Vundle.vim
 
 ````vim
+" razor-x/vimrc
 set nocompatible
+
+" Disable powerline by default.
 let g:powerline_loaded = 1
 
 filetype off
