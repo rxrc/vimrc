@@ -43,7 +43,7 @@ fi
 
 if [[ -f ~/.vimrc ]] || [[ -h ~/.vimrc ]]; then
   if [[ `head -n 1 ~/.vimrc` != '" razor-x/vimrc' ]]; then
-    echo -e "  ➤  Exists        ❰ ~/.vimrc ❱   \033[0m"
+    echo -e "  ➤  Exists       ❰ ~/.vimrc ❱   \033[0m"
 
     mv ~/.vimrc ~/.vimrc.preinstall
 
