@@ -9,8 +9,9 @@ $ = require('gulp-load-plugins')()
 remotePluginPath = 'razor-x/vimrc'
 pluginPath = "#{homePath}/.vim/bundle/vimrc"
 
-installBundle = () -> $.shell("sh -c '</dev/tty vim -c PluginUpdate -c quitall'")
-cleanBundle = () -> $.shell("sh -c '</dev/tty vim -c PluginClean -c quitall'")
+pluginInstall = () -> $.shell('vim -c PluginInstall -c quitall')
+pluginUpdate = () -> $.shell('vim -c PluginUpdate -c quitall')
+pluginClean = () -> $.shell('vim -c PluginClean -c quitall')
 
 gulp.task 'default', ['watch']
 
@@ -23,9 +24,9 @@ gulp.task 'dev', ->
   .pipe gulp.dest(homePath)
 
   gulp.src('')
-  .pipe installBundle()
-  .pipe installBundle()
-  .pipe cleanBundle()
+  .pipe pluginUpdate()
+  .pipe pluginUpdate()
+  .pipe pluginClean()
 
 gulp.task 'nodev', ->
   del(pluginPath, {force: true})
@@ -36,16 +37,16 @@ gulp.task 'nodev', ->
   .pipe gulp.dest(homePath)
 
   gulp.src('')
-  .pipe installBundle()
-  .pipe installBundle()
-  .pipe cleanBundle()
+  .pipe pluginUpdate()
+  .pipe pluginUpdate()
+  .pipe pluginClean()
 
 gulp.task 'clean', ->
   del(pluginPath, {force: true})
 
 gulp.task 'install', ['build'], ->
   gulp.src('')
-  .pipe installBundle()
+  .pipe pluginInstall()
 
 gulp.task 'build', ['clean'], ->
   gulp.src('plugin/**/*.vim')
@@ -57,5 +58,5 @@ gulp.task 'build', ['clean'], ->
 gulp.task 'watch', ['install'], ->
   $.watch ['./*.vim', './plugin/**/*.vim'], (file) ->
     if file.event is 'unlink' then del(file.path, {force: true})
-    if file.relative is 'plugins.vim' then gulp.src('').pipe installBundle()
+    if file.relative is 'plugins.vim' then gulp.src('').pipe pluginInstall()
   .pipe gulp.dest(pluginPath)
