@@ -90,6 +90,7 @@ You can customize this configuration or manage your own in the same way.
    with the path to your repository's location.
    If you do not host this on GitHub,
    you may need to adjust the repository path appropriately.
+ 3. Customize `package.json`.
 
 Here is an example of a command you can use to make the replacements:
 
