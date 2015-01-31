@@ -53,24 +53,37 @@ $ vim -c VundleUpdate -c quitall
 
 ## Development
 
-You can use Guard to watch for changes and automatically update
+You can use [Gulp] to watch for changes and automatically update
 the plugin locally when files in your development directory change.
-You will need [Ruby] ≥ 2 with [Bundler].
 
-Install the development dependences with
-
-````bash
-$ bundle
-````
-
-and then start guard with
+First, follow the normal install steps if you haven't already.
+Then, install the development dependences via [npm] with
 
 ````bash
-$ guard
+$ [sudo] npm install --global gulp
+$ npm install
 ````
 
-[Bundler]: http://bundler.io/
-[Ruby]: https://www.ruby-lang.org/en/
+Enter development mode with
+
+````bash
+$ gulp dev
+````
+
+and then start gulp with
+
+````bash
+$ gulp
+````
+
+To switch out of development mode run
+
+````bash
+$ gulp nodev
+````
+
+[Gulp]: http://gulpjs.com/
+[npm]: https://www.ruby-lang.org/en/
 
 ## License
 
