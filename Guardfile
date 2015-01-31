@@ -18,6 +18,6 @@ guard :shell, all_on_start: true do
 
   watch 'plugins.vim' do |m|
     update_file m[0]
-    `vim +PluginInstall +qall`
+    system "vim +PluginInstall +qall"
   end
 end

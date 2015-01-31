@@ -76,8 +76,8 @@ echo -e "\033[32m    ✔ Installed   ❰ ~/.vim/vimrc ❱   \033[0m"
 
 echo -e "  ➤ Run            ❰ VundleUpdate ❱   \033[0m"
 
-vim -c VundleUpdate -c quitall
-vim -c VundleUpdate -c quitall
+sh -c '</dev/tty vim -c VundleUpdate -c quitall'
+sh -c '</dev/tty vim -c VundleUpdate -c quitall'
 
 echo -e "\033[32m    ✔ Completed   ❰ VundleUpdate ❱   \033[0m"
 
