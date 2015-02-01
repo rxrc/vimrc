@@ -70,7 +70,7 @@ $ vim -c PluginUpdate -c quitall
 $ vim -c PluginClean -c quitall
 ````
 
-Note that `PluginUpdate` must be run twice: first to update this plugn,
+Note that `PluginUpdate` must be run twice: first to update this plugin,
 then again to correctly update any new plugins specified in `plugsin.vim`.
 
 I recommend adding an alias to your shell
