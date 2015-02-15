@@ -19,3 +19,5 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'tomasr/molokai'
 
 Plugin 'bling/vim-airline'
+Plugin 'edkolev/tmuxline.vim'
+Plugin 'edkolev/promptline.vim'
