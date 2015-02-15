@@ -10,7 +10,7 @@ hash git >/dev/null 2>&1 \
     exit 1
   }
 
-if [[ -d ~/.vim ]]; then
+if [ -d ~/.vim ]; then
   echo -e "\033[32m  ✔ Exists        ❰ ~/.vim ❱   \033[0m"
 else
   echo -e "  ➤ Creating      ❰ ~/.vim ❱   \033[0m"
@@ -20,7 +20,7 @@ else
   echo -e "\033[32m    ✔ Created     ❰ ~/.vim ❱   \033[0m"
 fi
 
-if [[ -d ~/.vim/backup ]]; then
+if [ -d ~/.vim/backup ]; then
   echo -e "\033[32m  ✔ Exists        ❰ ~/.vim/backup ❱   \033[0m"
 else
   echo -e "  ➤ Creating      ❰ ~/.vim/backup ❱   \033[0m"
@@ -30,7 +30,7 @@ else
   echo -e "\033[32m    ✔ Created     ❰ ~/.vim/backup ❱   \033[0m"
 fi
 
-if [[ -d ~/.vim/bundle/Vundle.vim ]]; then
+if [ -d ~/.vim/bundle/Vundle.vim ]; then
   echo -e "\033[32m  ✔ Found         ❰ Vundle ❱   \033[0m"
 else
   echo -e "  ➤ Installing    ❰ Vundle ❱   \033[0m"
@@ -41,8 +41,8 @@ else
   echo -e "\033[32m    ✔ Installed   ❰ Vundle ❱   \033[0m"
 fi
 
-if [[ -f ~/.vimrc ]] || [[ -h ~/.vimrc ]]; then
-  if [[ `head -n 1 ~/.vimrc` != '" razor-x/vimrc' ]]; then
+if [ -f ~/.vimrc ] || [ -h ~/.vimrc ]; then
+  if [ `head -n 1 ~/.vimrc` != '" razor-x/vimrc' ]; then
     echo -e "  ➤  Exists       ❰ ~/.vimrc ❱   \033[0m"
 
     mv ~/.vimrc ~/.vimrc.preinstall
