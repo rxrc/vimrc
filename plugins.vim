@@ -10,6 +10,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'dsawardekar/portkey'
 Plugin 'shougo/unite.vim'
 
+Plugin 'scrooloose/syntastic'
+
 Plugin 'dsawardekar/ember.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'heartsentwined/vim-ember-script'
