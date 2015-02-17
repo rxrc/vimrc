@@ -31,6 +31,10 @@ if has('gui_running')
   set background=dark
 else
   set background=dark
+
+  if strlen($TMUX)
+    let g:airline_theme = 'solarized'
+  endif
 endif
 
 if has('gui_running')
