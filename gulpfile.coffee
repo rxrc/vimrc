@@ -49,11 +49,11 @@ gulp.task 'install', ['build'], ->
   .pipe pluginInstall()
 
 gulp.task 'build', ['clean'], ->
-  gulp.src('plugin/**/*.vim')
-  .pipe gulp.dest("#{pluginPath}/plugin")
-
   gulp.src('*.vim')
   .pipe gulp.dest(pluginPath)
+
+  gulp.src('plugin/**/*.vim')
+  .pipe gulp.dest("#{pluginPath}/plugin")
 
 gulp.task 'watch', ['install'], ->
   $.watch ['./*.vim', './plugin/**/*.vim'], (file) ->
