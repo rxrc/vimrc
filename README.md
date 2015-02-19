@@ -10,6 +10,8 @@ This configuration system works as a meta-plugin:
 all desired Vim plugins are loaded from `plugins.vim` using [Vundle].
 Overall configuration then follows a normal plugin structure.
 
+[Vundle]: https://github.com/gmarik/Vundle.vim
+
 ## Installation
 
 ### Automatic Install
@@ -136,6 +138,9 @@ To switch out of development mode run
 $ gulp nodev
 ````
 
+[Gulp]: http://gulpjs.com/
+[npm]: https://www.ruby-lang.org/en/
+
 ## Contributing
 
 Please submit and comment on bug reports and feature requests.
@@ -159,7 +164,3 @@ This software is provided "as is" and without any express or
 implied warranties, including, without limitation, the implied
 warranties of merchantibility and fitness for a particular
 purpose.
-
-[Gulp]: http://gulpjs.com/
-[npm]: https://www.ruby-lang.org/en/
-[Vundle]: https://github.com/gmarik/Vundle.vim
