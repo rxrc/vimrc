@@ -4,6 +4,8 @@
 
 My complete Vim configuration as a Vim plugin.
 
+## Description
+
 This configuration system works as a meta-plugin:
 all desired Vim plugins are loaded from `plugins.vim` using [Vundle].
 Overall configuration then follows a normal plugin structure.
