@@ -15,6 +15,9 @@ set smartcase
 set spell spelllang=en_us
 set mousemodel=popup_setpos
 
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
+
 set laststatus=2
 
 let g:powerline_loaded = 1
