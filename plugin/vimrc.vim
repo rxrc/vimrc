@@ -1,6 +1,8 @@
 set directory=~/.vim/backup
 set backupdir=~/.vim/backup
 
+set t_Co=256
+
 set smartindent
 set tabstop=2
 set shiftwidth=2
