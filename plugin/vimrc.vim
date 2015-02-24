@@ -31,15 +31,15 @@ let g:NERDTreeChDirMode = 2
 let g:DeleteTrailingWhitespace = 1
 let g:DeleteTrailingWhitespace_Action = 'delete'
 
+let g:promptline_theme = 'airline'
+
 if has('gui_running')
+  let g:airline#extensions#tmuxline#enabled = 0
   colorscheme molokai
   set background=dark
 else
   set background=dark
-
-  if strlen($TMUX)
-    let g:airline_theme = 'solarized'
-  endif
+  colorscheme solarized
 endif
 
 if has('gui_running')
