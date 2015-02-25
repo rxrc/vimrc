@@ -3,6 +3,11 @@ set backupdir=~/.vim/backup
 
 set t_Co=256
 
+set noerrorbells visualbell t_vb=
+if has('autocmd')
+  autocmd GUIEnter * set visualbell t_vb=
+endif
+
 set smartindent
 set tabstop=2
 set shiftwidth=2
