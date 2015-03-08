@@ -24,8 +24,8 @@ gulp.task 'dev', ->
   .pipe gulp.dest(homePath)
 
   gulp.src('')
-  .pipe pluginUpdate()
-  .pipe pluginUpdate()
+  .pipe pluginInstall()
+  .pipe pluginInstall()
   .pipe pluginClean()
 
 gulp.task 'nodev', ->
@@ -37,8 +37,8 @@ gulp.task 'nodev', ->
   .pipe gulp.dest(homePath)
 
   gulp.src('')
-  .pipe pluginUpdate()
-  .pipe pluginUpdate()
+  .pipe pluginInstall()
+  .pipe pluginInstall()
   .pipe pluginClean()
 
 gulp.task 'clean', ->
