@@ -2,6 +2,14 @@ set -e
 
 echo -e "\033[32m➤ Installing!   \033[0m"
 
+hash vim >/dev/null 2>&1 \
+  && echo -e "\033[32m  ✔ Found         ❰ Vim ❱   \033[0m" \
+  || {
+    echo -e "\033[31m  ✘ Missing       ❰ Vim ❱   \033[0m"
+    echo -e "\033[31m✘ Install failed!"
+    exit 1
+  }
+
 hash git >/dev/null 2>&1 \
   && echo -e "\033[32m  ✔ Found         ❰ Git ❱   \033[0m" \
   || {
