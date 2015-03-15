@@ -8,6 +8,7 @@ if has('autocmd')
   autocmd GUIEnter * set visualbell t_vb=
 endif
 
+set hidden
 set smartindent
 set tabstop=2
 set shiftwidth=2
