@@ -85,6 +85,16 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'shougo/neobundle.vim'
 
+NeoBundle 'shougo/vimproc.vim', {
+\ 'build' : {
+\     'windows' : 'tools\\update-dll-mingw',
+\     'cygwin' : 'make -f make_cygwin.mak',
+\     'mac' : 'make -f make_mac.mak',
+\     'linux' : 'make',
+\     'unix' : 'gmake',
+\   },
+\ }
+
 if filereadable(expand('~/.vim/bundle/vimrc/plugins.vim'))
   source ~/.vim/bundle/vimrc/plugins.vim
 endif
@@ -98,9 +108,8 @@ echo -e "\033[32m    ✔ Installed   ❰ ~/.vimrc ❱   \033[0m"
 
 echo -e "  ➤ Run           ❰ neoinstall ❱   \033[0m"
 
-sh -c '</dev/tty vim -c NeoBundleInstall -c quitall'
-sh -c '</dev/tty vim -c NeoBundleInstall -c quitall'
-sh -c '</dev/tty vim -c NeoBundleClean! -c quitall'
+~/.vim/bundle/neobundle.vim/bin/neoinstall >/dev/null 2>&1
+~/.vim/bundle/neobundle.vim/bin/neoinstall >/dev/null 2>&1
 
 echo -e "\033[32m    ✔ Completed   ❰ neoinstall ❱   \033[0m"
 
