@@ -2,7 +2,7 @@ set -e
 
 echo -e "\033[32m➤ Installing!   \033[0m"
 
-hash vim >/dev/null 2>&1 \
+command -v vim >/dev/null 2>&1 \
   && echo -e "\033[32m  ✔ Found         ❰ Vim ❱   \033[0m" \
   || {
     echo -e "\033[31m  ✘ Missing       ❰ Vim ❱   \033[0m"
@@ -10,7 +10,7 @@ hash vim >/dev/null 2>&1 \
     exit 1
   }
 
-hash git >/dev/null 2>&1 \
+command -v git >/dev/null 2>&1 \
   && echo -e "\033[32m  ✔ Found         ❰ Git ❱   \033[0m" \
   || {
     echo -e "\033[31m  ✘ Missing       ❰ Git ❱   \033[0m"
@@ -43,7 +43,7 @@ if [ -d ~/.vim/bundle/neobundle.vim ]; then
 else
   echo -e "  ➤ Installing    ❰ NeoBundle ❱   \033[0m"
 
-  hash git >/dev/null 2>&1 && \
+  command -v git >/dev/null 2>&1 && \
     env git clone https://github.com/shougo/neobundle.vim ~/.vim/bundle/neobundle.vim >/dev/null 2>&1
 
   echo -e "\033[32m    ✔ Installed   ❰ NeoBundle ❱   \033[0m"
