@@ -54,11 +54,22 @@ endif
 call neobundle#begin(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'shougo/neobundle.vim'
-NeoBundle 'razor-x/vimrc'
+
+NeoBundle 'shougo/vimproc.vim', {
+\ 'build' : {
+\     'windows' : 'tools\\update-dll-mingw',
+\     'cygwin' : 'make -f make_cygwin.mak',
+\     'mac' : 'make -f make_mac.mak',
+\     'linux' : 'make',
+\     'unix' : 'gmake',
+\   },
+\ }
 
 if filereadable(expand('~/.vim/bundle/vimrc/plugins.vim'))
   source ~/.vim/bundle/vimrc/plugins.vim
 endif
+
+NeoBundle 'razor-x/vimrc'
 
 call neobundle#end()
 ```
@@ -66,10 +77,12 @@ call neobundle#end()
 and run this to install
 
 ```bash
-$ vim -c NeoBundleInstall -c quitall
-$ vim -c NeoBundleInstall -c quitall
-$ vim -c NeoBundleClean! -c quitall
+$ ~/.vim/bundle/neobundle.vim/bin/neoinstall
+$ ~/.vim/bundle/neobundle.vim/bin/neoinstall
 ```
+
+Note that `neoinstall` must be run twice: first to update this plugin,
+then again to correctly update any new plugins specified in `plugsin.vim`.
 
 ## Updating
 
