@@ -18,15 +18,15 @@ Overall configuration then follows a normal plugin structure.
 
 You can install this via the command-line with either curl
 
-````bash
+```bash
 curl -L https://io.evansosenko.com/vimrc/install.sh | sh
-````
+```
 
 or wget
 
-````bash
+```bash
 wget https://io.evansosenko.com/vimrc/install.sh -O - | sh
-````
+```
 
 ### Manual Install
 
@@ -34,7 +34,7 @@ wget https://io.evansosenko.com/vimrc/install.sh -O - | sh
 2. Create the `~/.vim/backup` directory.
 3. Create `~/.vimrc` with
 
-````vim
+```vim
 " razor-x/vimrc
 set nocompatible
 
@@ -54,36 +54,36 @@ endif
 
 call vundle#end()
 filetype plugin indent on
-````
+```
 
 and run this to install
 
-````bash
+```bash
 $ vim -c PluginUpdate -c quitall
 $ vim -c PluginUpdate -c quitall
 $ vim -c PluginClean -c quitall
-````
+```
 
 ## Updating
 
 Updating is handled via the normal [Vundle] update command
 
-````bash
+```bash
 $ vim -c PluginUpdate -c quitall
 $ vim -c PluginUpdate -c quitall
 $ vim -c PluginClean -c quitall
-````
+```
 
 Note that `PluginUpdate` must be run twice: first to update this plugin,
 then again to correctly update any new plugins specified in `plugsin.vim`.
 
 I recommend adding an alias to your shell
 
-````bash
+```bash
 if [[ -d ~/.vim/bundle/Vundle.vim ]]; then
   alias vimupg='vim -c PluginUpdate -c quitall && vim -c PluginUpdate -c quitall && vim -c PluginClean -c quitall'
 fi
-````
+```
 
 ## Customization
 
@@ -103,9 +103,9 @@ You can customize this configuration or manage your own in the same way.
 
 Here is an example of a command you can use to make replacements:
 
-````bash
+```bash
 git ls-files -z | xargs -0 sed -i 's/razor-x\/vimrc/username\/vimrc/g'
-````
+```
 
 ## Development
 
@@ -115,28 +115,28 @@ the plugin locally when files in your development directory change.
 First, follow the normal install steps if you haven't already.
 Then, install the development dependences via [npm] with
 
-````bash
+```bash
 $ [sudo] npm install --global gulp
 $ npm install
-````
+```
 
 Enter development mode with
 
-````bash
+```bash
 $ gulp dev
-````
+```
 
 and then start gulp with
 
-````bash
+```bash
 $ gulp
-````
+```
 
 To switch out of development mode run
 
-````bash
+```bash
 $ gulp nodev
-````
+```
 
 [Gulp]: http://gulpjs.com/
 [npm]: https://www.ruby-lang.org/en/
