@@ -1,1 +1,1 @@
-Plugin 'tpope/vim-sensible'
+NeoBundle 'tpope/vim-sensible'

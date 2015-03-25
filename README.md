@@ -7,10 +7,10 @@ My complete Vim configuration as a Vim plugin.
 ## Description
 
 This configuration system works as a meta-plugin:
-all desired Vim plugins are loaded from `plugins.vim` using [Vundle].
+all desired Vim plugins are loaded from `plugins.vim` using [NeoBundle].
 Overall configuration then follows a normal plugin structure.
 
-[Vundle]: https://github.com/gmarik/Vundle.vim
+[NeoBundle]: https://github.com/Shougo/neobundle.vim
 
 ## Installation
 
@@ -30,59 +30,55 @@ $ wget https://io.evansosenko.com/vimrc/install.sh -O - | sh
 
 ### Manual Install
 
-1. Install [Vundle].
+1. Install [NeoBundle].
 2. Create the `~/.vim/backup` directory.
 3. Create `~/.vimrc` with
 
 ```vim
 " razor-x/vimrc
-set nocompatible
 
 " Disable powerline by default.
 let g:powerline_loaded = 1
 
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" Skip initialization for vim-tiny or vim-small.
+if !1 | finish | endif
 
-Plugin 'gmarik/Vundle.vim'
-Plugin 'razor-x/vimrc'
+if has('vim_starting')
+ if &compatible
+   set nocompatible
+ endif
+
+ set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+NeoBundleFetch 'shougo/neobundle.vim'
+NeoBundle 'razor-x/vimrc'
 
 if filereadable(expand('~/.vim/bundle/vimrc/plugins.vim'))
   source ~/.vim/bundle/vimrc/plugins.vim
 endif
 
-call vundle#end()
-filetype plugin indent on
+call neobundle#end()
 ```
 
 and run this to install
 
 ```bash
-$ vim -c PluginUpdate -c quitall
-$ vim -c PluginUpdate -c quitall
-$ vim -c PluginClean -c quitall
+$ vim -c NeoBundleInstall -c quitall
+$ vim -c NeoBundleInstall -c quitall
+$ vim -c NeoBundleClean! -c quitall
 ```
 
 ## Updating
 
-Updating is handled via the normal [Vundle] update command
+Updating is handled via the normal [NeoBundle] update command
 
 ```bash
-$ vim -c PluginUpdate -c quitall
-$ vim -c PluginUpdate -c quitall
-$ vim -c PluginClean -c quitall
-```
-
-Note that `PluginUpdate` must be run twice: first to update this plugin,
-then again to correctly update any new plugins specified in `plugsin.vim`.
-
-I recommend adding an alias to your shell
-
-```bash
-if [[ -d ~/.vim/bundle/Vundle.vim ]]; then
-  alias vimupg='vim -c PluginUpdate -c quitall && vim -c PluginUpdate -c quitall && vim -c PluginClean -c quitall'
-fi
+$ vim -c NeoBundleUpdate -c quitall
+$ vim -c NeoBundleInstall -c quitall
+$ vim -c NeoBundleClean! -c quitall
 ```
 
 ## Customization

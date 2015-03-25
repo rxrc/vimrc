@@ -38,15 +38,15 @@ else
   echo -e "\033[32m    ✔ Created     ❰ ~/.vim/backup ❱   \033[0m"
 fi
 
-if [ -d ~/.vim/bundle/Vundle.vim ]; then
-  echo -e "\033[32m  ✔ Found         ❰ Vundle ❱   \033[0m"
+if [ -d ~/.vim/bundle/neobundle.vim ]; then
+  echo -e "\033[32m  ✔ Found         ❰ NeoBundle ❱   \033[0m"
 else
-  echo -e "  ➤ Installing    ❰ Vundle ❱   \033[0m"
+  echo -e "  ➤ Installing    ❰ NeoBundle ❱   \033[0m"
 
   hash git >/dev/null 2>&1 && \
-    env git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim >/dev/null 2>&1
+    env git clone https://github.com/shougo/neobundle.vim ~/.vim/bundle/neobundle.vim >/dev/null 2>&1
 
-  echo -e "\033[32m    ✔ Installed   ❰ Vundle ❱   \033[0m"
+  echo -e "\033[32m    ✔ Installed   ❰ NeoBundle ❱   \033[0m"
 fi
 
 if [ -f ~/.vimrc ] || [ -h ~/.vimrc ]; then
@@ -66,35 +66,42 @@ echo -e "  ➤ Installing    ❰ ~/.vimrc ❱   \033[0m"
 
 tee ~/.vimrc >/dev/null <<EOF
 " razor-x/vimrc
-set nocompatible
 
 " Disable powerline by default.
 let g:powerline_loaded = 1
 
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" Skip initialization for vim-tiny or vim-small.
+if !1 | finish | endif
 
-Plugin 'gmarik/Vundle.vim'
-Plugin 'razor-x/vimrc'
+if has('vim_starting')
+ if &compatible
+   set nocompatible
+ endif
+
+ set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+NeoBundleFetch 'shougo/neobundle.vim'
+NeoBundle 'razor-x/vimrc'
 
 if filereadable(expand('~/.vim/bundle/vimrc/plugins.vim'))
   source ~/.vim/bundle/vimrc/plugins.vim
 endif
 
-call vundle#end()
-filetype plugin indent on
+call neobundle#end()
 EOF
 
 echo -e "\033[32m    ✔ Installed   ❰ ~/.vimrc ❱   \033[0m"
 
-echo -e "  ➤ Run           ❰ PluginUpdate ❱   \033[0m"
+echo -e "  ➤ Run           ❰ neoinstall ❱   \033[0m"
 
-sh -c '</dev/tty vim -c PluginUpdate -c quitall'
-sh -c '</dev/tty vim -c PluginUpdate -c quitall'
-sh -c '</dev/tty vim -c PluginClean -c quitall'
+sh -c '</dev/tty vim -c NeoBundleInstall -c quitall'
+sh -c '</dev/tty vim -c NeoBundleInstall -c quitall'
+sh -c '</dev/tty vim -c NeoBundleClean! -c quitall'
 
-echo -e "\033[32m    ✔ Completed   ❰ PluginUpdate ❱   \033[0m"
+echo -e "\033[32m    ✔ Completed   ❰ neoinstall ❱   \033[0m"
 
 echo -e "\033[32m✔ Install complete!   \033[0m"
 
