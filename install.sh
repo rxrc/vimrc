@@ -84,11 +84,12 @@ endif
 call neobundle#begin(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'shougo/neobundle.vim'
-NeoBundle 'razor-x/vimrc'
 
 if filereadable(expand('~/.vim/bundle/vimrc/plugins.vim'))
   source ~/.vim/bundle/vimrc/plugins.vim
 endif
+
+NeoBundle 'razor-x/vimrc'
 
 call neobundle#end()
 EOF
