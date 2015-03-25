@@ -11,7 +11,7 @@ pluginPath = "#{homePath}/.vim/bundle/vimrc"
 
 pluginInstall = () -> $.shell('vim -c NeoBundleInstall -c quitall')
 pluginUpdate = () -> $.shell('vim -c NeoBundleUpdate -c quitall')
-pluginClean = () -> $.shell('vim -c NeoBundleClean -c quitall')
+pluginClean = () -> $.shell('vim -c NeoBundleClean! -c quitall')
 
 gulp.task 'default', ['watch']
 
