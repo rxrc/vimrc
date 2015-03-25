@@ -118,8 +118,9 @@ $ git ls-files -z | xargs -0 sed -i 's/razor-x\/vimrc/username\/vimrc/g'
 
 ## Development
 
-You can use [Gulp] to watch for changes and automatically update
-the plugin locally when files in your development directory change.
+You can use [Gulp] to switch to development mode
+which will configure NeoBundle to use the development
+directory as the plugin path.
 
 First, follow the normal install steps if you haven't already.
 Then, install the development dependences via [npm] with
@@ -133,12 +134,6 @@ Enter development mode with
 
 ```bash
 $ gulp dev
-```
-
-and then start gulp with
-
-```bash
-$ gulp
 ```
 
 To switch out of development mode run

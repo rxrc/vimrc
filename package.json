@@ -24,7 +24,6 @@
     "gulp-load-plugins": "^0.8.0",
     "gulp-replace": "^0.5.2",
     "gulp-shell": "^0.3.0",
-    "gulp-watch": "^4.1.1",
     "home-path": "^0.1.1"
   }
 }
