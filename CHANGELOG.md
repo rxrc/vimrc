@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 1.0.0
 
 - Replace Vundle with NeoBundle.
 
