@@ -2,7 +2,7 @@ set -e
 
 echo -e "\033[32m➤ Installing!   \033[0m"
 
-hash vim >/dev/null 2>&1 \
+command -v vim >/dev/null 2>&1 \
   && echo -e "\033[32m  ✔ Found         ❰ Vim ❱   \033[0m" \
   || {
     echo -e "\033[31m  ✘ Missing       ❰ Vim ❱   \033[0m"
@@ -10,7 +10,7 @@ hash vim >/dev/null 2>&1 \
     exit 1
   }
 
-hash git >/dev/null 2>&1 \
+command -v git >/dev/null 2>&1 \
   && echo -e "\033[32m  ✔ Found         ❰ Git ❱   \033[0m" \
   || {
     echo -e "\033[31m  ✘ Missing       ❰ Git ❱   \033[0m"
@@ -43,7 +43,7 @@ if [ -d ~/.vim/bundle/neobundle.vim ]; then
 else
   echo -e "  ➤ Installing    ❰ NeoBundle ❱   \033[0m"
 
-  hash git >/dev/null 2>&1 && \
+  command -v git >/dev/null 2>&1 && \
     env git clone https://github.com/shougo/neobundle.vim ~/.vim/bundle/neobundle.vim >/dev/null 2>&1
 
   echo -e "\033[32m    ✔ Installed   ❰ NeoBundle ❱   \033[0m"
@@ -84,11 +84,22 @@ endif
 call neobundle#begin(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'shougo/neobundle.vim'
-NeoBundle 'razor-x/vimrc'
+
+NeoBundle 'shougo/vimproc.vim', {
+\ 'build' : {
+\     'windows' : 'tools\\update-dll-mingw',
+\     'cygwin' : 'make -f make_cygwin.mak',
+\     'mac' : 'make -f make_mac.mak',
+\     'linux' : 'make',
+\     'unix' : 'gmake',
+\   },
+\ }
 
 if filereadable(expand('~/.vim/bundle/vimrc/plugins.vim'))
   source ~/.vim/bundle/vimrc/plugins.vim
 endif
+
+NeoBundle 'razor-x/vimrc'
 
 call neobundle#end()
 EOF
@@ -97,9 +108,8 @@ echo -e "\033[32m    ✔ Installed   ❰ ~/.vimrc ❱   \033[0m"
 
 echo -e "  ➤ Run           ❰ neoinstall ❱   \033[0m"
 
-sh -c '</dev/tty vim -c NeoBundleInstall -c quitall'
-sh -c '</dev/tty vim -c NeoBundleInstall -c quitall'
-sh -c '</dev/tty vim -c NeoBundleClean! -c quitall'
+~/.vim/bundle/neobundle.vim/bin/neoinstall >/dev/null 2>&1
+~/.vim/bundle/neobundle.vim/bin/neoinstall >/dev/null 2>&1
 
 echo -e "\033[32m    ✔ Completed   ❰ neoinstall ❱   \033[0m"
 

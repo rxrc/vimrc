@@ -19,13 +19,13 @@ Overall configuration then follows a normal plugin structure.
 You can install this via the command-line with either curl
 
 ```bash
-$ curl -L https://io.evansosenko.com/vimrc/install.sh | sh
+$ curl -L https://git.io/jgge | sh
 ```
 
 or wget
 
 ```bash
-$ wget https://io.evansosenko.com/vimrc/install.sh -O - | sh
+$ wget https://git.io/jgge -O - | sh
 ```
 
 ### Manual Install
@@ -54,11 +54,22 @@ endif
 call neobundle#begin(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'shougo/neobundle.vim'
-NeoBundle 'razor-x/vimrc'
+
+NeoBundle 'shougo/vimproc.vim', {
+\ 'build' : {
+\     'windows' : 'tools\\update-dll-mingw',
+\     'cygwin' : 'make -f make_cygwin.mak',
+\     'mac' : 'make -f make_mac.mak',
+\     'linux' : 'make',
+\     'unix' : 'gmake',
+\   },
+\ }
 
 if filereadable(expand('~/.vim/bundle/vimrc/plugins.vim'))
   source ~/.vim/bundle/vimrc/plugins.vim
 endif
+
+NeoBundle 'razor-x/vimrc'
 
 call neobundle#end()
 ```
@@ -66,10 +77,12 @@ call neobundle#end()
 and run this to install
 
 ```bash
-$ vim -c NeoBundleInstall -c quitall
-$ vim -c NeoBundleInstall -c quitall
-$ vim -c NeoBundleClean! -c quitall
+$ ~/.vim/bundle/neobundle.vim/bin/neoinstall
+$ ~/.vim/bundle/neobundle.vim/bin/neoinstall
 ```
+
+Note that `neoinstall` must be run twice: first to update this plugin,
+then again to correctly update any new plugins specified in `plugsin.vim`.
 
 ## Updating
 
@@ -89,6 +102,7 @@ You can customize this configuration or manage your own in the same way.
    If you prefer a clean start, clone the `minimal` branch:
    it has the same structure and development tools but with
    a very minimal configuration.
+   Tagged releases are based on that branch.
 2. Replace any instance of `razor-x/vimrc`
    with the path to your repository's location.
    If you do not host this on GitHub,
@@ -105,8 +119,9 @@ $ git ls-files -z | xargs -0 sed -i 's/razor-x\/vimrc/username\/vimrc/g'
 
 ## Development
 
-You can use [Gulp] to watch for changes and automatically update
-the plugin locally when files in your development directory change.
+You can use [Gulp] to switch to development mode
+which will configure NeoBundle to use the development
+directory as the plugin path.
 
 First, follow the normal install steps if you haven't already.
 Then, install the development dependences via [npm] with
@@ -120,12 +135,6 @@ Enter development mode with
 
 ```bash
 $ gulp dev
-```
-
-and then start gulp with
-
-```bash
-$ gulp
 ```
 
 To switch out of development mode run
