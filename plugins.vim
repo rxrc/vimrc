@@ -10,6 +10,7 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'dsawardekar/portkey'
 NeoBundle 'shougo/unite.vim'
+NeoBundle 'airblade/vim-gitgutter'
 
 NeoBundle 'scrooloose/syntastic'
 
