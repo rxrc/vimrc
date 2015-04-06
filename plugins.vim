@@ -4,6 +4,7 @@ NeoBundle 'vim-scripts/gitignore'
 NeoBundle 'vim-scripts/showtrailingwhitespace'
 NeoBundle 'vim-scripts/deletetrailingwhitespace'
 NeoBundle 'editorconfig/editorconfig-vim'
+NeoBundle 'vim-scripts/bufkill.vim'
 
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'tpope/vim-fugitive'
