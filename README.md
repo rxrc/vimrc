@@ -137,6 +137,9 @@ Enter development mode with
 $ gulp dev
 ```
 
+If you modify `plugins.vim`,
+run `gulp dev` again to reconfigure the plugins.
+
 To switch out of development mode run
 
 ```bash
