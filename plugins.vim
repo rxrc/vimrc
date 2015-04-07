@@ -1,27 +1,35 @@
+" General configuration.
 NeoBundle 'tpope/vim-sensible'
-NeoBundle 'ervandew/supertab'
-NeoBundle 'vim-scripts/gitignore'
+NeoBundle 'editorconfig/editorconfig-vim'
+
+" Syntax handling.
+NeoBundle 'scrooloose/syntastic'
 NeoBundle 'vim-scripts/showtrailingwhitespace'
 NeoBundle 'vim-scripts/deletetrailingwhitespace'
-NeoBundle 'editorconfig/editorconfig-vim'
-NeoBundle 'vim-scripts/bufkill.vim'
 
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'dsawardekar/portkey'
-NeoBundle 'shougo/unite.vim'
+" Git integration.
+NeoBundle 'vim-scripts/gitignore'
 NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'tpope/vim-fugitive'
 
-NeoBundle 'scrooloose/syntastic'
-
-NeoBundle 'dsawardekar/ember.vim'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'heartsentwined/vim-ember-script'
-NeoBundle 'heartsentwined/vim-emblem'
-
+" Themes and colors.
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'tomasr/molokai'
 
+" Interface customization.
+NeoBundle 'vim-scripts/bufkill.vim'
+NeoBundle 'ervandew/supertab'
+NeoBundle 'dsawardekar/portkey'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'shougo/unite.vim'
+
+" Prompt and statusline.
 NeoBundle 'bling/vim-airline'
-NeoBundle 'edkolev/tmuxline.vim'
 NeoBundle 'edkolev/promptline.vim'
+NeoBundle 'edkolev/tmuxline.vim'
+
+" Languages and frameworks.
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'dsawardekar/ember.vim'
+NeoBundle 'heartsentwined/vim-ember-script'
+NeoBundle 'heartsentwined/vim-emblem'
