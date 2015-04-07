@@ -29,5 +29,10 @@ set smartcase
 let g:DeleteTrailingWhitespace = 1
 let g:DeleteTrailingWhitespace_Action = 'delete'
 
+" Session management.
+let g:session_autoload = 'no'
+let g:session_autosave = 'yes'
+let g:session_autosave_periodic = 5
+
 " Set NERDTree preferences.
 let g:NERDTreeChDirMode = 2

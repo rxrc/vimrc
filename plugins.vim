@@ -28,6 +28,10 @@ NeoBundle 'bling/vim-airline'
 NeoBundle 'edkolev/promptline.vim'
 NeoBundle 'edkolev/tmuxline.vim'
 
+" Session management.
+NeoBundle 'xolox/vim-misc'
+NeoBundle 'xolox/vim-session'
+
 " Languages and frameworks.
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'dsawardekar/ember.vim'
