@@ -23,7 +23,7 @@ NeoBundle 'dsawardekar/portkey'
 NeoBundle 'scrooloose/nerdtree'
 
 " Unite.vim.
-let g:unite_source_history_yank_enable = 1
+let g:unite_source_history_yank_enable = 1 " must be set here
 NeoBundle 'shougo/unite.vim'
 
 " Prompt and statusline.
