@@ -21,6 +21,9 @@ NeoBundle 'vim-scripts/bufkill.vim'
 NeoBundle 'ervandew/supertab'
 NeoBundle 'dsawardekar/portkey'
 NeoBundle 'scrooloose/nerdtree'
+
+" Unite.vim.
+let g:unite_source_history_yank_enable = 1
 NeoBundle 'shougo/unite.vim'
 
 " Prompt and statusline.
