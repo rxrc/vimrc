@@ -28,16 +28,6 @@ else
   echo -e "\033[32m    ✔ Created     ❰ ~/.vim ❱   \033[0m"
 fi
 
-if [ -d ~/.vim/backup ]; then
-  echo -e "\033[32m  ✔ Exists        ❰ ~/.vim/backup ❱   \033[0m"
-else
-  echo -e "  ➤ Creating      ❰ ~/.vim/backup ❱   \033[0m"
-
-  mkdir -p ~/.vim/backup
-
-  echo -e "\033[32m    ✔ Created     ❰ ~/.vim/backup ❱   \033[0m"
-fi
-
 if [ -d ~/.vim/bundle/neobundle.vim ]; then
   echo -e "\033[32m  ✔ Found         ❰ NeoBundle ❱   \033[0m"
 else

@@ -31,8 +31,7 @@ $ wget https://git.io/jgge -O - | sh
 ### Manual Install
 
 1. Install [NeoBundle].
-2. Create the `~/.vim/backup` directory.
-3. Create `~/.vimrc` with
+2. Create `~/.vimrc` with
 
 ```vim
 " razor-x/vimrc
