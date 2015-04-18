@@ -23,8 +23,4 @@ endif
 " Set font.
 if has('gui_running')
   set guifont=Inconsolata\-g\ 11
-
-  if hostname() == 'Gungnir'
-    set guifont=Inconsolata\-g\ 18
-  endif
 endif
