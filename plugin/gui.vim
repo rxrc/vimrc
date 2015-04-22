@@ -1,6 +1,9 @@
 " Set right mouse button action.
 set mousemodel=popup_setpos
 
+" Set focus to follow mouse.
+set mousefocus
+
 " Hide most gui elements.
 set guioptions-=m " remove menu bar
 set guioptions-=T " remove toolbar
