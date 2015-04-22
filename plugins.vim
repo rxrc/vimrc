@@ -18,6 +18,7 @@ NeoBundle 'tomasr/molokai'
 
 " Interface customization.
 NeoBundle 'vim-scripts/bufkill.vim'
+NeoBundle 'christoomey/vim-tmux-navigator'
 NeoBundle 'ervandew/supertab'
 NeoBundle 'dsawardekar/portkey'
 NeoBundle 'scrooloose/nerdtree'
