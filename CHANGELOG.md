@@ -2,6 +2,7 @@
 
 ## HEAD
 
+- Improve switching between dev and nodev mode.
 - Use XDG cache directory.
 
 ## 1.0.0
