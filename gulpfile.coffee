@@ -1,7 +1,6 @@
 'use strict'
 
 gulp = require('gulp')
-del = require('del')
 path = require('path')
 homePath = require('home-path')()
 $ = require('gulp-load-plugins')()
