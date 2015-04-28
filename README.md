@@ -14,6 +14,14 @@ Overall configuration then follows a normal plugin structure.
 
 ## Installation
 
+### Required Fonts
+
+This configuration uses [Inconsolata-g], and
+vim-airline is set to use [Powerline fonts].
+
+[Inconsolata-g]: https://github.com/powerline/fonts/tree/master/Inconsolata-g
+[Powerline fonts]: https://github.com/powerline/fonts
+
 ### Automatic Install
 
 You can install this via the command-line with either curl
