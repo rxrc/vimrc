@@ -42,7 +42,7 @@ $ wget https://git.io/jgge -O - | sh
 2. Create `~/.vimrc` with
 
 ```vim
-" razor-x/vimrc
+" rxrc/vimrc
 
 " Disable powerline by default.
 let g:powerline_loaded = 1
@@ -76,7 +76,7 @@ if filereadable(expand('~/.vim/bundle/vimrc/plugins.vim'))
   source ~/.vim/bundle/vimrc/plugins.vim
 endif
 
-NeoBundle 'razor-x/vimrc'
+NeoBundle 'rxrc/vimrc'
 
 call neobundle#end()
 ```
@@ -110,7 +110,7 @@ You can customize this configuration or manage your own in the same way.
    it has the same structure and development tools but with
    a very minimal configuration.
    Tagged releases are based on that branch.
-2. Replace any instance of `razor-x/vimrc`
+2. Replace any instance of `rxrc/vimrc`
    with the path to your repository's location.
    If you do not host this on GitHub,
    you may need to adjust the repository path appropriately.
@@ -121,7 +121,7 @@ You can customize this configuration or manage your own in the same way.
 Here is an example of a command you can use to make replacements:
 
 ```bash
-$ git ls-files -z | xargs -0 sed -i 's/razor-x\/vimrc/username\/vimrc/g'
+$ git ls-files -z | xargs -0 sed -i 's/rxrc\/vimrc/username\/vimrc/g'
 ```
 
 ## Development
@@ -162,7 +162,7 @@ Please submit and comment on bug reports and feature requests.
 
 To submit a patch:
 
-1. Fork it (https://github.com/razor-x/vimrc/fork).
+1. Fork it (https://github.com/rxrc/vimrc/fork).
 2. Create your feature branch (`git checkout -b my-new-feature`).
 3. Make changes.
 4. Commit your changes (`git commit -am 'Add some feature'`).

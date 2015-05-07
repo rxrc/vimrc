@@ -5,7 +5,7 @@ path = require('path')
 homePath = require('home-path')()
 $ = require('gulp-load-plugins')()
 
-remotePluginPath = 'razor-x/vimrc'
+remotePluginPath = 'rxrc/vimrc'
 vimCmd = (cmd) ->
   "vim -N -u #{homePath}/.vimrc -c \"try | #{cmd} $* | finally | qall | endtry\" -U NONE -i NONE -V1 -e -s"
 
