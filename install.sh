@@ -41,7 +41,7 @@ fi
 
 if [ -f ~/.vimrc ] || [ -h ~/.vimrc ]; then
   VIMRC_LINE=$(head -n 1 ~/.vimrc);
-  if [ "$VIMRC_LINE" != '" razor-x/vimrc' ]; then
+  if [ "$VIMRC_LINE" != '" rxrc/vimrc' ]; then
     echo -e "  ➤  Exists       ❰ ~/.vimrc ❱   \033[0m"
 
     mv ~/.vimrc ~/.vimrc.preinstall
@@ -55,7 +55,7 @@ fi
 echo -e "  ➤ Installing    ❰ ~/.vimrc ❱   \033[0m"
 
 tee ~/.vimrc >/dev/null <<EOF
-" razor-x/vimrc
+" rxrc/vimrc
 
 " Disable powerline by default.
 let g:powerline_loaded = 1
@@ -89,7 +89,7 @@ if filereadable(expand('~/.vim/bundle/vimrc/plugins.vim'))
   source ~/.vim/bundle/vimrc/plugins.vim
 endif
 
-NeoBundle 'razor-x/vimrc'
+NeoBundle 'rxrc/vimrc'
 
 call neobundle#end()
 EOF

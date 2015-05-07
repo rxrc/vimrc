@@ -5,7 +5,7 @@
   "description": "Vim configuration.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/razor-x/vimrc.git"
+    "url": "https://github.com/rxrc/vimrc.git"
   },
   "keywords": [
     "vim",
@@ -14,9 +14,9 @@
   "author": "Evan Sosenko",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/razor-x/vimrc/issues"
+    "url": "https://github.com/rxrc/vimrc/issues"
   },
-  "homepage": "https://github.com/razor-x/vimrc",
+  "homepage": "https://github.com/rxrc/vimrc",
   "devDependencies": {
     "coffee-script": "^1.9.0",
     "gulp": "^3.8.11",
