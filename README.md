@@ -27,13 +27,13 @@ vim-airline is set to use [Powerline fonts].
 You can install this via the command-line with either curl
 
 ```bash
-$ curl -L https://git.io/jgge | sh
+$ curl -L https://git.io/vJAzK | sh
 ```
 
 or wget
 
 ```bash
-$ wget https://git.io/jgge -O - | sh
+$ wget https://git.io/vJAzK -O - | sh
 ```
 
 ### Manual Install
