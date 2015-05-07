@@ -1,6 +1,6 @@
 # Vim Configuration
 
-[![MIT License](http://img.shields.io/badge/license-MIT-red.svg?style=flat)](./LICENSE.txt)
+[![MIT License](http://img.shields.io/github/license/rxrc/vimrc.svg)](./LICENSE.txt)
 
 My complete Vim configuration as a Vim plugin.
 
