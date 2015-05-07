@@ -20,6 +20,7 @@ NeoBundle 'tomasr/molokai'
 NeoBundle 'vim-scripts/bufkill.vim'
 NeoBundle 'christoomey/vim-tmux-navigator'
 NeoBundle 'ervandew/supertab'
+NeoBundle 'chrisbra/unicode.vim'
 NeoBundle 'dsawardekar/portkey'
 NeoBundle 'scrooloose/nerdtree'
 
