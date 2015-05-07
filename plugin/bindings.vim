@@ -5,4 +5,4 @@ nnoremap <silent> <C-S> :<C-U>update<CR>
 nnoremap <silent> <C-W> :<C-U>BD<CR>
 
 " Toggle highlighting.
-map <leader>h :set hlsearch!<CR>
+nnoremap <silent> <leader>h :<C-U>set hlsearch!<CR>
