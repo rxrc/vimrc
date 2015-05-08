@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 1.1.0
 
 - Improve switching between dev and nodev mode.
 - Use XDG cache directory.
