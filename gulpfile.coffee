@@ -18,7 +18,8 @@ gulp.task 'default', ['dev']
 gulp.task 'dev', ->
   gulp.src("#{homePath}/.vimrc")
   .pipe $.replace("NeoBundle '#{remotePluginPath}'", "NeoBundle '#{path.resolve()}'")
-  .pipe $.replace("~/.vim/bundle/vimrc/plugins.vim", "#{path.resolve()}/plugins.vim")
+  .pipe $.replace("$HOME . '/.vim/bundle/vimrc/plugins.vim'", "'' . '#{path.resolve()}/plugins.vim'")
+  .pipe $.replace('$HOME/.vim/bundle/vimrc/plugins.vim', "#{path.resolve()}/plugins.vim")
   .pipe gulp.dest(homePath)
 
   gulp.src('')
@@ -30,7 +31,8 @@ gulp.task 'dev', ->
 gulp.task 'nodev', ->
   gulp.src("#{homePath}/.vimrc")
   .pipe $.replace("NeoBundle '#{path.resolve()}'", "NeoBundle '#{remotePluginPath}'")
-  .pipe $.replace("#{path.resolve()}/plugins.vim", "~/.vim/bundle/vimrc/plugins.vim")
+  .pipe $.replace("'' . '#{path.resolve()}/plugins.vim'", "$HOME . '/.vim/bundle/vimrc/plugins.vim'")
+  .pipe $.replace("#{path.resolve()}/plugins.vim", '$HOME/.vim/bundle/vimrc/plugins.vim')
   .pipe gulp.dest(homePath)
 
   gulp.src('')

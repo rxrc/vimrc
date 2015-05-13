@@ -68,16 +68,16 @@ if has('vim_starting')
    set nocompatible
  endif
 
- set runtimepath+=~/.vim/bundle/neobundle.vim/
+ set runtimepath+=\$HOME/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#begin(expand('~/.vim/bundle/'))
+call neobundle#begin(\$HOME . '/.vim/bundle/')
 
 NeoBundleFetch 'shougo/neobundle.vim'
 
 NeoBundle 'shougo/vimproc.vim', {
 \ 'build' : {
-\     'windows' : 'tools\\update-dll-mingw',
+\     'windows' : 'tools\\\\update-dll-mingw',
 \     'cygwin' : 'make -f make_cygwin.mak',
 \     'mac' : 'make -f make_mac.mak',
 \     'linux' : 'make',
@@ -85,8 +85,8 @@ NeoBundle 'shougo/vimproc.vim', {
 \   },
 \ }
 
-if filereadable(expand('~/.vim/bundle/vimrc/plugins.vim'))
-  source ~/.vim/bundle/vimrc/plugins.vim
+if filereadable(\$HOME . '/.vim/bundle/vimrc/plugins.vim')
+  source \$HOME/.vim/bundle/vimrc/plugins.vim
 endif
 
 NeoBundle 'rxrc/vimrc'
@@ -94,7 +94,7 @@ NeoBundle 'rxrc/vimrc'
 call neobundle#end()
 EOF
 
-echo -e "\033[32m    ✔ Installed   ❰ $HOME/.vimrc ❱   \033[0m"
+echo -e "\033[32m    ✔ Installed   ❰ ~/.vimrc ❱   \033[0m"
 
 echo -e "  ➤ Run           ❰ neoinstall ❱   \033[0m"
 
