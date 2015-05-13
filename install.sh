@@ -18,43 +18,43 @@ command -v git >/dev/null 2>&1 \
     exit 1
   }
 
-if [ -d ~/.vim ]; then
+if [ -d $HOME/.vim ]; then
   echo -e "\033[32m  ✔ Exists        ❰ ~/.vim ❱   \033[0m"
 else
   echo -e "  ➤ Creating      ❰ ~/.vim ❱   \033[0m"
 
-  mkdir -p ~/.vim
+  mkdir -p $HOME/.vim
 
   echo -e "\033[32m    ✔ Created     ❰ ~/.vim ❱   \033[0m"
 fi
 
-if [ -d ~/.vim/bundle/neobundle.vim ]; then
+if [ -d $HOME/.vim/bundle/neobundle.vim ]; then
   echo -e "\033[32m  ✔ Found         ❰ NeoBundle ❱   \033[0m"
 else
   echo -e "  ➤ Installing    ❰ NeoBundle ❱   \033[0m"
 
   command -v git >/dev/null 2>&1 && \
-    env git clone https://github.com/shougo/neobundle.vim ~/.vim/bundle/neobundle.vim >/dev/null 2>&1
+    env git clone https://github.com/shougo/neobundle.vim $HOME/.vim/bundle/neobundle.vim >/dev/null 2>&1
 
   echo -e "\033[32m    ✔ Installed   ❰ NeoBundle ❱   \033[0m"
 fi
 
-if [ -f ~/.vimrc ] || [ -h ~/.vimrc ]; then
-  VIMRC_LINE=$(head -n 1 ~/.vimrc);
+if [ -f $HOME/.vimrc ] || [ -h $HOME/.vimrc ]; then
+  VIMRC_LINE=$(head -n 1 $HOME/.vimrc);
   if [ "$VIMRC_LINE" != '" rxrc/vimrc' ]; then
     echo -e "  ➤  Exists       ❰ ~/.vimrc ❱   \033[0m"
 
-    mv ~/.vimrc ~/.vimrc.preinstall
+    mv $HOME/.vimrc $HOME/.vimrc.preinstall
 
     echo -e "\033[32m    ✔ Moved to    ❰ ~/.vimrc.preinstall ❱   \033[0m"
   else
-    rm ~/.vimrc
+    rm $HOME/.vimrc
   fi
 fi
 
 echo -e "  ➤ Installing    ❰ ~/.vimrc ❱   \033[0m"
 
-tee ~/.vimrc >/dev/null <<EOF
+tee $HOME/.vimrc >/dev/null <<EOF
 " rxrc/vimrc
 
 " Disable powerline by default.
@@ -94,12 +94,12 @@ NeoBundle 'rxrc/vimrc'
 call neobundle#end()
 EOF
 
-echo -e "\033[32m    ✔ Installed   ❰ ~/.vimrc ❱   \033[0m"
+echo -e "\033[32m    ✔ Installed   ❰ $HOME/.vimrc ❱   \033[0m"
 
 echo -e "  ➤ Run           ❰ neoinstall ❱   \033[0m"
 
-~/.vim/bundle/neobundle.vim/bin/neoinstall >/dev/null 2>&1
-~/.vim/bundle/neobundle.vim/bin/neoinstall >/dev/null 2>&1
+$HOME/.vim/bundle/neobundle.vim/bin/neoinstall >/dev/null 2>&1
+$HOME/.vim/bundle/neobundle.vim/bin/neoinstall >/dev/null 2>&1
 
 echo -e "\033[32m    ✔ Completed   ❰ neoinstall ❱   \033[0m"
 
