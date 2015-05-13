@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+- Use $HOME over ~.
+
 ## 1.1.0
 
 - Improve switching between dev and nodev mode.

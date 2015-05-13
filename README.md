@@ -56,10 +56,10 @@ if has('vim_starting')
    set nocompatible
  endif
 
- set runtimepath+=~/.vim/bundle/neobundle.vim/
+ set runtimepath+=$HOME/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#begin(expand('~/.vim/bundle/'))
+call neobundle#begin($HOME . '/.vim/bundle/')
 
 NeoBundleFetch 'shougo/neobundle.vim'
 
@@ -73,8 +73,8 @@ NeoBundle 'shougo/vimproc.vim', {
 \   },
 \ }
 
-if filereadable(expand('~/.vim/bundle/vimrc/plugins.vim'))
-  source ~/.vim/bundle/vimrc/plugins.vim
+if filereadable($HOME . '/.vim/bundle/vimrc/plugins.vim')
+  source $HOME/.vim/bundle/vimrc/plugins.vim
 endif
 
 NeoBundle 'rxrc/vimrc'
