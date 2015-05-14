@@ -2,6 +2,8 @@
 
 ## HEAD
 
+**Rerunning the install script is recommended.**
+
 - Use $HOME over ~.
 
 ## 1.1.0
