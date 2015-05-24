@@ -1,48 +1,88 @@
-" General configuration.
+"
+" Global Configuration
+"
+
+" Libraries
+NeoBundle 'xolox/vim-misc' " for xolox/vim-session
+NeoBundle 'tpope/vim-repeat'
+
+" Sensible Defaults
 NeoBundle 'tpope/vim-sensible'
+
+" EditorConfig
 NeoBundle 'editorconfig/editorconfig-vim'
 
-" Syntax handling.
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'vim-scripts/showtrailingwhitespace'
-NeoBundle 'vim-scripts/deletetrailingwhitespace'
-
-" Git integration.
-NeoBundle 'vim-scripts/gitignore'
-NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'tpope/vim-fugitive'
-
-" Themes and colors.
-NeoBundle 'altercation/vim-colors-solarized'
-NeoBundle 'tomasr/molokai'
-
-" Rainbow parentheses
-NeoBundle 'luochen1990/rainbow'
-let g:rainbow_active = 1 " must be set here
-
-" Interface customization.
-NeoBundle 'tpope/vim-dispatch'
-NeoBundle 'tpope/vim-repeat'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'vim-scripts/bufkill.vim'
-NeoBundle 'christoomey/vim-tmux-navigator'
-NeoBundle 'ervandew/supertab'
-NeoBundle 'chrisbra/unicode.vim'
-NeoBundle 'dsawardekar/portkey'
-NeoBundle 'scrooloose/nerdtree'
-
-" Unite.vim.
-let g:unite_source_history_yank_enable = 1 " must be set here
-NeoBundle 'shougo/unite.vim'
-
-" Prompt and statusline.
+" Prompt and Statusline
 NeoBundle 'bling/vim-airline'
 NeoBundle 'edkolev/promptline.vim'
 NeoBundle 'edkolev/tmuxline.vim'
 
-" Session management.
-NeoBundle 'xolox/vim-misc'
+"
+" Editor
+"
+
+" Themes and Colors
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'tomasr/molokai'
+
+" Syntax
+NeoBundle 'scrooloose/syntastic'
+
+" Whitespace
+NeoBundle 'vim-scripts/showtrailingwhitespace'
+NeoBundle 'vim-scripts/deletetrailingwhitespace'
+
+" Parentheses
+NeoBundle 'luochen1990/rainbow'
+let g:rainbow_active = 1 " must be set here
+
+" Tab
+NeoBundle 'ervandew/supertab'
+
+" Macros
+NeoBundle 'tpope/vim-surround'
+
+"
+" Internal Interfaces
+"
+
+" Buffer
+NeoBundle 'vim-scripts/bufkill.vim'
+
+" Session
 NeoBundle 'xolox/vim-session'
+
+" Unicode
+NeoBundle 'chrisbra/unicode.vim'
+
+" Unite.vim
+let g:unite_source_history_yank_enable = 1 " must be set here
+NeoBundle 'shougo/unite.vim'
+
+"
+" External Interfaces
+"
+
+" File
+NeoBundle 'scrooloose/nerdtree'
+
+" Shell
+NeoBundle 'tpope/vim-dispatch'
+
+" Git
+NeoBundle 'vim-scripts/gitignore'
+NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'tpope/vim-fugitive'
+
+" tmux
+NeoBundle 'christoomey/vim-tmux-navigator'
+
+" Portkey
+NeoBundle 'dsawardekar/portkey'
+
+"
+" Language Interfaces
+"
 
 " Clojure
 NeoBundle 'guns/vim-sexp'
