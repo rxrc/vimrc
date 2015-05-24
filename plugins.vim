@@ -17,6 +17,7 @@ NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'tomasr/molokai'
 
 " Interface customization.
+NeoBundle 'tpope/vim-dispatch'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'vim-scripts/bufkill.vim'
@@ -43,6 +44,7 @@ NeoBundle 'xolox/vim-session'
 NeoBundle 'guns/vim-sexp'
 NeoBundle 'tpope/vim-sexp-mappings-for-regular-people'
 NeoBundle 'tpope/vim-fireplace'
+NeoBundle 'tpope/vim-leiningen'
 NeoBundle 'guns/vim-clojure-highlight'
 NeoBundle 'kien/rainbow_parentheses.vim'
 
