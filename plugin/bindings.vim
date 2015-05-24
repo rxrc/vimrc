@@ -9,3 +9,11 @@ nnoremap <silent> <C-I> :<C-U>nohlsearch<CR>
 
 " Toggle highlighting.
 nnoremap <silent> <leader>h :<C-U>set hlsearch!<CR>
+
+" Copy to system clipboard.
+nnoremap <leader>c "+y
+nnoremap <leader>cc "+yy
+
+" Paste from system clipboard.
+nnoremap <leader>p "+p
+nnoremap <leader>P "+P
