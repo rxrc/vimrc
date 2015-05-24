@@ -37,8 +37,10 @@ NeoBundle 'edkolev/tmuxline.vim'
 NeoBundle 'xolox/vim-misc'
 NeoBundle 'xolox/vim-session'
 
-" Languages and frameworks.
+" CoffeeScript
 NeoBundle 'kchmck/vim-coffee-script'
+
+" Ember
 NeoBundle 'dsawardekar/ember.vim'
 NeoBundle 'heartsentwined/vim-ember-script'
 NeoBundle 'heartsentwined/vim-emblem'
