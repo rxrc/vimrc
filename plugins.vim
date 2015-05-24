@@ -41,6 +41,7 @@ NeoBundle 'ervandew/supertab'
 
 " Macros
 NeoBundle 'tpope/vim-surround'
+NeoBundle 'tpope/vim-commentary'
 
 "
 " Internal Interfaces
