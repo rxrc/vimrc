@@ -10,6 +10,9 @@ let g:airline_powerline_fonts = 1
 " Set promptline.vim theme.
 let g:promptline_theme = 'airline'
 
+" Enable rainbow.
+let g:rainbow_active = 1
+
 " Set colorscheme.
 if has('gui_running')
   let g:airline#extensions#tmuxline#enabled = 0
