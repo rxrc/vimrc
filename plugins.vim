@@ -15,6 +15,7 @@ NeoBundle 'tpope/vim-fugitive'
 " Themes and colors.
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'tomasr/molokai'
+NeoBundle 'luochen1990/rainbow'
 
 " Interface customization.
 NeoBundle 'tpope/vim-dispatch'
@@ -46,7 +47,6 @@ NeoBundle 'tpope/vim-sexp-mappings-for-regular-people'
 NeoBundle 'tpope/vim-fireplace'
 NeoBundle 'tpope/vim-leiningen'
 NeoBundle 'guns/vim-clojure-highlight'
-NeoBundle 'kien/rainbow_parentheses.vim'
 
 " CoffeeScript
 NeoBundle 'kchmck/vim-coffee-script'
