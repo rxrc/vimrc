@@ -15,7 +15,10 @@ NeoBundle 'tpope/vim-fugitive'
 " Themes and colors.
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'tomasr/molokai'
+
+" Rainbow parentheses
 NeoBundle 'luochen1990/rainbow'
+let g:rainbow_active = 1 " must be set here
 
 " Interface customization.
 NeoBundle 'tpope/vim-dispatch'
