@@ -8,3 +8,4 @@ nnoremap <leader>f :<C-U>Unite -no-split -buffer-name=files
   \ -start-insert file_rec/async:!<CR>
 nnoremap <leader>y :<C-U>Unite -no-split -buffer-name=yank
   \ history/yank<CR>
+nnoremap <leader>a :<C-U>Unite grep:.<CR>
