@@ -61,3 +61,6 @@ NeoBundle 'heartsentwined/vim-emblem'
 
 " Go
 NeoBundle 'fatih/vim-go'
+
+" Haskell
+NeoBundle 'bitc/vim-hdevtools'
