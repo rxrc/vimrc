@@ -44,3 +44,6 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'dsawardekar/ember.vim'
 NeoBundle 'heartsentwined/vim-ember-script'
 NeoBundle 'heartsentwined/vim-emblem'
+
+" Go
+NeoBundle 'fatih/vim-go'
