@@ -43,7 +43,6 @@ NeoBundle 'xolox/vim-session'
 NeoBundle 'guns/vim-sexp'
 NeoBundle 'tpope/vim-sexp-mappings-for-regular-people'
 NeoBundle 'tpope/vim-fireplace'
-NeoBundle 'guns/vim-clojure-static'
 NeoBundle 'guns/vim-clojure-highlight'
 NeoBundle 'kien/rainbow_parentheses.vim'
 
