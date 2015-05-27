@@ -6,7 +6,7 @@ nnoremap <silent> ,v :<C-U>vsplit<CR>
 nnoremap <silent> <C-S> :<C-U>write<CR>
 
 " Shortcut for update.
-nnoremap <silent> <leader>w <C-U>update<CR>
+nnoremap <silent> <leader>w :<C-U>update<CR>
 
 " Close the buffer but not the window.
 nnoremap <silent> <C-W> :<C-U>BD<CR>
