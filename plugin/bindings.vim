@@ -2,8 +2,11 @@
 nnoremap <silent> ,s :<C-U>split<CR>
 nnoremap <silent> ,v :<C-U>vsplit<CR>
 
-" Bind Ctrl-S to update.
-nnoremap <silent> <C-S> :<C-U>update<CR>
+" Bind Ctrl-S to write.
+nnoremap <silent> <C-S> :<C-U>write<CR>
+
+" Shortcut for update.
+nnoremap <silent> <leader>w <C-U>update<CR>
 
 " Close the buffer but not the window.
 nnoremap <silent> <C-W> :<C-U>BD<CR>
