@@ -88,6 +88,7 @@ NeoBundle 'dsawardekar/portkey'
 " Clojure
 NeoBundle 'guns/vim-sexp'
 NeoBundle 'tpope/vim-sexp-mappings-for-regular-people'
+NeoBundle 'venantius/vim-eastwood'
 NeoBundle 'tpope/vim-fireplace'
 NeoBundle 'tpope/vim-leiningen'
 NeoBundle 'guns/vim-clojure-highlight'
