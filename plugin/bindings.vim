@@ -1,4 +1,4 @@
-" Double-tap leader to open Command-line mode.
+" Double-tap leader to open command-line mode.
 nnoremap <leader><leader> :
 
 " Use : to open command-line window.
