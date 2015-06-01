@@ -45,6 +45,7 @@ NeoBundle 'ervandew/supertab'
 " Macros
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-commentary'
+let g:commentary_map_backslash = 0 " disable \\ commentary maps
 
 "
 " Internal Interfaces
