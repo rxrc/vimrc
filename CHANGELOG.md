@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+- Replace gulp-shell with node exec.
+
 ## 1.2.0
 
 **Rerunning the install script is recommended.**

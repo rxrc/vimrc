@@ -1,17 +1,34 @@
 'use strict'
 
 gulp = require('gulp')
-path = require('path')
 homePath = require('home-path')()
+path = require('path')
+exec = require('child_process').exec
 $ = require('gulp-load-plugins')()
 
-remotePluginPath = 'rxrc/vimrc'
-vimCmd = (cmd) ->
-  "vim -N -u #{homePath}/.vimrc -c \"try | #{cmd} $* | finally | qall | endtry\" -U NONE -i NONE -V1 -e -s"
+runCommands = (commands) ->
+  exec commands.join('; '),
+    (err, stdout, stderr) ->
+      process.stdout.write stdout
+      process.stdout.write stderr
 
-pluginInstall = () -> $.shell(vimCmd 'NeoBundleUpdate')
-pluginUpdate = () -> $.shell(vimCmd 'NeoBundleInstall')
-pluginClean = () -> $.shell(vimCmd 'NeoBundleClean!')
+remotePluginPath = 'rxrc/vimrc'
+
+vimCommand = (command) -> [
+  'vim'
+  '-N'
+  "-u #{homePath}/.vimrc"
+  "-c \"try | #{command} $* | finally | qall | endtry\""
+  '-U NONE'
+  '-i NONE'
+  '-V1'
+  '-e'
+  '-s'
+].join(' ')
+
+pluginInstall = vimCommand 'NeoBundleUpdate'
+pluginUpdate  = vimCommand 'NeoBundleInstall'
+pluginClean   = vimCommand 'NeoBundleClean!'
 
 gulp.task 'default', ['dev']
 
@@ -22,11 +39,7 @@ gulp.task 'dev', ->
   .pipe $.replace('$HOME/.vim/bundle/vimrc/plugins.vim', "#{path.resolve()}/plugins.vim")
   .pipe gulp.dest(homePath)
 
-  gulp.src('')
-  .pipe pluginClean()
-  .pipe pluginUpdate()
-  .pipe pluginInstall()
-  .pipe pluginClean()
+  runCommands [pluginClean, pluginUpdate, pluginInstall, pluginClean]
 
 gulp.task 'nodev', ->
   gulp.src("#{homePath}/.vimrc")
@@ -35,6 +48,4 @@ gulp.task 'nodev', ->
   .pipe $.replace("#{path.resolve()}/plugins.vim", '$HOME/.vim/bundle/vimrc/plugins.vim')
   .pipe gulp.dest(homePath)
 
-  gulp.src('')
-  .pipe pluginClean()
-  .pipe pluginInstall()
+  runCommands [pluginClean, pluginInstall]
