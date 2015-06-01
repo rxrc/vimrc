@@ -5,8 +5,8 @@ map <leader><leader> za
 nnoremap <silent> <leader>s :<C-U>split<CR>
 nnoremap <silent> <leader>v :<C-U>vsplit<CR>
 
-" Bind Ctrl-S to write.
-nnoremap <silent> <C-S> :<C-U>write<CR>
+" Double-tap backslash to write.
+nnoremap <silent> \\ :<C-U>write<CR>
 
 " Shortcut for update.
 nnoremap <silent> <leader>w :<C-U>update<CR>
