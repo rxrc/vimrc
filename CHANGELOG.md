@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 1.2.1
 
 - Replace gulp-shell with node exec.
 
