@@ -1,3 +1,6 @@
+" Map space to leader.
+map <space> <leader>
+
 " Shortcuts to open splits.
 nnoremap <silent> ,s :<C-U>split<CR>
 nnoremap <silent> ,v :<C-U>vsplit<CR>
