@@ -2,7 +2,7 @@
 nnoremap <leader><leader> :
 
 " Use : to open command-line window.
-nnorema : q:
+nnoremap : q:
 
 " Use Q to toggle folds.
 nmap Q za
