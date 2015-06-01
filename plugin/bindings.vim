@@ -1,5 +1,11 @@
-" Double-tap leader to toggle folds.
-map <leader><leader> za
+" Double-tap leader to open Command-line mode.
+nnoremap <leader><leader> :
+
+" Use : to open command-line window.
+nnorema : q:
+
+" Use Q to toggle folds.
+nmap Q za
 
 " Shortcuts to open splits.
 nnoremap <silent> <leader>s :<C-U>split<CR>
