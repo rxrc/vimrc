@@ -27,9 +27,9 @@ nnoremap <silent> <C-I> :<C-U>nohlsearch<CR>
 nnoremap <silent> <leader>h :<C-U>set hlsearch!<CR>
 
 " Copy to system clipboard.
-map <leader>c "+y
-map <leader>cc "+yy
-map <silent> <leader>ca :<C-U>%y+<CR>
+nmap <leader>c "+y
+nmap <leader>cc "+yy
+nmap <silent> <leader>ca :<C-U>%y+<CR>
 
 " Paste from system clipboard.
 nnoremap <leader>p "+p
