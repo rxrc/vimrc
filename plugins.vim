@@ -2,6 +2,9 @@
 " Global Configuration
 "
 
+" Map space to leader.
+let mapleader = "\<Space>"
+
 " Libraries
 NeoBundle 'xolox/vim-misc' " for xolox/vim-session
 NeoBundle 'tpope/vim-repeat'

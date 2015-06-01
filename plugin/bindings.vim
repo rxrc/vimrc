@@ -1,8 +1,5 @@
-" Map space to leader.
-map <space> <leader>
-
-" Double-tap space to toggle folds.
-map <space><space> za
+" Double-tap leader to toggle folds.
+map <leader><leader> za
 
 " Shortcuts to open splits.
 nnoremap <silent> <leader>s :<C-U>split<CR>
