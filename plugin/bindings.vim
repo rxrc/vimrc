@@ -23,10 +23,7 @@ nnoremap <silent> <leader>s :<C-U>update<CR>
 nnoremap <silent> <leader>w :<C-U>BD<CR>
 
 " Clear highlighting until next search.
-nnoremap <silent> <C-I> :<C-U>nohlsearch<CR>
-
-" Toggle highlighting.
-nnoremap <silent> <leader>i :<C-U>set hlsearch!<CR>
+nnoremap <silent> <leader>i :<C-U>nohlsearch<CR>
 
 " Copy to system clipboard.
 nmap <leader>c "+y
