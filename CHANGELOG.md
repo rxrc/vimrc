@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+- Minor gulpfile optimizations.
+
 ## 1.2.1
 
 - Replace gulp-shell with node exec.
