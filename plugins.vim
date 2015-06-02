@@ -69,7 +69,7 @@ NeoBundle 'shougo/unite.vim'
 "
 
 " File
-NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'shougo/vimfiler.vim'
 
 " Shell
 NeoBundle 'tpope/vim-dispatch'

@@ -34,5 +34,5 @@ let g:session_autoload = 'no'
 let g:session_autosave = 'yes'
 let g:session_autosave_periodic = 5
 
-" Set NERDTree preferences.
-let g:NERDTreeChDirMode = 2
+" Set vimfiler preferences.
+let g:vimfiler_as_default_explorer = 1
