@@ -30,6 +30,7 @@ NeoBundle 'tomasr/molokai'
 
 " Syntax
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'chrisbra/colorizer'
 
 " Whitespace
 NeoBundle 'vim-scripts/showtrailingwhitespace'
