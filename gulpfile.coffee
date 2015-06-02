@@ -30,22 +30,34 @@ pluginInstall = vimCommand 'NeoBundleUpdate'
 pluginUpdate  = vimCommand 'NeoBundleInstall'
 pluginClean   = vimCommand 'NeoBundleClean!'
 
+devStrings = [
+  "NeoBundle '#{path.resolve()}'"
+  "'' . '#{path.resolve()}/plugins.vim'"
+  "#{path.resolve()}/plugins.vim"
+]
+
+noDevStrings = [
+  "NeoBundle '#{remotePluginPath}'"
+  "$HOME . '/.vim/bundle/vimrc/plugins.vim'"
+  '$HOME/.vim/bundle/vimrc/plugins.vim'
+]
+
 gulp.task 'default', ['dev']
 
 gulp.task 'dev', ->
   gulp.src("#{homePath}/.vimrc")
-  .pipe $.replace("NeoBundle '#{remotePluginPath}'", "NeoBundle '#{path.resolve()}'")
-  .pipe $.replace("$HOME . '/.vim/bundle/vimrc/plugins.vim'", "'' . '#{path.resolve()}/plugins.vim'")
-  .pipe $.replace('$HOME/.vim/bundle/vimrc/plugins.vim', "#{path.resolve()}/plugins.vim")
+  .pipe $.replace(noDevStrings[0], devStrings[0])
+  .pipe $.replace(noDevStrings[1], devStrings[1])
+  .pipe $.replace(noDevStrings[2], devStrings[2])
   .pipe gulp.dest(homePath)
 
   runCommands [pluginClean, pluginUpdate, pluginInstall, pluginClean]
 
 gulp.task 'nodev', ->
   gulp.src("#{homePath}/.vimrc")
-  .pipe $.replace("NeoBundle '#{path.resolve()}'", "NeoBundle '#{remotePluginPath}'")
-  .pipe $.replace("'' . '#{path.resolve()}/plugins.vim'", "$HOME . '/.vim/bundle/vimrc/plugins.vim'")
-  .pipe $.replace("#{path.resolve()}/plugins.vim", '$HOME/.vim/bundle/vimrc/plugins.vim')
+  .pipe $.replace(devStrings[0], noDevStrings[0])
+  .pipe $.replace(devStrings[1], noDevStrings[1])
+  .pipe $.replace(devStrings[2], noDevStrings[2])
   .pipe gulp.dest(homePath)
 
   runCommands [pluginClean, pluginInstall]
