@@ -102,6 +102,32 @@ $ vim -c NeoBundleInstall -c quitall
 $ vim -c NeoBundleClean! -c quitall
 ```
 
+Here is an example of a Zsh function that will provide a one-step update:
+
+```zsh
+# Upgrade vimrc.
+function vimupg () {
+  if ! [[ -d $HOME/.vim/bundle/neobundle.vim ]]; then
+    echo 'NeoBundle is not installed.'
+    return 1
+  fi
+
+  vimrc=$HOME/.vimrc
+
+  vim -N -u $vimrc -c \
+    "try | NeoBundleUpdate $* | finally | qall! | endtry" \
+    -U NONE -i NONE -V1 -e -s
+
+  vim -N -u $vimrc -c \
+    "try | NeoBundleInstall $* | finally | qall! | endtry" \
+    -U NONE -i NONE -V1 -e -s
+
+  vim -N -u $vimrc -c \
+    "try | NeoBundleClean! $* | finally | qall! | endtry" \
+    -U NONE -i NONE -V1 -e -s
+}
+```
+
 ## Customization
 
 You can customize this configuration or manage your own in the same way.
