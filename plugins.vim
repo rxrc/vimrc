@@ -6,46 +6,46 @@
 let mapleader = "\<Space>"
 
 " Libraries
-NeoBundle 'xolox/vim-misc' " for xolox/vim-session
-NeoBundle 'tpope/vim-repeat'
+Plug 'xolox/vim-misc' " for xolox/vim-session
+Plug 'tpope/vim-repeat'
 
 " Sensible Defaults
-NeoBundle 'tpope/vim-sensible'
+Plug 'tpope/vim-sensible'
 
 " EditorConfig
-NeoBundle 'editorconfig/editorconfig-vim'
+Plug 'editorconfig/editorconfig-vim'
 
 " Prompt and Statusline
-NeoBundle 'bling/vim-airline'
-NeoBundle 'edkolev/promptline.vim'
-NeoBundle 'edkolev/tmuxline.vim'
+Plug 'bling/vim-airline'
+Plug 'edkolev/promptline.vim'
+Plug 'edkolev/tmuxline.vim'
 
 "
 " Editor
 "
 
 " Themes and Colors
-NeoBundle 'altercation/vim-colors-solarized'
-NeoBundle 'tomasr/molokai'
+Plug 'altercation/vim-colors-solarized'
+Plug 'tomasr/molokai'
 
 " Syntax
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'chrisbra/colorizer'
+Plug 'scrooloose/syntastic'
+Plug 'chrisbra/colorizer'
 
 " Whitespace
-NeoBundle 'vim-scripts/showtrailingwhitespace'
-NeoBundle 'vim-scripts/deletetrailingwhitespace'
+Plug 'vim-scripts/showtrailingwhitespace'
+Plug 'vim-scripts/deletetrailingwhitespace'
 
 " Parentheses
-NeoBundle 'luochen1990/rainbow'
+Plug 'luochen1990/rainbow'
 let g:rainbow_active = 1 " must be set here
 
 " Tab
-NeoBundle 'ervandew/supertab'
+Plug 'ervandew/supertab'
 
 " Macros
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
 let g:commentary_map_backslash = 0 " disable \\ commentary maps
 
 "
@@ -53,62 +53,62 @@ let g:commentary_map_backslash = 0 " disable \\ commentary maps
 "
 
 " Buffer
-NeoBundle 'vim-scripts/bufkill.vim'
+Plug 'vim-scripts/bufkill.vim'
 
 " Session
-NeoBundle 'xolox/vim-session'
+Plug 'xolox/vim-session'
 
 " Unicode
-NeoBundle 'chrisbra/unicode.vim'
+Plug 'chrisbra/unicode.vim'
 
 " Unite.vim
 let g:unite_source_history_yank_enable = 1 " must be set here
-NeoBundle 'shougo/unite.vim'
+Plug 'shougo/unite.vim'
 
 "
 " External Interfaces
 "
 
 " File
-NeoBundle 'shougo/vimfiler.vim'
+Plug 'shougo/vimfiler.vim'
 
 " Shell
-NeoBundle 'tpope/vim-dispatch'
+Plug 'tpope/vim-dispatch'
 
 " Git
-NeoBundle 'vim-scripts/gitignore'
-NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'tpope/vim-fugitive'
+Plug 'vim-scripts/gitignore'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
 
 " tmux
-NeoBundle 'christoomey/vim-tmux-navigator'
+Plug 'christoomey/vim-tmux-navigator'
 
 " Portkey
-NeoBundle 'dsawardekar/portkey'
+Plug 'dsawardekar/portkey'
 
 "
 " Language Interfaces
 "
 
 " Clojure
-NeoBundle 'guns/vim-sexp'
-NeoBundle 'tpope/vim-sexp-mappings-for-regular-people'
-NeoBundle 'venantius/vim-cljfmt'
-NeoBundle 'venantius/vim-eastwood'
-NeoBundle 'tpope/vim-fireplace'
-NeoBundle 'tpope/vim-leiningen'
-NeoBundle 'guns/vim-clojure-highlight'
+Plug 'guns/vim-sexp'
+Plug 'tpope/vim-sexp-mappings-for-regular-people'
+Plug 'venantius/vim-cljfmt'
+Plug 'venantius/vim-eastwood'
+Plug 'tpope/vim-fireplace'
+Plug 'tpope/vim-leiningen'
+Plug 'guns/vim-clojure-highlight'
 
 " CoffeeScript
-NeoBundle 'kchmck/vim-coffee-script'
+Plug 'kchmck/vim-coffee-script'
 
 " Ember
-NeoBundle 'dsawardekar/ember.vim'
-NeoBundle 'heartsentwined/vim-ember-script'
-NeoBundle 'heartsentwined/vim-emblem'
+Plug 'dsawardekar/ember.vim'
+Plug 'heartsentwined/vim-ember-script'
+Plug 'heartsentwined/vim-emblem'
 
 " Go
-NeoBundle 'fatih/vim-go'
+Plug 'fatih/vim-go'
 
 " Haskell
-NeoBundle 'bitc/vim-hdevtools'
+Plug 'bitc/vim-hdevtools'

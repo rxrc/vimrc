@@ -26,20 +26,20 @@ vimCommand = (command) -> [
   '-s'
 ].join(' ')
 
-pluginInstall = vimCommand 'NeoBundleUpdate'
-pluginUpdate  = vimCommand 'NeoBundleInstall'
-pluginClean   = vimCommand 'NeoBundleClean!'
+pluginInstall = vimCommand 'PlugUpdate'
+pluginUpdate  = vimCommand 'PlugInstall'
+pluginClean   = vimCommand 'PlugClean!'
 
 devStrings = [
-  "NeoBundle '#{path.resolve()}'"
+  "Plug '#{path.resolve()}'"
   "'' . '#{path.resolve()}/plugins.vim'"
   "#{path.resolve()}/plugins.vim"
 ]
 
 noDevStrings = [
-  "NeoBundle '#{remotePluginPath}'"
-  "$HOME . '/.vim/bundle/vimrc/plugins.vim'"
-  '$HOME/.vim/bundle/vimrc/plugins.vim'
+  "Plug '#{remotePluginPath}'"
+  "$HOME . '/.vim/plugged/vimrc/plugins.vim'"
+  '$HOME/.vim/plugged/vimrc/plugins.vim'
 ]
 
 gulp.task 'default', ['dev']

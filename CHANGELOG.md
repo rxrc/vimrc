@@ -1,5 +1,14 @@
 # Changelog
 
+## HEAD
+
+- Replace [NeoBundle] with [vim-plug].
+  * Remove and reinstall `~/.vim` before updating.
+  * Update any NeoBundle style directives with Plug ones.
+
+[NeoBundle]: https://github.com/Shougo/neobundle.vim
+[vim-plug]: https://github.com/junegunn/vim-plugvim-plug
+
 ## 1.2.2
 
 - Minor gulpfile optimizations.
