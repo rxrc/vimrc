@@ -67,6 +67,8 @@ $ wget https://git.io/vJAzK -O - | sh
     Plug 'rxrc/vimrc', { 'on': 'false' }
     PlugInstall
   endif
+
+  call plug#end()
   ```
 
 3. Run
