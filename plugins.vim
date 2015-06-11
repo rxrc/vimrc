@@ -6,6 +6,7 @@
 let mapleader = "\<Space>"
 
 " Libraries
+Plug 'shougo/vimproc.vim', { 'do': 'make' }
 Plug 'xolox/vim-misc' " for xolox/vim-session
 Plug 'tpope/vim-repeat'
 
