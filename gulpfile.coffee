@@ -16,14 +16,10 @@ remotePluginPath = 'rxrc/vimrc'
 
 vimCommand = (command) -> [
   'vim'
-  '-N'
   "-u #{homePath}/.vimrc"
-  "-c \"try | #{command} $* | finally | qall | endtry\""
-  '-U NONE'
-  '-i NONE'
-  '-V1'
-  '-e'
-  '-s'
+  "-c #{command}"
+  "-c qall"
+  "&>/dev/null"
 ].join(' ')
 
 pluginInstall = vimCommand 'PlugUpdate'

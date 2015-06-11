@@ -78,13 +78,8 @@ echo -e "\033[32m    ✔ Installed   ❰ ~/.vimrc ❱   \033[0m"
 
 echo -e "  ➤ Run           ❰ PlugInstall ❱   \033[0m"
 
-vim -N -u $HOME/.vimrc -c \
-  "try | PlugInstall $* | finally | qall! | endtry" \
-  -U NONE -i NONE -V1 -e -s
-
-vim -N -u $HOME/.vimrc -c \
-  "try | PlugInstall $* | finally | qall! | endtry" \
-  -U NONE -i NONE -V1 -e -s
+vim -c silent !echo PlugInstall -c qall! &>/dev/null
+vim -c silent !echo PlugInstall -c qall! &>/dev/null
 
 echo -e "\033[32m    ✔ Completed   ❰ PlugInstall ❱   \033[0m"
 

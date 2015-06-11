@@ -81,21 +81,10 @@ function vimupg () {
 
   vimrc=$HOME/.vimrc
 
-  vim -N -u $vimrc -c \
-    "try | PlugUpgrade $* | finally | qall! | endtry" \
-    -U NONE -i NONE -V1 -e -s
-
-  vim -N -u $vimrc -c \
-    "try | PlugUpdate $* | finally | qall! | endtry" \
-    -U NONE -i NONE -V1 -e -s
-
-  vim -N -u $vimrc -c \
-    "try | PlugInstall $* | finally | qall! | endtry" \
-    -U NONE -i NONE -V1 -e -s
-
-  vim -N -u $vimrc -c \
-    "try | PlugClean! $* | finally | qall! | endtry" \
-    -U NONE -i NONE -V1 -e -s
+  vim -u $vimrc -c PlugUpgrade -c qall
+  vim -u $vimrc -c PlugUpdate -c qall
+  vim -u $vimrc -c PlugInstall -c qall
+  vim -u $vimrc -c PlugClean! -c qall
 }
 ```
 
