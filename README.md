@@ -42,11 +42,14 @@ $ wget https://git.io/vJAzK -O - | sh
 1. Install [vim-plug].
 2. Create `~/.vimrc` with
 
-   ```vim
+  ```vim
   " rxrc/vimrc
 
   " Disable powerline by default.
   let g:powerline_loaded = 1
+
+  " Disable session autosave prompt.
+  let g:session_autosave = 'no'
 
   " Skip initialization for vim-tiny or vim-small.
   if !1 | finish | endif
@@ -55,15 +58,23 @@ $ wget https://git.io/vJAzK -O - | sh
 
   if filereadable($HOME . '/.vim/plugged/vimrc/plugins.vim')
     source $HOME/.vim/plugged/vimrc/plugins.vim
+    if $VIMRC_INSTALL == 'true'
+      PlugInstall
+    else
+      Plug 'rxrc/vimrc'
+    endif
+  else
+    Plug 'rxrc/vimrc', { 'on': 'false' }
+    PlugInstall
   endif
-
-  Plug 'rxrc/vimrc'
-
-  call plug#end()
   ```
 
-3. Run `PlugInstall` in vim **twice** to install: first to update this plugin,
-   then again to correctly update any new plugins specified in `plugsin.vim`.
+3. Run
+
+  ```bash
+  $ vim -c qall!
+  $ VIMRC_INSTALL=true vim -c qall!
+  ```
 
 ## Updating
 

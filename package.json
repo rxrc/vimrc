@@ -19,10 +19,10 @@
   "homepage": "https://github.com/rxrc/vimrc",
   "devDependencies": {
     "coffee-script": "^1.9.0",
-    "execSync": "^1.0.2",
     "gulp": "^3.8.11",
     "gulp-load-plugins": "^0.8.0",
     "gulp-replace": "^0.5.2",
+    "gulp-shell": "^0.4.2",
     "home-path": "^0.1.1"
   }
 }

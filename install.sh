@@ -60,6 +60,9 @@ tee $HOME/.vimrc >/dev/null <<EOF
 " Disable powerline by default.
 let g:powerline_loaded = 1
 
+" Disable session autosave prompt.
+let g:session_autosave = 'no'
+
 " Skip initialization for vim-tiny or vim-small.
 if !1 | finish | endif
 
@@ -67,9 +70,15 @@ call plug#begin(\$HOME . '/.vim/plugged')
 
 if filereadable(\$HOME . '/.vim/plugged/vimrc/plugins.vim')
   source \$HOME/.vim/plugged/vimrc/plugins.vim
+  if \$VIMRC_INSTALL == 'true'
+    PlugInstall
+  else
+    Plug 'rxrc/vimrc'
+  endif
+else
+  Plug 'rxrc/vimrc', { 'on': 'false' }
+  PlugInstall
 endif
-
-Plug 'rxrc/vimrc'
 
 call plug#end()
 EOF
@@ -78,8 +87,8 @@ echo -e "\033[32m    ✔ Installed   ❰ ~/.vimrc ❱   \033[0m"
 
 echo -e "  ➤ Run           ❰ PlugInstall ❱   \033[0m"
 
-vim -c silent !echo PlugInstall -c qall! &>/dev/null
-vim -c silent !echo PlugInstall -c qall! &>/dev/null
+vim -c silent -c qall! &>/dev/null
+VIMRC_INSTALL=true vim -c silent -c qall! &>/dev/null
 
 echo -e "\033[32m    ✔ Completed   ❰ PlugInstall ❱   \033[0m"
 
