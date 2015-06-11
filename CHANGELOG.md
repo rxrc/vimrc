@@ -21,7 +21,12 @@
 
 ## 1.0.0
 
-- Replace Vundle with NeoBundle.
+- Replace [Vundle] with [NeoBundle].
+  * Remove and reinstall `~/.vim` before updating.
+  * Update any Vundle style directives with NeoBundle ones.
+
+[NeoBundle]: https://github.com/Shougo/neobundle.vim
+[Vundle]: https://github.com/gmarik/Vundle.vim
 
 ## 0.1.0
 
