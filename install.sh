@@ -87,11 +87,9 @@ echo -e "\033[32m    ✔ Installed   ❰ ~/.vimrc ❱   \033[0m"
 
 echo -e "  ➤ Run           ❰ PlugInstall ❱   \033[0m"
 
-vim -c silent -c qall! &>/dev/null
-VIMRC_INSTALL=true vim -c silent -c qall! &>/dev/null
-
-echo -e "\033[32m    ✔ Completed   ❰ PlugInstall ❱   \033[0m"
-
-echo -e "\033[32m✔ Install complete!   \033[0m"
-
-exit 0
+echo | vim -c qall!; \
+  (export VIMRC_INSTALL=true && echo | vim -c qall!); \
+  echo; \
+  echo -e "\033[32m    ✔ Completed   ❰ PlugInstall ❱   \033[0m"; \
+  echo -e "\033[32m✔ Install complete!   \033[0m"; \
+  exit 0
