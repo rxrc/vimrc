@@ -26,9 +26,9 @@ nnoremap <silent> <leader>w :<C-U>BD<CR>
 nnoremap <silent> <leader>i :<C-U>nohlsearch<CR>
 
 " Copy to system clipboard.
-nmap <leader>c "+y
-nmap <leader>cc "+yy
-nmap <silent> <leader>ca :<C-U>%y+<CR>
+nnoremap <leader>c "+y
+nnoremap <leader>cc "+yy
+nnoremap <silent> <leader>ca :<C-U>%y+<CR>
 
 " Paste from system clipboard.
 nnoremap <leader>p "+p
