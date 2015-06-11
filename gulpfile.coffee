@@ -33,9 +33,7 @@ gulp.task 'dev', ->
   .pipe $.replace(noDevStrings[2], devStrings[2])
   .pipe gulp.dest(homePath)
   .pipe $.shell([
-    pluginInstall
-    pluginClean
-    pluginUpdate
+    [pluginInstall, pluginClean, pluginUpdate].join('; ')
   ])
 
 gulp.task 'nodev', ->
@@ -44,9 +42,6 @@ gulp.task 'nodev', ->
   .pipe $.replace(devStrings[1], noDevStrings[1])
   .pipe $.replace(devStrings[2], noDevStrings[2])
   .pipe gulp.dest(homePath)
-  .pipe $.shell([pluginInit])
   .pipe $.shell([
-    pluginInstall
-    pluginClean
-    pluginUpdate
+    [pluginInit, pluginInstall, pluginInit, pluginClean, pluginUpdate].join('; ')
   ])
