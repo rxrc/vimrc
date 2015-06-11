@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 2.0.1
 
 - Fix issue where install script would fail
   when piped to shell.
