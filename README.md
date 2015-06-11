@@ -8,10 +8,10 @@ My complete Vim configuration as a Vim plugin.
 ## Description
 
 This configuration system works as a meta-plugin:
-all desired Vim plugins are loaded from `plugins.vim` using [NeoBundle].
+all desired Vim plugins are loaded from `plugins.vim` using [vim-plug].
 Overall configuration then follows a normal plugin structure.
 
-[NeoBundle]: https://github.com/Shougo/neobundle.vim
+[vim-plug]: https://github.com/junegunn/vim-plugvim-plug
 
 ## Installation
 
@@ -31,94 +31,67 @@ $ wget https://git.io/vJAzK -O - | sh
 
 ### Manual Install
 
-1. Install [NeoBundle].
+1. Install [vim-plug].
 2. Create `~/.vimrc` with
 
-```vim
-" rxrc/vimrc
+   ```vim
+  " rxrc/vimrc
 
-" Disable powerline by default.
-let g:powerline_loaded = 1
+  " Disable powerline by default.
+  let g:powerline_loaded = 1
 
-" Skip initialization for vim-tiny or vim-small.
-if !1 | finish | endif
+  " Skip initialization for vim-tiny or vim-small.
+  if !1 | finish | endif
 
-if has('vim_starting')
- if &compatible
-   set nocompatible
- endif
+  call plug#begin($HOME . '/.vim/plugged')
 
- set runtimepath+=$HOME/.vim/bundle/neobundle.vim/
-endif
+  if filereadable($HOME . '/.vim/plugged/vimrc/plugins.vim')
+    source $HOME/.vim/plugged/vimrc/plugins.vim
+  endif
 
-call neobundle#begin($HOME . '/.vim/bundle/')
+  Plug 'rxrc/vimrc'
 
-NeoBundleFetch 'shougo/neobundle.vim'
+  call plug#end()
+  ```
 
-NeoBundle 'shougo/vimproc.vim', {
-\ 'build' : {
-\     'windows' : 'tools\\update-dll-mingw',
-\     'cygwin' : 'make -f make_cygwin.mak',
-\     'mac' : 'make -f make_mac.mak',
-\     'linux' : 'make',
-\     'unix' : 'gmake',
-\   },
-\ }
-
-if filereadable($HOME . '/.vim/bundle/vimrc/plugins.vim')
-  source $HOME/.vim/bundle/vimrc/plugins.vim
-endif
-
-NeoBundle 'rxrc/vimrc'
-
-call neobundle#end()
-```
-
-and run this to install
-
-```bash
-$ ~/.vim/bundle/neobundle.vim/bin/neoinstall
-$ ~/.vim/bundle/neobundle.vim/bin/neoinstall
-```
-
-Note that `neoinstall` must be run twice: first to update this plugin,
-then again to correctly update any new plugins specified in `plugsin.vim`.
+3. Run `PlugInstall` in vim **twice** to install: first to update this plugin,
+   then again to correctly update any new plugins specified in `plugsin.vim`.
 
 ## Updating
 
-Updating is handled via the normal [NeoBundle] update command
-
-```bash
-$ vim -c NeoBundleUpdate -c quitall
-$ vim -c NeoBundleInstall -c quitall
-$ vim -c NeoBundleClean! -c quitall
-```
+Updating is handled via the normal [vim-plug commands].
 
 Here is an example of a Zsh function that will provide a one-step update:
 
 ```zsh
 # Upgrade vimrc.
 function vimupg () {
-  if ! [[ -d $HOME/.vim/bundle/neobundle.vim ]]; then
-    echo 'NeoBundle is not installed.'
+  if ! [[ -e $HOME/.vim/autoload/plug.vim ]]; then
+    echo 'vim-plug is not installed.'
     return 1
   fi
 
   vimrc=$HOME/.vimrc
 
   vim -N -u $vimrc -c \
-    "try | NeoBundleUpdate $* | finally | qall! | endtry" \
+    "try | PlugUpgrade $* | finally | qall! | endtry" \
     -U NONE -i NONE -V1 -e -s
 
   vim -N -u $vimrc -c \
-    "try | NeoBundleInstall $* | finally | qall! | endtry" \
+    "try | PlugUpdate $* | finally | qall! | endtry" \
     -U NONE -i NONE -V1 -e -s
 
   vim -N -u $vimrc -c \
-    "try | NeoBundleClean! $* | finally | qall! | endtry" \
+    "try | PlugInstall $* | finally | qall! | endtry" \
+    -U NONE -i NONE -V1 -e -s
+
+  vim -N -u $vimrc -c \
+    "try | PlugClean! $* | finally | qall! | endtry" \
     -U NONE -i NONE -V1 -e -s
 }
 ```
+
+[vim-plug commands]: https://github.com/junegunn/vim-plug#commands
 
 ## Customization
 
@@ -146,7 +119,7 @@ $ git ls-files -z | xargs -0 sed -i 's/rxrc\/vimrc/username\/vimrc/g'
 ## Development
 
 You can use [Gulp] to switch to development mode
-which will configure NeoBundle to use the development
+which will configure vim-plug to use the development
 directory as the plugin path.
 
 First, follow the normal install steps if you haven't already.
