@@ -28,15 +28,15 @@ else
   echo -e "\033[32m    ✔ Created     ❰ ~/.vim ❱   \033[0m"
 fi
 
-if [ -d $HOME/.vim/bundle/neobundle.vim ]; then
-  echo -e "\033[32m  ✔ Found         ❰ NeoBundle ❱   \033[0m"
+if [ -e $HOME/.vim/autoload/plug.vim ]; then
+  echo -e "\033[32m  ✔ Found         ❰ vim-plug ❱   \033[0m"
 else
-  echo -e "  ➤ Installing    ❰ NeoBundle ❱   \033[0m"
+  echo -e "  ➤ Installing    ❰ vim-plug ❱   \033[0m"
 
   command -v git >/dev/null 2>&1 && \
-    env git clone https://github.com/shougo/neobundle.vim $HOME/.vim/bundle/neobundle.vim >/dev/null 2>&1
+    env git clone https://github.com/junegunn/vim-plug $HOME/.vim/autoload >/dev/null 2>&1
 
-  echo -e "\033[32m    ✔ Installed   ❰ NeoBundle ❱   \033[0m"
+  echo -e "\033[32m    ✔ Installed   ❰ vim-plug ❱   \033[0m"
 fi
 
 if [ -f $HOME/.vimrc ] || [ -h $HOME/.vimrc ]; then
@@ -60,48 +60,37 @@ tee $HOME/.vimrc >/dev/null <<EOF
 " Disable powerline by default.
 let g:powerline_loaded = 1
 
+" Disable session autosave prompt.
+let g:session_autosave = 'no'
+
 " Skip initialization for vim-tiny or vim-small.
 if !1 | finish | endif
 
-if has('vim_starting')
- if &compatible
-   set nocompatible
- endif
+call plug#begin(\$HOME . '/.vim/plugged')
 
- set runtimepath+=\$HOME/.vim/bundle/neobundle.vim/
+if filereadable(\$HOME . '/.vim/plugged/vimrc/plugins.vim')
+  source \$HOME/.vim/plugged/vimrc/plugins.vim
+  if \$VIMRC_INSTALL == 'true'
+    PlugInstall
+  else
+    Plug 'rxrc/vimrc'
+  endif
+else
+  Plug 'rxrc/vimrc', { 'on': 'false' }
+  PlugInstall
 endif
 
-call neobundle#begin(\$HOME . '/.vim/bundle/')
-
-NeoBundleFetch 'shougo/neobundle.vim'
-
-NeoBundle 'shougo/vimproc.vim', {
-\ 'build' : {
-\     'windows' : 'tools\\\\update-dll-mingw',
-\     'cygwin' : 'make -f make_cygwin.mak',
-\     'mac' : 'make -f make_mac.mak',
-\     'linux' : 'make',
-\     'unix' : 'gmake',
-\   },
-\ }
-
-if filereadable(\$HOME . '/.vim/bundle/vimrc/plugins.vim')
-  source \$HOME/.vim/bundle/vimrc/plugins.vim
-endif
-
-NeoBundle 'rxrc/vimrc'
-
-call neobundle#end()
+call plug#end()
 EOF
 
 echo -e "\033[32m    ✔ Installed   ❰ ~/.vimrc ❱   \033[0m"
 
-echo -e "  ➤ Run           ❰ neoinstall ❱   \033[0m"
+echo -e "  ➤ Run           ❰ PlugInstall ❱   \033[0m"
 
-$HOME/.vim/bundle/neobundle.vim/bin/neoinstall >/dev/null 2>&1
-$HOME/.vim/bundle/neobundle.vim/bin/neoinstall >/dev/null 2>&1
+vim -c silent -c qall! &>/dev/null
+VIMRC_INSTALL=true vim -c silent -c qall! &>/dev/null
 
-echo -e "\033[32m    ✔ Completed   ❰ neoinstall ❱   \033[0m"
+echo -e "\033[32m    ✔ Completed   ❰ PlugInstall ❱   \033[0m"
 
 echo -e "\033[32m✔ Install complete!   \033[0m"
 
