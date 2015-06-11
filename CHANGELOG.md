@@ -1,5 +1,10 @@
 # Changelog
 
+## HEAD
+
+- Fix issue where install script would fail
+  when piped to shell.
+
 ## 2.0.0
 
 - Replace [NeoBundle] with [vim-plug].
