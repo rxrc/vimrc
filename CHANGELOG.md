@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 2.0.0
 
 - Replace [NeoBundle] with [vim-plug].
   * Remove and reinstall `~/.vim` before updating.
