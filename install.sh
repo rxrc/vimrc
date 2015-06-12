@@ -76,7 +76,7 @@ if filereadable(\$HOME . '/.vim/plugged/vimrc/plugins.vim')
     Plug 'rxrc/vimrc'
   endif
 else
-  Plug 'rxrc/vimrc', { 'on': 'false' }
+  Plug 'rxrc/vimrc', { 'on': [] }
   PlugInstall
 endif
 
