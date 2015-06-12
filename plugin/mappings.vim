@@ -2,6 +2,10 @@
 nnoremap <Leader><Leader> :
 vnoremap <Leader><Leader> :
 
+" Use Ctrl-K and Ctrl-J to navigate command history.
+cnoremap <C-K> <Up>
+cnoremap <C-J> <Down>
+
 " Use : to open command-line window.
 nnoremap : q:
 vnoremap : q:
