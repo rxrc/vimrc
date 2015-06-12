@@ -19,7 +19,7 @@ nnoremap <silent> <leader>Q :<C-U>quit!<CR>
 vnoremap <silent> <leader>Q :<C-U>quit!<CR>
 
 " Shortcut to force quit all.
-nnoremap <silent> <C-S-Q> :<C-U>quitall!<CR>
+nnoremap <silent> <C-Q> :<C-U>quitall!<CR>
 
 " Double-tap backslash to force write.
 nnoremap <silent> \\ :<C-U>write!<CR>
