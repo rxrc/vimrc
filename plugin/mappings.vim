@@ -10,6 +10,9 @@ cnoremap <C-J> <Down>
 nnoremap : q:
 vnoremap : q:
 
+" Shortcut for new.
+nnoremap <silent> <Leader>n :<C-U>enew<CR>
+
 " Shortcuts for quit.
 nnoremap <silent> Q :<C-U>quit<CR>
 vnoremap <silent> Q :<C-U>quit<CR>
