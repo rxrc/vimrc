@@ -1,8 +1,10 @@
 " Double-tap leader to open command-line mode.
 nnoremap <leader><leader> :
+vnoremap <leader><leader> :
 
 " Use : to open command-line window.
 nnoremap : q:
+vnoremap : q:
 
 " Use Q to toggle folds.
 nmap Q za
