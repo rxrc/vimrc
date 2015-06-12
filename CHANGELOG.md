@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+- Use vim-plug suggested `[]` in `.vimrc`.
+
 ## 2.0.1
 
 - Fix issue where install script would fail
