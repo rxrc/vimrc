@@ -10,12 +10,19 @@ cnoremap <C-J> <Down>
 nnoremap : q:
 vnoremap : q:
 
-" Use Q to toggle folds.
-nmap Q za
+" Shortcuts for quit.
+nnoremap <silent> Q :<C-U>quit<CR>
+vnoremap <silent> Q :<C-U>quit<CR>
 
+" Shortcuts for force quit.
+nnoremap <silent> <leader>Q :<C-U>quit!<CR>
+vnoremap <silent> <leader>Q :<C-U>quit!<CR>
 
-" Double-tap backslash to write.
-nnoremap <silent> \\ :<C-U>write<CR>
+" Shortcut to force quit all.
+nnoremap <silent> <C-S-Q> :<C-U>quitall!<CR>
+
+" Double-tap backslash to force write.
+nnoremap <silent> \\ :<C-U>write!<CR>
 
 " Shortcut for update.
 nnoremap <silent> <Leader>s :<C-U>update<CR>
