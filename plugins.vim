@@ -61,16 +61,13 @@ Plug 'xolox/vim-misc' | Plug 'xolox/vim-session'
 " Unicode
 Plug 'chrisbra/unicode.vim'
 
-" Unite.vim
+" Unite.vim and vimfiler
 let g:unite_source_history_yank_enable = 1 " must be set here
-Plug 'shougo/unite.vim'
+Plug 'shougo/unite.vim' | Plug 'shougo/vimfiler.vim'
 
 "
 " External Interfaces
 "
-
-" File
-Plug 'shougo/vimfiler.vim'
 
 " Shell
 Plug 'tpope/vim-dispatch'
