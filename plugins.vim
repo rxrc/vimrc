@@ -7,7 +7,6 @@ let mapleader = "\<Space>"
 
 " Libraries
 Plug 'shougo/vimproc.vim', { 'do': 'make' }
-Plug 'xolox/vim-misc' " for xolox/vim-session
 Plug 'tpope/vim-repeat'
 
 " Sensible Defaults
@@ -57,7 +56,7 @@ let g:commentary_map_backslash = 0 " disable \\ commentary maps
 Plug 'vim-scripts/bufkill.vim'
 
 " Session
-Plug 'xolox/vim-session'
+Plug 'xolox/vim-misc' | Plug 'xolox/vim-session'
 
 " Unicode
 Plug 'chrisbra/unicode.vim'
