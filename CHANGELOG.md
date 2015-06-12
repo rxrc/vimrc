@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 2.0.2
 
 - Use vim-plug suggested `[]` in `.vimrc`.
 
