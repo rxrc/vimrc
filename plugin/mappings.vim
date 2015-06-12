@@ -1,6 +1,6 @@
 " Double-tap leader to open command-line mode.
-nnoremap <leader><leader> :
-vnoremap <leader><leader> :
+nnoremap <Leader><Leader> :
+vnoremap <Leader><Leader> :
 
 " Use : to open command-line window.
 nnoremap : q:
@@ -14,31 +14,31 @@ nmap Q za
 nnoremap <silent> \\ :<C-U>write<CR>
 
 " Shortcut for update.
-nnoremap <silent> <leader>s :<C-U>update<CR>
+nnoremap <silent> <Leader>s :<C-U>update<CR>
 
 " Close the buffer but not the window.
-nnoremap <silent> <leader>w :<C-U>BD<CR>
+nnoremap <silent> <Leader>w :<C-U>BD<CR>
 
 " Clear highlighting until next search.
-nnoremap <silent> <leader>i :<C-U>nohlsearch<CR>
+nnoremap <silent> <Leader>i :<C-U>nohlsearch<CR>
 
 " Copy to system clipboard.
-nnoremap <leader>c "+y
-nnoremap <leader>cc "+yy
-nnoremap <silent> <leader>ca :<C-U>%y+<CR>
+nnoremap <Leader>c "+y
+nnoremap <Leader>cc "+yy
+nnoremap <silent> <Leader>ca :<C-U>%y+<CR>
 
 " Paste from system clipboard.
-nnoremap <leader>p "+p
-nnoremap <leader>P "+P
+nnoremap <Leader>p "+p
+nnoremap <Leader>P "+P
 
 " Split frame.
-nnoremap <leader>H :topleft vsplit<CR>
-nnoremap <leader>L :botright vsplit<CR>
-nnoremap <leader>K :topleft split<CR>
-nnoremap <leader>J :botright split<CR>
+nnoremap <Leader>H :topleft vsplit<CR>
+nnoremap <Leader>L :botright vsplit<CR>
+nnoremap <Leader>K :topleft split<CR>
+nnoremap <Leader>J :botright split<CR>
 
 " Split window.
-nnoremap <leader>h :leftabove vsplit<CR>
-nnoremap <leader>l :rightbelow vsplit<CR>
-nnoremap <leader>k :leftabove split<CR>
-nnoremap <leader>j :rightbelow split<CR>
+nnoremap <Leader>h :leftabove vsplit<CR>
+nnoremap <Leader>l :rightbelow vsplit<CR>
+nnoremap <Leader>k :leftabove split<CR>
+nnoremap <Leader>j :rightbelow split<CR>
