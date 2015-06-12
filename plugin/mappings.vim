@@ -7,11 +7,6 @@ nnoremap : q:
 " Use Q to toggle folds.
 nmap Q za
 
-" Shortcuts to open splits.
-nnoremap <silent> <leader>h :<C-U>vsplit left<CR>
-nnoremap <silent> <leader>j :<C-U>split below<CR>
-nnoremap <silent> <leader>k :<C-U>split above<CR>
-nnoremap <silent> <leader>l :<C-U>vsplit right<CR>
 
 " Double-tap backslash to write.
 nnoremap <silent> \\ :<C-U>write<CR>
@@ -33,3 +28,15 @@ nnoremap <silent> <leader>ca :<C-U>%y+<CR>
 " Paste from system clipboard.
 nnoremap <leader>p "+p
 nnoremap <leader>P "+P
+
+" Split frame.
+nnoremap <leader>H :topleft vsplit<CR>
+nnoremap <leader>L :botright vsplit<CR>
+nnoremap <leader>K :topleft split<CR>
+nnoremap <leader>J :botright split<CR>
+
+" Split window.
+nnoremap <leader>h :leftabove vsplit<CR>
+nnoremap <leader>l :rightbelow vsplit<CR>
+nnoremap <leader>k :leftabove split<CR>
+nnoremap <leader>j :rightbelow split<CR>
