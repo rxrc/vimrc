@@ -24,9 +24,6 @@ vnoremap <silent> <leader>Q :<C-U>quit!<CR>
 " Shortcut to force quit all.
 nnoremap <silent> <C-Q> :<C-U>quitall!<CR>
 
-" Double-tap backslash to force write.
-nnoremap <silent> \\ :<C-U>write!<CR>
-
 " Shortcuts for update and force write.
 nnoremap <silent> <Leader>s :<C-U>update<CR>
 nnoremap <silent> <Leader>S :<C-U>write!<CR>
@@ -57,3 +54,6 @@ nnoremap <Leader>h :leftabove vsplit<CR>
 nnoremap <Leader>l :rightbelow vsplit<CR>
 nnoremap <Leader>k :leftabove split<CR>
 nnoremap <Leader>j :rightbelow split<CR>
+
+" Double-tap backslash toggle commenting.
+nmap \\ gcc
