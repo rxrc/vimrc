@@ -118,3 +118,7 @@ Plug 'fatih/vim-go'
 
 " Haskell
 Plug 'bitc/vim-hdevtools'
+
+" Ruby
+Plug 'tpope/vim-rbenv'
+Plug 'tpope/vim-bundler'
