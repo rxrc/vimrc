@@ -40,6 +40,9 @@ Plug 'vim-scripts/deletetrailingwhitespace'
 Plug 'luochen1990/rainbow'
 let g:rainbow_active = 1 " must be set here
 
+" Sneak
+Plug 'justinmk/vim-sneak'
+
 " Autocompletion
 Plug 'shougo/neocomplete.vim'
 Plug 'shougo/neosnippet'
