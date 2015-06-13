@@ -58,5 +58,8 @@ nnoremap <Leader>l :rightbelow vsplit<CR>
 nnoremap <Leader>k :leftabove split<CR>
 nnoremap <Leader>j :rightbelow split<CR>
 
+" Shortcut to toggle folds.
+nnoremap <Leader><Tab> za
+
 " Double-tap backslash toggle commenting.
 nmap \\ gcc
