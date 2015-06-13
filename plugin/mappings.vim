@@ -28,6 +28,9 @@ nnoremap <silent> <C-Q> :<C-U>quitall!<CR>
 nnoremap <silent> <Leader>s :<C-U>update<CR>
 nnoremap <silent> <Leader>S :<C-U>write!<CR>
 
+" Shortcut for redo.
+nnoremap <silent> <Leader>r <C-R>
+
 " Close the buffer but not the window.
 nnoremap <silent> <Leader>w :<C-U>BD<CR>
 
