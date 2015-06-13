@@ -27,8 +27,9 @@ nnoremap <silent> <C-Q> :<C-U>quitall!<CR>
 " Double-tap backslash to force write.
 nnoremap <silent> \\ :<C-U>write!<CR>
 
-" Shortcut for update.
+" Shortcuts for update and force write.
 nnoremap <silent> <Leader>s :<C-U>update<CR>
+nnoremap <silent> <Leader>S :<C-U>write!<CR>
 
 " Close the buffer but not the window.
 nnoremap <silent> <Leader>w :<C-U>BD<CR>
