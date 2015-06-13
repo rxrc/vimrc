@@ -1,5 +1,11 @@
 " Tab completion.
-inoremap <expr> <Tab> pumvisible() ? "\<C-N>" : "\<Tab>"
+imap <expr> <Tab> neosnippet#expandable_or_jumpable() ?
+  \ "\<Plug>(neosnippet_expand_or_jump)"
+  \: pumvisible() ? "\<C-N>" : "\<Tab>"
+
+" Snippet tab navigation.
+smap <expr> <Tab> neosnippet#expandable_or_jumpable() ?
+  \ "\<Plug>(neosnippet_expand_or_jump)" : "\<Tab>"
 
 " Close popup on enter.
 inoremap <expr> <CR> neocomplete#close_popup() . "\<CR>"
