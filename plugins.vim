@@ -50,6 +50,11 @@ Plug 'shougo/neosnippet'
 Plug 'shougo/neosnippet-snippets'
 let g:neocomplete#enable_at_startup = 1 " must be set here
 
+" Initialize force_omni_input_patterns.
+if !exists('g:neocomplete#force_omni_input_patterns')
+  let g:neocomplete#force_omni_input_patterns = {}
+endif
+
 " Macros
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
@@ -122,6 +127,8 @@ Plug 'bitc/vim-hdevtools'
 
 " Python
 Plug 'tmhedberg/simpylfold'
+Plug 'davidhalter/jedi-vim'
+  \ | Plug 'lambdalisue/vim-pyenv', { 'for': ['python', 'python3'] }
 
 " Ruby
 Plug 'tpope/vim-rbenv'
