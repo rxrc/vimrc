@@ -4,6 +4,9 @@ if has('autocmd')
   autocmd GUIEnter * set visualbell t_vb=
 endif
 
+" Hide some autocompletion messages.
+set shortmess+=c
+
 " Hide buffers instead of closing them.
 set hidden
 
