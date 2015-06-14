@@ -42,6 +42,7 @@ let g:rainbow_active = 1 " must be set here
 
 " Sneak
 Plug 'justinmk/vim-sneak'
+let g:sneak#streak = 1 " must be set here
 
 " Autocompletion
 Plug 'shougo/neocomplete.vim'
