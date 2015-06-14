@@ -88,7 +88,6 @@ Plug 'shougo/unite.vim' | Plug 'shougo/vimfiler.vim'
 Plug 'tpope/vim-dispatch'
 
 " Git
-Plug 'vim-scripts/gitignore'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 
