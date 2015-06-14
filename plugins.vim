@@ -126,8 +126,7 @@ Plug 'bitc/vim-hdevtools'
 
 " Python
 Plug 'tmhedberg/simpylfold'
-Plug 'davidhalter/jedi-vim'
-  \ | Plug 'lambdalisue/vim-pyenv', { 'for': ['python', 'python3'] }
+Plug 'davidhalter/jedi-vim' | Plug 'lambdalisue/vim-pyenv'
 
 " Ruby
 Plug 'tpope/vim-rbenv'
