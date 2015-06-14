@@ -40,6 +40,7 @@ nnoremap <silent> <Leader>i :<C-U>nohlsearch<CR>
 
 " Copy to system clipboard.
 nnoremap <Leader>c "+y
+vnoremap <Leader>c "+y
 nnoremap <Leader>cc "+yy
 nnoremap <silent> <Leader>ca :<C-U>%y+<CR>
 
