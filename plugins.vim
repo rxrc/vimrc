@@ -120,6 +120,9 @@ Plug 'fatih/vim-go'
 " Haskell
 Plug 'bitc/vim-hdevtools'
 
+" Python
+Plug 'tmhedberg/simpylfold'
+
 " Ruby
 Plug 'tpope/vim-rbenv'
 Plug 'tpope/vim-bundler'
