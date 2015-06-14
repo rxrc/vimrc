@@ -28,15 +28,3 @@ set smartcase
 " Set folding preferences.
 set foldmethod=syntax
 set nofoldenable
-
-" Delete trailing whitespace.
-let g:DeleteTrailingWhitespace = 1
-let g:DeleteTrailingWhitespace_Action = 'delete'
-
-" Customize session management.
-let g:session_autoload = 'no'
-let g:session_autosave = 'yes'
-let g:session_autosave_periodic = 5
-
-" Set vimfiler preferences.
-let g:vimfiler_as_default_explorer = 1
