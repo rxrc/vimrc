@@ -62,3 +62,6 @@ nnoremap <Leader>j :rightbelow split<CR>
 
 " Shortcut to toggle folds.
 nnoremap <Leader><Tab> za
+
+" Shortcut to open spell popup in insert mode.
+inoremap <C-P> <C-X><C-S>
