@@ -1,7 +1,7 @@
 " Tab completion.
 imap <expr> <Tab> neosnippet#expandable_or_jumpable() ?
   \ "\<Plug>(neosnippet_expand_or_jump)"
-  \: pumvisible() ? "\<C-N>" : "\<Tab>"
+  \: pumvisible() ? "\<C-N>" : neocomplete#start_manual_complete()
 
 " Snippet tab navigation.
 smap <expr> <Tab> neosnippet#expandable_or_jumpable() ?
@@ -12,6 +12,9 @@ inoremap <expr> <CR> neocomplete#close_popup() . "\<CR>"
 
 " Smart close popup on backspace.
 inoremap <expr> <BS> neocomplete#smart_close_popup() . "\<C-H>"
+
+" Complete common sting with Ctrl-Space.
+inoremap <expr><C-Space> neocomplete#complete_common_string()
 
 " Popup navigation with Ctrl-J and Ctrl-K.
 inoremap <expr> <C-J> pumvisible() ? "\<C-N>" : "\<C-J>"
