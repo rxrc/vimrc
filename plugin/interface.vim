@@ -31,3 +31,6 @@ set smartcase
 " Set folding preferences.
 set foldmethod=syntax
 set nofoldenable
+
+" Open splits below by default.
+set splitbelow
