@@ -1,7 +1,10 @@
 " Tab completion.
 imap <expr> <Tab> neosnippet#expandable_or_jumpable() ?
   \ "\<Plug>(neosnippet_expand_or_jump)"
-  \: pumvisible() ? "\<C-N>" : neocomplete#start_manual_complete()
+  \: pumvisible() ? "\<C-N>" : "<Tab>"
+
+" Start manual completion with Ctrl-Tab.
+inoremap <expr> <C-Tab> neocomplete#start_manual_complete()
 
 " Snippet tab navigation.
 smap <expr> <Tab> neosnippet#expandable_or_jumpable() ?
