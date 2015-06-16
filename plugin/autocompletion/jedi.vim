@@ -5,6 +5,12 @@ let g:jedi#auto_vim_configuration = 0
 let g:neocomplete#force_omni_input_patterns.python =
   \ '\%([^. \t]\.\|^\s*@\|^\s*from\s.\+import \|^\s*from \|^\s*import \)\w*'
 
+" Set default jedi-vim mappings.
+let g:jedi#rename_command = '<Leader>R'
+let g:jedi#usages_command = '<Leader>N'
+let g:jedi#goto_command = '<Leader>D'
+let g:jedi#goto_assignments_command = '<Leader>G'
+
 " Synchronize jedi-vim with pyenv.
 if jedi#init_python()
   function! s:jedi_auto_force_py_version() abort
