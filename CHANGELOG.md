@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+- Use `~/.vim/plugged.dev` for development mode.
+
 ## 2.0.2
 
 - Use vim-plug suggested `[]` in `.vimrc`.

@@ -13,12 +13,14 @@ pluginUpdate = 'vim -c PlugUpdate -c qall! &>/dev/null'
 pluginClean = 'vim -c PlugClean! -c qall! &>/dev/null'
 
 devStrings = [
+  "call plug#begin($HOME . '/.vim/plugged.dev')"
   "Plug '#{path.resolve()}'"
   "'' . '#{path.resolve()}/plugins.vim'"
   "#{path.resolve()}/plugins.vim"
 ]
 
 noDevStrings = [
+  "call plug#begin($HOME . '/.vim/plugged')"
   "Plug '#{remotePluginPath}'"
   "$HOME . '/.vim/plugged/vimrc/plugins.vim'"
   '$HOME/.vim/plugged/vimrc/plugins.vim'
