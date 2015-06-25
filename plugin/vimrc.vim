@@ -21,3 +21,6 @@ let g:session_directory = $XDG_CACHE_HOME . '/vim/session'
 
 " Enable filetype detection.
 filetype plugin on
+
+" Enable persistent undo history.
+set undofile
