@@ -13,8 +13,9 @@ smap <expr> <Tab> neosnippet#expandable_or_jumpable() ?
 " Close popup on enter.
 inoremap <expr> <CR> neocomplete#close_popup() . "\<CR>"
 
-" Smart close popup on backspace.
-inoremap <expr> <BS> neocomplete#smart_close_popup() . "\<C-H>"
+" Smart close popup on Ctrl-W.
+imap <expr> <C-W> pumvisible() ?
+  \ neocomplete#smart_close_popup() . "\<C-H>" : "<C-W>"
 
 " Complete common sting with Ctrl-Space.
 inoremap <expr><C-Space> neocomplete#complete_common_string()
