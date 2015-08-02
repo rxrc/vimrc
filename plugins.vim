@@ -124,6 +124,9 @@ Plug 'fatih/vim-go'
 " Haskell
 Plug 'bitc/vim-hdevtools'
 
+" Jade
+Plug 'digitaltoad/vim-jade'
+
 " Python
 Plug 'tmhedberg/simpylfold'
 Plug 'davidhalter/jedi-vim' | Plug 'lambdalisue/vim-pyenv'
