@@ -1,7 +1,7 @@
+install_vimrc () {
+
 set -e
 set -u
-
-install_vimrc () {
 
 echo -e "\033[32m➤ Installing!   \033[0m"
 
