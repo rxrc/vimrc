@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 2.0.3
 
 - Wrap install script in function.
 - Use `~/.vim/plugged.dev` for development mode.
