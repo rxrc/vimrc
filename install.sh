@@ -1,4 +1,7 @@
+install_vimrc () {
+
 set -e
+set -u
 
 echo -e "\033[32m➤ Installing!   \033[0m"
 
@@ -93,3 +96,6 @@ echo | vim -c qall!; \
   echo -e "\033[32m    ✔ Completed   ❰ PlugInstall ❱   \033[0m"; \
   echo -e "\033[32m✔ Install complete!   \033[0m"; \
   exit 0
+}
+
+install_vimrc
