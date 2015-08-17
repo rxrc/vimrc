@@ -2,6 +2,7 @@
 
 ## HEAD
 
+- Wrap install script in function.
 - Use `~/.vim/plugged.dev` for development mode.
 
 ## 2.0.2
