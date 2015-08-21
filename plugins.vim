@@ -44,6 +44,9 @@ let g:rainbow_active = 1 " must be set here
 Plug 'justinmk/vim-sneak'
 let g:sneak#streak = 1 " must be set here
 
+" Clipboard
+Plug 'svermeulen/vim-easyclip'
+
 " Autocompletion
 Plug 'shougo/neocomplete.vim'
 Plug 'shougo/neosnippet'
