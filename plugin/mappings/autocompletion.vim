@@ -1,14 +1,17 @@
-" Tab completion.
-imap <expr> <Tab> neosnippet#expandable_or_jumpable() ?
-  \ "\<Plug>(neosnippet_expand_or_jump)"
-  \: pumvisible() ? "\<C-N>" : "<Tab>"
+" Start manual completion with Ctrl-Space.
+inoremap <expr> <C-Space> neocomplete#start_manual_complete()
 
-" Start manual completion with Ctrl-Tab.
-inoremap <expr> <C-Tab> neocomplete#start_manual_complete()
+" Tab completion.
+imap <expr> <Tab> pumvisible() ? "\<C-N>" : "<Tab>"
+
+" Snippet completion with Ctrl-Tab.
+imap <expr> <C-Tab> neosnippet#expandable_or_jumpable() ?
+  \ "\<Plug>(neosnippet_expand_or_jump)"
+  \: pumvisible() ? "\<C-N>" : "<C-Tab>"
 
 " Snippet tab navigation.
-smap <expr> <Tab> neosnippet#expandable_or_jumpable() ?
-  \ "\<Plug>(neosnippet_expand_or_jump)" : "\<Tab>"
+smap <expr> <C-Tab> neosnippet#expandable_or_jumpable() ?
+  \ "\<Plug>(neosnippet_expand_or_jump)" : "\<C-Tab>"
 
 " Close popup on enter.
 inoremap <expr> <CR> neocomplete#close_popup() . "\<CR>"
@@ -18,12 +21,8 @@ imap <expr> <C-W> pumvisible() ?
   \ neocomplete#smart_close_popup() . "\<C-H>" : "<C-W>"
 
 " Complete common sting with Ctrl-Space.
-inoremap <expr><C-Space> neocomplete#complete_common_string()
+inoremap <expr> <C-L> neocomplete#complete_common_string()
 
 " Popup navigation with Ctrl-J and Ctrl-K.
 inoremap <expr> <C-J> pumvisible() ? "\<C-N>" : "\<C-J>"
 inoremap <expr> <C-K> pumvisible() ? "\<C-P>" : "\<C-K>"
-
-" Fast popup navigation with Ctrl-L and Ctrl-H.
-inoremap <expr> <C-L> pumvisible() ? "\<C-N>\<C-N>\<C-N>" : "\<C-L>"
-inoremap <expr> <C-H> pumvisible() ? "\<C-P>\<C-P>\<C-P>" : "\<C-H>"
