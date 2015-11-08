@@ -7,6 +7,10 @@
     "type": "git",
     "url": "https://github.com/rxrc/vimrc.git"
   },
+  "scripts": {
+    "dev": "gulp dev",
+    "nodev": "gulp nodev"
+  },
   "keywords": [
     "vim",
     "vimrc"
