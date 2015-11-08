@@ -134,23 +134,22 @@ First, follow the normal install steps if you haven't already.
 Then, install the development dependences via [npm] with
 
 ```bash
-$ [sudo] npm install --global gulp
 $ npm install
 ```
 
 Enter development mode with
 
 ```bash
-$ gulp dev
+$ npm run dev
 ```
 
 If you modify `plugins.vim`,
-run `gulp dev` again to reconfigure the plugins.
+run `npm run dev` again to reconfigure the plugins.
 
 To switch out of development mode run
 
 ```bash
-$ gulp nodev
+$ npm run nodev
 ```
 
 [Gulp]: http://gulpjs.com/
