@@ -130,6 +130,9 @@ Plug 'bitc/vim-hdevtools'
 " Jade
 Plug 'digitaltoad/vim-jade'
 
+" Node.js
+Plug 'ahayman/vim-nodejs-complete'
+
 " Python
 Plug 'tmhedberg/simpylfold'
 Plug 'davidhalter/jedi-vim' | Plug 'lambdalisue/vim-pyenv'
