@@ -11,7 +11,7 @@ This configuration system works as a meta-plugin:
 all desired Vim plugins are loaded from `plugins.vim` using [vim-plug].
 Overall configuration then follows a normal plugin structure.
 
-[vim-plug]: https://github.com/junegunn/vim-plugvim-plug
+[vim-plug]: https://github.com/junegunn/vim-plug
 
 ## Installation
 
