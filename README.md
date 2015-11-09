@@ -19,13 +19,13 @@ Overall configuration then follows a normal plugin structure.
 
 You can install this via the command-line with either curl
 
-```bash
+```
 $ curl -L https://git.io/vJAzK | sh
 ```
 
 or wget
 
-```bash
+```
 $ wget https://git.io/vJAzK -O - | sh
 ```
 
@@ -65,7 +65,7 @@ $ wget https://git.io/vJAzK -O - | sh
 
 3. Run
 
-  ```bash
+  ```
   $ vim -c qall!
   $ VIMRC_INSTALL=true vim -c qall!
   ```
@@ -112,7 +112,7 @@ You can customize this configuration or manage your own in the same way.
 
 Here is an example of a command you can use to make replacements:
 
-```bash
+```
 $ git ls-files -z | xargs -0 sed -i 's/rxrc\/vimrc/username\/vimrc/g'
 ```
 
@@ -125,13 +125,13 @@ directory as the plugin path.
 First, follow the normal install steps if you haven't already.
 Then, install the development dependences via [npm] with
 
-```bash
+```
 $ npm install
 ```
 
 Enter development mode with
 
-```bash
+```
 $ npm run dev
 ```
 
@@ -140,7 +140,7 @@ run `npm run dev` again to reconfigure the plugins.
 
 To switch out of development mode run
 
-```bash
+```
 $ npm run nodev
 ```
 
