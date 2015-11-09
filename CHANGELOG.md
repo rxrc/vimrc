@@ -1,8 +1,9 @@
 # Changelog
 
-## HEAD
+## 2.1.1
 
 - Add `npm-debug.log` to .gitignore.
+- Minor README updates.
 
 ## 2.1.0
 
