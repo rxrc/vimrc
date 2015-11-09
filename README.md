@@ -37,6 +37,11 @@ $ wget https://git.io/vJAzK -O - | sh
   ```vim
   " rxrc/nvimrc
 
+  " Create and set config directory.
+  if empty($XDG_CONFIG_HOME)
+    let $XDG_CONFIG_HOME = $HOME . '/.config'
+  endif
+
   " Disable powerline by default.
   let g:powerline_loaded = 1
 
@@ -46,17 +51,17 @@ $ wget https://git.io/vJAzK -O - | sh
   " Skip initialization for vim-tiny or vim-small.
   if !1 | finish | endif
 
-  call plug#begin($HOME . '/.vim/plugged')
+  call plug#begin($XDG_CONFIG_HOME . '/nvim/plugged')
 
-  if filereadable($HOME . '/.vim/plugged/vimrc/plugins.vim')
-    source $HOME/.vim/plugged/vimrc/plugins.vim
-    if $VIMRC_INSTALL == 'true'
+  if filereadable($XDG_CONFIG_HOME . '/nvim/plugged/nvimrc/plugins.vim')
+    source $XDG_CONFIG_HOME/nvim/plugged/nvimrc/plugins.vim
+    if $NVIMRC_INSTALL == 'true'
       PlugInstall
     else
-      Plug 'rxrc/vimrc'
+      Plug 'rxrc/nvimrc'
     endif
   else
-    Plug 'rxrc/vimrc', { 'on': [] }
+    Plug 'rxrc/nvimrc', { 'on': [] }
     PlugInstall
   endif
 
