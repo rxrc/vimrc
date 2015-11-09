@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+- Add `npm-debug.log` to .gitignore.
+
 ## 2.1.0
 
 - Use local gulp.
