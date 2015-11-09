@@ -5,7 +5,7 @@ homePath = require('home-path')()
 path = require('path')
 $ = require('gulp-load-plugins')()
 
-remotePluginPath = 'rxrc/vimrc'
+remotePluginPath = 'rxrc/nvimrc'
 
 pluginInit = 'vim -c qall! &>/dev/null'
 pluginInstall = 'VIMRC_INSTALL=true vim -c PlugClean! -c qall! &>/dev/null'

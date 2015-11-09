@@ -1,26 +1,28 @@
 {
-  "name": "vimrc",
+  "name": "nvimrc",
   "version": "2.1.1",
   "private": true,
-  "description": "Vim configuration.",
+  "description": "Neovim configuration.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rxrc/vimrc.git"
+    "url": "https://github.com/rxrc/nvimrc.git"
   },
   "scripts": {
     "dev": "gulp dev",
     "nodev": "gulp nodev"
   },
   "keywords": [
+    "neovim",
+    "nvimrc",
     "vim",
     "vimrc"
   ],
   "author": "Evan Sosenko",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rxrc/vimrc/issues"
+    "url": "https://github.com/rxrc/nvimrc/issues"
   },
-  "homepage": "https://github.com/rxrc/vimrc",
+  "homepage": "https://github.com/rxrc/nvimrc",
   "devDependencies": {
     "coffee-script": "^1.9.0",
     "gulp": "^3.8.11",

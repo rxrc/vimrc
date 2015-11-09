@@ -1,7 +1,7 @@
 # Vim Configuration
 
-[![Github Releases](https://img.shields.io/github/release/rxrc/vimrc.svg)](https://github.com/rxrc/vimrc/releases)
-[![GitHub license](http://img.shields.io/github/license/rxrc/vimrc.svg)](./LICENSE.txt)
+[![Github Releases](https://img.shields.io/github/release/rxrc/nvimrc.svg)](https://github.com/rxrc/nvimrc/releases)
+[![GitHub license](http://img.shields.io/github/license/rxrc/nvimrc.svg)](./LICENSE.txt)
 
 My complete Vim configuration as a Vim plugin.
 
@@ -32,10 +32,10 @@ $ wget https://git.io/vJAzK -O - | sh
 ### Manual Install
 
 1. Install [vim-plug].
-2. Create `~/.vimrc` with
+2. Create `~/.nvimrc` with
 
   ```vim
-  " rxrc/vimrc
+  " rxrc/nvimrc
 
   " Disable powerline by default.
   let g:powerline_loaded = 1
@@ -102,7 +102,7 @@ You can customize this configuration or manage your own in the same way.
    it has the same structure and development tools but with
    a very minimal configuration.
    Tagged releases are based on that branch.
-2. Replace any instance of `rxrc/vimrc`
+2. Replace any instance of `rxrc/nvimrc`
    with the path to your repository's location.
    If you do not host this on GitHub,
    you may need to adjust the repository path appropriately.
@@ -113,7 +113,7 @@ You can customize this configuration or manage your own in the same way.
 Here is an example of a command you can use to make replacements:
 
 ```
-$ git ls-files -z | xargs -0 sed -i 's/rxrc\/vimrc/username\/vimrc/g'
+$ git ls-files -z | xargs -0 sed -i 's/rxrc\/nvimrc/username\/nvimrc/g'
 ```
 
 ## Development
@@ -153,7 +153,7 @@ Please submit and comment on bug reports and feature requests.
 
 To submit a patch:
 
-1. Fork it (https://github.com/rxrc/vimrc/fork).
+1. Fork it (https://github.com/rxrc/nvimrc/fork).
 2. Create your feature branch (`git checkout -b my-new-feature`).
 3. Make changes.
 4. Commit your changes (`git commit -am 'Add some feature'`).
