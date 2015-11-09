@@ -1,14 +1,14 @@
-# Vim Configuration
+# Neovim Configuration
 
 [![Github Releases](https://img.shields.io/github/release/rxrc/nvimrc.svg)](https://github.com/rxrc/nvimrc/releases)
 [![GitHub license](http://img.shields.io/github/license/rxrc/nvimrc.svg)](./LICENSE.txt)
 
-My complete Vim configuration as a Vim plugin.
+My complete Neovim configuration as a Neovim plugin.
 
 ## Description
 
 This configuration system works as a meta-plugin:
-all desired Vim plugins are loaded from `plugins.vim` using [vim-plug].
+all desired Neovim plugins are loaded from `plugins.vim` using [vim-plug].
 Overall configuration then follows a normal plugin structure.
 
 [vim-plug]: https://github.com/junegunn/vim-plug
@@ -162,7 +162,7 @@ To submit a patch:
 
 ## License
 
-This Vim configuration is licensed under the MIT license.
+This Neovim configuration is licensed under the MIT license.
 
 ## Warranty
 
