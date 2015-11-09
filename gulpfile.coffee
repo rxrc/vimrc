@@ -7,29 +7,29 @@ $ = require('gulp-load-plugins')()
 
 remotePluginPath = 'rxrc/nvimrc'
 
-pluginInit = 'vim -c qall! &>/dev/null'
-pluginInstall = 'VIMRC_INSTALL=true vim -c PlugClean! -c qall! &>/dev/null'
-pluginUpdate = 'vim -c PlugUpdate -c qall! &>/dev/null'
-pluginClean = 'vim -c PlugClean! -c qall! &>/dev/null'
+pluginInit = 'nvim -c qall! &>/dev/null'
+pluginInstall = 'NVIMRC_INSTALL=true vim -c PlugClean! -c qall! &>/dev/null'
+pluginUpdate = 'nvim -c PlugUpdate -c qall! &>/dev/null'
+pluginClean = 'nvim -c PlugClean! -c qall! &>/dev/null'
 
 devStrings = [
-  "call plug#begin($HOME . '/.vim/plugged.dev')"
+  "call plug#begin($XDG_CONFIG_HOME . '/nvim/plugged.dev')"
   "Plug '#{path.resolve()}'"
   "'' . '#{path.resolve()}/plugins.vim'"
   "#{path.resolve()}/plugins.vim"
 ]
 
 noDevStrings = [
-  "call plug#begin($HOME . '/.vim/plugged')"
+  "call plug#begin($XDG_CONFIG_HOME . '/nvim/plugged')"
   "Plug '#{remotePluginPath}'"
-  "$HOME . '/.vim/plugged/vimrc/plugins.vim'"
-  '$HOME/.vim/plugged/vimrc/plugins.vim'
+  "$XDG_CONFIG_HOME . '/nvim/plugged/vimrc/plugins.vim'"
+  '$XDG_CONFIG_HOME/nvim/plugged/vimrc/plugins.vim'
 ]
 
 gulp.task 'default', ['dev']
 
 gulp.task 'dev', ->
-  gulp.src("#{homePath}/.vimrc")
+  gulp.src("#{homePath}/.config/nvim/init.vim")
   .pipe $.replace(noDevStrings[0], devStrings[0])
   .pipe $.replace(noDevStrings[1], devStrings[1])
   .pipe $.replace(noDevStrings[2], devStrings[2])
@@ -40,7 +40,7 @@ gulp.task 'dev', ->
   ])
 
 gulp.task 'nodev', ->
-  gulp.src("#{homePath}/.vimrc")
+  gulp.src("#{homePath}/.config/nvim/init.vim")
   .pipe $.replace(devStrings[0], noDevStrings[0])
   .pipe $.replace(devStrings[1], noDevStrings[1])
   .pipe $.replace(devStrings[2], noDevStrings[2])
