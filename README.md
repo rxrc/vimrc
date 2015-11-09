@@ -32,7 +32,7 @@ $ wget https://git.io/vJAzK -O - | sh
 ### Manual Install
 
 1. Install [vim-plug].
-2. Create `~/.nvimrc` with
+2. Create `~/.config/nvim/init.vim` with
 
   ```vim
   " rxrc/nvimrc
@@ -66,8 +66,8 @@ $ wget https://git.io/vJAzK -O - | sh
 3. Run
 
   ```
-  $ vim -c qall!
-  $ VIMRC_INSTALL=true vim -c qall!
+  $ nvim -c qall!
+  $ NVIMRC_INSTALL=true nvim -c qall!
   ```
 
 ## Updating
@@ -77,17 +77,17 @@ Updating is handled via the normal [vim-plug commands].
 Here is an example of a Zsh function that will provide a one-step update:
 
 ```zsh
-# Upgrade vimrc.
-function vimupg () {
-  if ! [[ -e $HOME/.vim/autoload/plug.vim ]]; then
+# Upgrade nvimrc.
+function nvimupg () {
+  if ! [[ -e $XDG_CONFIG_HOME/nvim/autoload/plug.vim ]]; then
     echo 'vim-plug is not installed.'
     return 1
   fi
 
-  vim -c PlugUpgrade -c qall
-  vim -c PlugUpdate -c qall
-  vim -c PlugInstall -c qall
-  vim -c PlugClean! -c qall
+  nvim -c PlugUpgrade -c qall
+  nvim -c PlugUpdate -c qall
+  nvim -c PlugInstall -c qall
+  nvim -c PlugClean! -c qall
 }
 ```
 
