@@ -4,10 +4,9 @@ inoremap <expr> <C-Space> neocomplete#start_manual_complete()
 " Tab completion.
 imap <expr> <Tab> pumvisible() ? "\<C-N>" : "<Tab>"
 
-" Snippet completion with Ctrl-Tab.
-imap <expr> <C-Tab> neosnippet#expandable_or_jumpable() ?
-  \ "\<Plug>(neosnippet_expand_or_jump)"
-  \: pumvisible() ? "\<C-N>" : "<C-Tab>"
+" Snippet completion with Ctrl-H.
+imap <expr> <C-H> neosnippet#expandable_or_jumpable() ?
+  \ "\<Plug>(neosnippet_expand_or_jump)" : "<C-H>"
 
 " Snippet tab navigation.
 smap <expr> <C-Tab> neosnippet#expandable_or_jumpable() ?
