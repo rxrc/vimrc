@@ -1,5 +1,12 @@
 # Changelog
 
+## HEAD
+
+- Neovim support: fork from [vimrc] to [nvimrc].
+
+[nvimrc]: https://github.com/rxrc/nvimrc
+[vimrc]: https://github.com/rxrc/vimrc
+
 ## 2.1.1
 
 - Add `npm-debug.log` to .gitignore.
