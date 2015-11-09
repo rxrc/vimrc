@@ -3,16 +3,16 @@ if empty($XDG_CACHE_HOME)
   let $XDG_CACHE_HOME = $HOME . '/.cache'
 endif
 
-if !isdirectory($XDG_CACHE_HOME . '/vim')
-  call mkdir($XDG_CACHE_HOME . '/vim', 'p')
+if !isdirectory($XDG_CACHE_HOME . '/nvim')
+  call mkdir($XDG_CACHE_HOME . '/nvim', 'p')
 endif
 
 for dir in ['backup', 'swap', 'undo']
-  if !isdirectory($XDG_CACHE_HOME . '/vim/' . dir)
-    call mkdir($XDG_CACHE_HOME . '/vim/' . dir, 'p')
+  if !isdirectory($XDG_CACHE_HOME . '/nvim/' . dir)
+    call mkdir($XDG_CACHE_HOME . '/nvim/' . dir, 'p')
   endif
 endfor
 
-set backupdir=$XDG_CACHE_HOME/vim/backup
-set directory=$XDG_CACHE_HOME/vim/swap
-set undodir=$XDG_CACHE_HOME/vim/undo
+set backupdir=$XDG_CACHE_HOME/nvim/backup
+set directory=$XDG_CACHE_HOME/nvim/swap
+set undodir=$XDG_CACHE_HOME/nvim/undo
