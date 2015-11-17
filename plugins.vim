@@ -150,7 +150,6 @@ let g:rainbow_active = 1 " must be set here
 " Use Sneak streak mode.
 let g:sneak#streak = 1 " must be set here
 
-
 "
 " neocomplete
 
