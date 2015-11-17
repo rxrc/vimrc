@@ -38,11 +38,9 @@ Plug 'vim-scripts/deletetrailingwhitespace'
 
 " Parentheses
 Plug 'luochen1990/rainbow'
-let g:rainbow_active = 1 " must be set here
 
 " Sneak
 Plug 'justinmk/vim-sneak'
-let g:sneak#streak = 1 " must be set here
 
 " Clipboard
 Plug 'svermeulen/vim-easyclip'
@@ -51,17 +49,10 @@ Plug 'svermeulen/vim-easyclip'
 Plug 'shougo/neocomplete.vim'
 Plug 'shougo/neosnippet'
 Plug 'shougo/neosnippet-snippets'
-let g:neocomplete#enable_at_startup = 1 " must be set here
-
-" Initialize force_omni_input_patterns.
-if !exists('g:neocomplete#force_omni_input_patterns')
-  let g:neocomplete#force_omni_input_patterns = {}
-endif
 
 " Macros
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
-let g:commentary_map_backslash = 0 " disable \\ commentary maps
 
 "
 " Internal Interfaces
@@ -80,7 +71,6 @@ Plug 'chrisbra/unicode.vim'
 Plug 'majutsushi/tagbar'
 
 " Unite.vim and vimfiler
-let g:unite_source_history_yank_enable = 1 " must be set here
 Plug 'shougo/unite.vim' | Plug 'shougo/vimfiler.vim'
 
 "
@@ -140,3 +130,48 @@ Plug 'davidhalter/jedi-vim' | Plug 'lambdalisue/vim-pyenv'
 " Ruby
 Plug 'tpope/vim-rbenv'
 Plug 'tpope/vim-bundler'
+
+"
+" Initialization Settings
+"
+
+"
+" Rainbow Parentheses
+
+" Enable rainbow parentheses.
+let g:rainbow_active = 1 " must be set here
+
+"
+" Sneak
+
+" Use Sneak streak mode.
+let g:sneak#streak = 1 " must be set here
+
+
+"
+" neocomplete
+
+" Enable neocomplete.
+let g:neocomplete#enable_at_startup = 1
+
+" Initialize input_patterns.
+if !exists('g:neocomplete#sources#omni#input_patterns')
+  let g:neocomplete#sources#omni#input_patterns = {}
+endif
+
+" Initialize force_omni_input_patterns.
+if !exists('g:neocomplete#force_omni_input_patterns')
+  let g:neocomplete#force_omni_input_patterns = {}
+endif
+
+"
+" Commentary
+
+" Disable \\ commentary maps.
+let g:commentary_map_backslash = 0
+
+"
+" Unite.vim
+
+" Enable yank history.
+let g:unite_source_history_yank_enable = 1
