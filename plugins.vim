@@ -124,6 +124,7 @@ Plug 'digitaltoad/vim-jade'
 Plug 'latex-box-team/latex-box'
 
 " Node.js
+Plug 'moll/vim-node'
 Plug 'ahayman/vim-nodejs-complete'
 
 " Python
