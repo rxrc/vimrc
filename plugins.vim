@@ -131,6 +131,9 @@ Plug 'ahayman/vim-nodejs-complete'
 Plug 'tmhedberg/simpylfold'
 Plug 'davidhalter/jedi-vim' | Plug 'lambdalisue/vim-pyenv'
 
+" React
+Plug 'mxw/vim-jsx'
+
 " Ruby
 Plug 'tpope/vim-rbenv'
 Plug 'tpope/vim-bundler'
