@@ -120,6 +120,9 @@ Plug 'bitc/vim-hdevtools'
 " Jade
 Plug 'digitaltoad/vim-jade'
 
+"JavaScript
+Plug 'pangloss/vim-javascript'
+
 " LaTeX
 Plug 'latex-box-team/latex-box'
 
