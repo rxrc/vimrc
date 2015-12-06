@@ -77,6 +77,9 @@ Plug 'shougo/unite.vim' | Plug 'shougo/vimfiler.vim'
 " External Interfaces
 "
 
+" Documentation
+Plug 'keith/investigate.vim'
+
 " Shell
 Plug 'tpope/vim-dispatch'
 
