@@ -6,7 +6,7 @@ imap <expr> <Tab> pumvisible() ? "<C-N>" : "<Tab>"
 
 " Snippet completion and navigation with Ctrl-L.
 imap <expr> <C-L> neosnippet#expandable_or_jumpable() ?
-  \ "<Plug>(neosnippet_expand_or_jump)" : "<C-L>"
+  \ "<Plug>(neosnippet_expand_or_jump)" : "<Right>"
 
 " Close popup on enter.
 inoremap <expr> <CR> neocomplete#close_popup() . "<CR>"
