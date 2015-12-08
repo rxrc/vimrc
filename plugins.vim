@@ -20,6 +20,9 @@ Plug 'bling/vim-airline'
 Plug 'edkolev/promptline.vim'
 Plug 'edkolev/tmuxline.vim'
 
+" Projectionist
+Plug 'tpope/vim-projectionist'
+
 "
 " Editor
 "
@@ -103,7 +106,7 @@ Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'venantius/vim-cljfmt'
 Plug 'venantius/vim-eastwood'
 Plug 'tpope/vim-fireplace'
-Plug 'tpope/vim-leiningen'
+Plug 'tpope/vim-salve'
 Plug 'guns/vim-clojure-highlight'
 
 " CoffeeScript
