@@ -70,6 +70,10 @@ nnoremap <Leader>l :rightbelow vsplit<CR>
 nnoremap <Leader>k :leftabove split<CR>
 nnoremap <Leader>j :rightbelow split<CR>
 
+" Cycle through buffers.
+nnoremap <Leader>, :bprevious<CR>
+nnoremap <Leader>. :bnext<CR>
+
 " Shortcut to toggle folds.
 nnoremap <Leader><Tab> za
 
