@@ -65,7 +65,8 @@ Plug 'tpope/vim-commentary'
 Plug 'vim-scripts/bufkill.vim'
 
 " Session
-Plug 'xolox/vim-misc' | Plug 'xolox/vim-session'
+Plug 'xolox/vim-misc'
+     \ | Plug 'xolox/vim-session'
 
 " Unicode
 Plug 'chrisbra/unicode.vim'
@@ -74,7 +75,8 @@ Plug 'chrisbra/unicode.vim'
 Plug 'majutsushi/tagbar'
 
 " Unite.vim and vimfiler
-Plug 'shougo/unite.vim' | Plug 'shougo/vimfiler.vim'
+Plug 'shougo/unite.vim'
+     \ | Plug 'shougo/vimfiler.vim'
 
 "
 " External Interfaces
@@ -101,52 +103,87 @@ Plug 'dsawardekar/portkey'
 "
 
 " Clojure
-Plug 'tpope/vim-fireplace'
-Plug 'tpope/vim-salve'
-Plug 'guns/vim-sexp'
-Plug 'tpope/vim-sexp-mappings-for-regular-people'
-Plug 'guns/vim-clojure-highlight'
-Plug 'venantius/vim-cljfmt'
-Plug 'venantius/vim-eastwood'
+Plug 'tpope/vim-fireplace',
+     \ { 'for': 'clojure' }
+
+Plug 'tpope/vim-salve',
+     \ { 'for': 'clojure' }
+
+Plug 'guns/vim-sexp',
+     \ { 'for': 'clojure' }
+
+Plug 'tpope/vim-sexp-mappings-for-regular-people',
+     \ { 'for': 'clojure' }
+
+Plug 'guns/vim-clojure-highlight',
+     \ { 'for': 'clojure' }
+
+Plug 'venantius/vim-cljfmt',
+     \ { 'for': 'clojure' }
+
+Plug 'venantius/vim-eastwood',
+     \ { 'for': 'clojure' }
 
 " CoffeeScript
-Plug 'kchmck/vim-coffee-script'
+Plug 'kchmck/vim-coffee-script',
+     \ { 'for': 'coffee' }
 
 " Ember
-Plug 'dsawardekar/ember.vim'
-Plug 'heartsentwined/vim-ember-script'
-Plug 'heartsentwined/vim-emblem'
+Plug 'dsawardekar/ember.vim',
+     \ { 'for': ['javascript', 'handlebars.ember'] }
+
+Plug 'heartsentwined/vim-ember-script',
+     \ { 'for': 'ember-script' }
+
+Plug 'heartsentwined/vim-emblem',
+     \ { 'for': 'emblem' }
 
 " Go
-Plug 'fatih/vim-go'
+Plug 'fatih/vim-go',
+     \ { 'for': ['go', 'gohtmltmpl'] }
 
 " Haskell
-Plug 'bitc/vim-hdevtools'
+Plug 'bitc/vim-hdevtools',
+     \ { 'for': 'haskell' }
 
 " Jade
-Plug 'digitaltoad/vim-jade'
+Plug 'digitaltoad/vim-jade',
+     \ { 'for': 'jade' }
 
 "JavaScript
-Plug 'pangloss/vim-javascript'
+Plug 'pangloss/vim-javascript',
+     \ { 'for': 'javascript' }
 
 " LaTeX
-Plug 'latex-box-team/latex-box'
+Plug 'latex-box-team/latex-box',
+     \ { 'for': 'tex' }
 
 " Node.js
-Plug 'moll/vim-node'
-Plug 'ahayman/vim-nodejs-complete'
+Plug 'moll/vim-node',
+     \ { 'for': 'javascript' }
+
+Plug 'ahayman/vim-nodejs-complete',
+     \ { 'for': 'javascript' }
 
 " Python
-Plug 'tmhedberg/simpylfold'
-Plug 'davidhalter/jedi-vim'
-  \ | Plug 'lambdalisue/vim-pyenv', { 'for': 'python' }
+Plug 'tmhedberg/simpylfold',
+     \ { 'for': 'python' }
+
+Plug 'davidhalter/jedi-vim',
+     \ { 'for': 'python' }
+     \ | Plug 'lambdalisue/vim-pyenv',
+              \ { 'for': 'python' }
 
 " React
-Plug 'mxw/vim-jsx'
+Plug 'mxw/vim-jsx',
+     \ { 'for': 'javascript.jsx' }
 
 " Ruby
-Plug 'tpope/vim-rbenv'
-Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-rbenv',
+     \ { 'for': 'ruby' }
+
+Plug 'tpope/vim-bundler',
+     \ { 'for': 'ruby' }
 
 "
 " Initialization Settings
