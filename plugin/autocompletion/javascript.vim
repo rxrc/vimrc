@@ -1,2 +1,5 @@
 " Use Node omni completion.
-autocmd FileType javascript setlocal omnifunc=nodejscomplete#CompleteJS
+augroup omni-javascript
+  autocmd!
+  autocmd FileType javascript setlocal omnifunc=nodejscomplete#CompleteJS
+augroup END
