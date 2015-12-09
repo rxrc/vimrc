@@ -138,7 +138,8 @@ Plug 'ahayman/vim-nodejs-complete'
 
 " Python
 Plug 'tmhedberg/simpylfold'
-Plug 'davidhalter/jedi-vim' | Plug 'lambdalisue/vim-pyenv'
+Plug 'davidhalter/jedi-vim'
+  \ | Plug 'lambdalisue/vim-pyenv', { 'for': 'python' }
 
 " React
 Plug 'mxw/vim-jsx'
