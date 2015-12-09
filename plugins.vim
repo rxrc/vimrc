@@ -64,7 +64,7 @@ Plug 'tpope/vim-commentary'
 "
 
 " Buffer
-Plug 'vim-scripts/bufkill.vim'
+Plug 'qpkorr/bufkill.vim'
 
 " Session
 Plug 'xolox/vim-misc'
