@@ -1,8 +1,9 @@
 " Disable bell and visual bell.
 set noerrorbells visualbell t_vb=
-if has('autocmd')
+augroup gui-visualbell
+  autocmd!
   autocmd GUIEnter * set visualbell t_vb=
-endif
+augroup END
 
 " Hide some autocompletion messages.
 set shortmess+=c

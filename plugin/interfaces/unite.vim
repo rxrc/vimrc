@@ -21,9 +21,14 @@ if executable('ag')
 endif
 
 " Customize the buffer.
-autocmd FileType unite call s:unite_settings()
 function! s:unite_settings()
   " Enable navigation with Ctrl-J and Ctrl-K in insert mode.
   imap <buffer> <C-J> <Plug>(unite_select_next_line)
   imap <buffer> <C-K> <Plug>(unite_select_previous_line)
 endfunction
+
+" Apply unite buffer settings when opening unite buffer.
+augroup unite-buffer-settings
+  autocmd!
+  autocmd FileType unite call s:unite_settings()
+augroup END

@@ -1,5 +1,8 @@
 " Use jedi-vim for Python autocompletion.
-autocmd FileType python setlocal omnifunc=jedi#completions
+augroup omni-python
+  autocmd!
+  autocmd FileType python setlocal omnifunc=jedi#completions
+augroup END
 let g:jedi#completions_enabled = 0
 let g:jedi#auto_vim_configuration = 0
 let g:neocomplete#force_omni_input_patterns.python =

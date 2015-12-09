@@ -13,7 +13,8 @@ function! s:spell_auto_local_spellfile() abort
   endif
 endfunction
 
-augroup vim-spellfile-local-augroup
-  autocmd! *
+" Load local spellfile when opening file.
+augroup spellfile-local-spellfile
+  autocmd!
   autocmd FileType * call s:spell_auto_local_spellfile()
 augroup END
