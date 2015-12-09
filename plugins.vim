@@ -101,13 +101,13 @@ Plug 'dsawardekar/portkey'
 "
 
 " Clojure
-Plug 'guns/vim-sexp'
-Plug 'tpope/vim-sexp-mappings-for-regular-people'
-Plug 'venantius/vim-cljfmt'
-Plug 'venantius/vim-eastwood'
 Plug 'tpope/vim-fireplace'
 Plug 'tpope/vim-salve'
+Plug 'guns/vim-sexp'
+Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'guns/vim-clojure-highlight'
+Plug 'venantius/vim-cljfmt'
+Plug 'venantius/vim-eastwood'
 
 " CoffeeScript
 Plug 'kchmck/vim-coffee-script'
