@@ -6,7 +6,9 @@
 let mapleader = "\<Space>"
 
 " Libraries
-Plug 'shougo/vimproc.vim', { 'do': 'make \|\| gmake' }
+Plug 'shougo/vimproc.vim',
+     \ { 'do': 'make \|\| gmake' }
+
 Plug 'tpope/vim-repeat'
 
 " Sensible Defaults
