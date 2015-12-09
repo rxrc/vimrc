@@ -38,8 +38,7 @@ Plug 'scrooloose/syntastic'
 Plug 'chrisbra/colorizer'
 
 " Whitespace
-Plug 'vim-scripts/showtrailingwhitespace'
-Plug 'vim-scripts/deletetrailingwhitespace'
+Plug 'ntpeters/vim-better-whitespace'
 
 " Parentheses
 Plug 'luochen1990/rainbow'

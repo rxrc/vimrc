@@ -1,3 +1,5 @@
 " Delete trailing whitespace.
-let g:DeleteTrailingWhitespace = 1
-let g:DeleteTrailingWhitespace_Action = 'delete'
+augroup whitespace-strip
+  autocmd!
+  autocmd BufWritePre * StripWhitespace
+augroup END
