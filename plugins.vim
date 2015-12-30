@@ -248,3 +248,9 @@ let g:commentary_map_backslash = 0
 
 " Enable yank history.
 let g:unite_source_history_yank_enable = 1
+
+"
+" fzf
+
+" Set fzf command prefix.
+let g:fzf_command_prefix = 'Fzf'
