@@ -14,12 +14,6 @@ vnoremap : q:
 nnoremap <Leader>q q
 vnoremap <Leader>q q
 
-" Shortcuts for marks.
-nnoremap q m
-vnoremap q m
-nnoremap qq mm
-vnoremap qq mm
-
 " Shortcut for new.
 nnoremap <silent> <Leader>n :<C-U>enew<CR>
 

@@ -65,6 +65,9 @@ Plug 'shougo/neocomplete.vim'
 Plug 'shougo/neosnippet'
 Plug 'shougo/neosnippet-snippets'
 
+" Marks
+Plug 'kshenoy/vim-signature'
+
 " Undo
 Plug 'sjl/gundo.vim'
 
@@ -220,6 +223,12 @@ endif
 if !exists('g:neocomplete#force_omni_input_patterns')
   let g:neocomplete#force_omni_input_patterns = {}
 endif
+
+"
+" Signature
+
+" Set signature leader.
+let g:SignatureMap = { 'Leader': "q" }
 
 "
 " Commentary
