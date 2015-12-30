@@ -49,21 +49,21 @@ Plug 'justinmk/vim-sneak'
 " Clipboard
 Plug 'svermeulen/vim-easyclip'
 
-" Autocompletion
-Plug 'shougo/neocomplete.vim'
-Plug 'shougo/neosnippet'
-Plug 'shougo/neosnippet-snippets'
-
 " Macros
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
+
+" Buffer
+Plug 'qpkorr/vim-bufkill'
 
 "
 " Internal Interfaces
 "
 
-" Buffer
-Plug 'qpkorr/vim-bufkill'
+" Autocompletion
+Plug 'shougo/neocomplete.vim'
+Plug 'shougo/neosnippet'
+Plug 'shougo/neosnippet-snippets'
 
 " Undo
 Plug 'sjl/gundo.vim'
