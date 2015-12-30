@@ -65,6 +65,9 @@ Plug 'tpope/vim-commentary'
 " Buffer
 Plug 'qpkorr/vim-bufkill'
 
+" Undo
+Plug 'sjl/gundo.vim'
+
 " Session
 Plug 'xolox/vim-misc'
      \ | Plug 'xolox/vim-session'
