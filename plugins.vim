@@ -95,6 +95,9 @@ Plug 'keith/investigate.vim'
 " Shell
 Plug 'tpope/vim-dispatch'
 
+" The Silver Searcher
+Plug 'rking/ag.vim'
+
 " Git
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
