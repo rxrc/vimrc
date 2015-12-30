@@ -28,8 +28,8 @@ nnoremap <silent> Q :<C-U>quit<CR>
 vnoremap <silent> Q :<C-U>quit<CR>
 
 " Shortcuts for force quit.
-nnoremap <silent> <leader>Q :<C-U>quit!<CR>
-vnoremap <silent> <leader>Q :<C-U>quit!<CR>
+nnoremap <silent> <Leader>Q :<C-U>quit!<CR>
+vnoremap <silent> <Leader>Q :<C-U>quit!<CR>
 
 " Shortcut to quit all.
 nnoremap <silent> <C-Q> :<C-U>quitall<CR>
