@@ -89,6 +89,10 @@ Plug 'shougo/unite.vim'
 " External Interfaces
 "
 
+" fzf
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+
 " Documentation
 Plug 'keith/investigate.vim'
 
