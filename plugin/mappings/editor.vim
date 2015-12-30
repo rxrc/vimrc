@@ -41,10 +41,6 @@ nnoremap <silent> <Leader>S :<C-U>write!<CR>
 " Shortcut for redo.
 nnoremap <silent> <Leader>r <C-R>
 
-" Close the buffer but not the window.
-nnoremap <silent> <Leader>w :<C-U>BD<CR>
-nnoremap <silent> <Leader>W :<C-U>BD!<CR>
-
 " Clear highlighting until next search.
 nnoremap <silent> <Leader>i :<C-U>nohlsearch<CR>
 
