@@ -54,7 +54,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 
 " Buffer
-Plug 'qpkorr/vim-bufkill'
+Plug 'moll/vim-bbye'
 
 "
 " Internal Interfaces
