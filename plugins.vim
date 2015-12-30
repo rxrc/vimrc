@@ -56,6 +56,9 @@ Plug 'tpope/vim-commentary'
 " Buffer
 Plug 'moll/vim-bbye'
 
+" Yank
+Plug 'shougo/neoyank.vim'
+
 "
 " Internal Interfaces
 "
@@ -242,12 +245,6 @@ let g:SignatureMap = { 'Leader': "q" }
 
 " Disable \\ commentary maps.
 let g:commentary_map_backslash = 0
-
-"
-" Unite.vim
-
-" Enable yank history.
-let g:unite_source_history_yank_enable = 1
 
 "
 " fzf
