@@ -69,3 +69,6 @@ nnoremap <Leader><Tab> za
 
 " Shortcut to open spell popup in insert mode.
 inoremap <C-P> <C-X><C-S>
+
+" Shortcut to open external links.
+nmap <Leader>x gx
