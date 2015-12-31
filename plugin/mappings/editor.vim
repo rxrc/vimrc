@@ -10,13 +10,13 @@ cnoremap <C-J> <Down>
 nnoremap : q:
 vnoremap : q:
 
-" Shortcuts for record.
-nnoremap <Leader>q q
-vnoremap <Leader>q q
-
 " Shortcuts for quit.
 nnoremap <silent> Q :<C-U>quit<CR>
 vnoremap <silent> Q :<C-U>quit<CR>
+
+" Shortcuts for record.
+nnoremap <Leader>q q
+vnoremap <Leader>q q
 
 " Shortcut for new.
 nnoremap <silent> <Leader>n :<C-U>enew<CR>
