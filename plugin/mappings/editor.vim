@@ -33,7 +33,7 @@ nnoremap <silent> <Leader>s :<C-U>update<CR>
 nnoremap <silent> <Leader>S :<C-U>write!<CR>
 
 " Shortcut for redo.
-nnoremap <silent> <Leader>r <C-R>
+nnoremap <Leader>r <C-R>
 
 " Clear highlighting until next search.
 nnoremap <silent> <Leader>I :<C-U>nohlsearch<CR>
