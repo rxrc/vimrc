@@ -1,9 +1,9 @@
 " Toggle vimfiler split.
-nnoremap <silent> <Leader>od :<C-U>VimFilerSplit
+nnoremap <silent> <Leader>oi :<C-U>VimFilerSplit
   \ -toggle -no-quit -no-focus -buffer-name=main<CR>
 
 " Go to vimfiler.
-nnoremap <silent> <Leader>d :<C-U>VimFilerSplit -no-quit -buffer-name=main<CR>
+nnoremap <silent> <Leader>i :<C-U>VimFilerSplit -no-quit -buffer-name=main<CR>
 
 " Set vimfiler buffer mappings.
 augroup vimfiler-local-mappings
