@@ -14,12 +14,12 @@ vnoremap : q:
 nnoremap <Leader>q q
 vnoremap <Leader>q q
 
-" Shortcut for new.
-nnoremap <silent> <Leader>n :<C-U>enew<CR>
-
 " Shortcuts for quit.
 nnoremap <silent> Q :<C-U>quit<CR>
 vnoremap <silent> Q :<C-U>quit<CR>
+
+" Shortcut for new.
+nnoremap <silent> <Leader>n :<C-U>enew<CR>
 
 " Shortcuts for force quit.
 nnoremap <silent> <Leader>Q :<C-U>quit!<CR>
