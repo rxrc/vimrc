@@ -49,20 +49,20 @@ nnoremap <Leader>p "+p
 nnoremap <Leader>P "+P
 
 " Split frame.
-nnoremap <Leader>H :topleft vsplit<CR>
-nnoremap <Leader>L :botright vsplit<CR>
-nnoremap <Leader>K :topleft split<CR>
-nnoremap <Leader>J :botright split<CR>
+nnoremap <silent> <Leader>H :<C-U>topleft vsplit<CR>
+nnoremap <silent> <Leader>L :<C-U>botright vsplit<CR>
+nnoremap <silent> <Leader>K :<C-U>topleft split<CR>
+nnoremap <silent> <Leader>J :<C-U>botright split<CR>
 
 " Split window.
-nnoremap <Leader>h :leftabove vsplit<CR>
-nnoremap <Leader>l :rightbelow vsplit<CR>
-nnoremap <Leader>k :leftabove split<CR>
-nnoremap <Leader>j :rightbelow split<CR>
+nnoremap <silent> <Leader>h :<C-U>leftabove vsplit<CR>
+nnoremap <silent> <Leader>l :<C-U>rightbelow vsplit<CR>
+nnoremap <silent> <Leader>k :<C-U>leftabove split<CR>
+nnoremap <silent> <Leader>j :<C-U>rightbelow split<CR>
 
 " Cycle through buffers.
-nnoremap <Leader>, :bprevious<CR>
-nnoremap <Leader>. :bnext<CR>
+nnoremap <silent> <Leader>, :<C-U>bprevious<CR>
+nnoremap <silent> <Leader>. :<C-U>bnext<CR>
 
 " Shortcut to toggle folds.
 nnoremap <Leader><Tab> za
