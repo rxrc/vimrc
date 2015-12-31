@@ -73,7 +73,7 @@ Plug 'shougo/neosnippet-snippets'
 Plug 'kshenoy/vim-signature'
 
 " Undo
-Plug 'sjl/gundo.vim'
+Plug 'mbbill/undotree'
 
 " Session
 Plug 'xolox/vim-misc'
