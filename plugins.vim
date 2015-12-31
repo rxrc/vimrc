@@ -202,6 +202,9 @@ Plug 'tpope/vim-rbenv',
 Plug 'tpope/vim-bundler',
      \ { 'for': 'ruby' }
 
+Plug 'danchoi/ri.vim',
+     \ { 'for': 'ruby' }
+
 "
 " Initialization Settings
 "
@@ -251,3 +254,9 @@ let g:commentary_map_backslash = 0
 
 " Set fzf command prefix.
 let g:fzf_command_prefix = 'Fzf'
+
+"
+" Ruby
+
+" Disable default ri.vim mappings.
+let g:ri_no_mappings = 1
