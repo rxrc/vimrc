@@ -173,7 +173,7 @@ Plug 'pangloss/vim-javascript',
      \ { 'for': 'javascript' }
 
 " LaTeX
-Plug 'latex-box-team/latex-box',
+Plug 'lervag/vimtex',
      \ { 'for': 'tex' }
 
 " Node.js
