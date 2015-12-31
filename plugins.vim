@@ -4,6 +4,7 @@
 
 " Map space to leader.
 let mapleader = "\<Space>"
+let maplocalleader = "\\"
 
 " Libraries
 Plug 'shougo/vimproc.vim',
