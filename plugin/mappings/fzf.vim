@@ -7,7 +7,7 @@ nnoremap <silent> <Leader>fq :<C-U>FzfMarks<CR>
 nnoremap <silent> <Leader>fl :<C-U>FzfLines<CR>
 nnoremap <silent> <Leader>fk :<C-U>FzfBLines<CR>
 nnoremap <silent> <Leader>fj :<C-U>FzfBuffers<CR>
-nnoremap <silent> <Leader>fg :<C-U>FzfCommits<CR>
+nnoremap <silent> <Leader>fe :<C-U>FzfCommits<CR>
 nnoremap <silent> <Leader>fh :<C-U>FzfBCommits<CR>
 nnoremap <silent> <Leader>ft :<C-U>FzfTags<CR>
 nnoremap <silent> <Leader>fc :<C-U>FzfBTags<CR>
