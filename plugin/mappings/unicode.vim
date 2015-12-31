@@ -1,2 +1,3 @@
+" Remap <Leader>un to avoid overloading <Leader>u.
 unmap <Leader>un
-nmap <Leader>gu <Plug>(UnicodeSwapCompleteName)
+nmap <Leader>ou <Plug>(UnicodeSwapCompleteName)

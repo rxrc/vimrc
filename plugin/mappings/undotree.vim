@@ -1,5 +1,5 @@
 " Toggle Undotree.
-nnoremap <silent> <Leader>ou :<C-U>UndotreeToggle<CR>
+nnoremap <silent> <Leader>U :<C-U>UndotreeToggle<CR>
 
 " Open and focus Undotree.
 nnoremap <silent> <Leader>u

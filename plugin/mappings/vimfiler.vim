@@ -1,5 +1,5 @@
 " Toggle vimfiler split.
-nnoremap <silent> <Leader>oi :<C-U>VimFilerSplit
+nnoremap <silent> <Leader>I :<C-U>VimFilerSplit
   \ -toggle -no-quit -no-focus -buffer-name=main<CR>
 
 " Open and focus vimfiler.
