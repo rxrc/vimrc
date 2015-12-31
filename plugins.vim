@@ -168,7 +168,7 @@ Plug 'bitc/vim-hdevtools',
 Plug 'digitaltoad/vim-jade',
      \ { 'for': 'jade' }
 
-"JavaScript
+" JavaScript
 Plug 'pangloss/vim-javascript',
      \ { 'for': 'javascript' }
 
