@@ -36,7 +36,7 @@ nnoremap <silent> <Leader>S :<C-U>write!<CR>
 nnoremap <silent> <Leader>r <C-R>
 
 " Clear highlighting until next search.
-nnoremap <silent> <Leader>i :<C-U>nohlsearch<CR>
+nnoremap <silent> <Leader>I :<C-U>nohlsearch<CR>
 
 " Copy to system clipboard.
 nnoremap <Leader>c "+y
