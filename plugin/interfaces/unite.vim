@@ -1,8 +1,7 @@
-" Unite.vim configuration.
-
 " Set matcher behavior.
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 
+" Use ag or ack if available.
 if executable('ag')
   let g:unite_source_grep_command='ag'
   let g:unite_source_grep_default_opts='--nocolor --nogroup --hidden'
