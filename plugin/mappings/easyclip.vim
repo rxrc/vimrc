@@ -1,4 +1,4 @@
 " Enable substitution operator.
-nmap <silent> gs <Plug>SubstituteOverMotionMap
-nmap gss <Plug>SubstituteLine
-xmap gs <Plug>XEasyClipPaste
+nmap <silent> : <Plug>SubstituteOverMotionMap
+nmap :: <Plug>SubstituteLine
+xmap :s <Plug>XEasyClipPaste
