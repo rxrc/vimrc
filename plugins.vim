@@ -164,6 +164,10 @@ Plug 'fatih/vim-go',
 Plug 'bitc/vim-hdevtools',
      \ { 'for': 'haskell' }
 
+" HTML
+Plug 'mattn/emmet-vim',
+     \ { 'for': ['html', 'css'] }
+
 " Jade
 Plug 'digitaltoad/vim-jade',
      \ { 'for': 'jade' }
