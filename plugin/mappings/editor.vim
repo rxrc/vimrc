@@ -7,8 +7,8 @@ cnoremap <C-K> <Up>
 cnoremap <C-J> <Down>
 
 " Use : to open command-line window.
-nnoremap : q:
-vnoremap : q:
+nnoremap <Leader>: q:
+vnoremap <Leader>: q:
 
 " Shortcuts for quit.
 nnoremap <silent> Q :<C-U>quit<CR>
