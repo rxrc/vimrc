@@ -38,6 +38,9 @@ nnoremap <Leader>r <C-R>
 " Clear highlighting until next search.
 nnoremap <silent> <Leader>oi :<C-U>nohlsearch<CR>
 
+" Shortcut to paste from expression register.
+nnoremap <Leader>= "=
+
 " Copy to system clipboard.
 nnoremap <Leader>c "+y
 vnoremap <Leader>c "+y
