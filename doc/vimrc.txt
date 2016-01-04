@@ -1,0 +1,57 @@
+*vimrc.txt* Vim configuration as a self-bootstrapping plugin.
+*rxrc/vimrc*
+
+                                _                    ~
+                         __   _(_)_ __ ___  _ __ ___ ~
+                         \ \ / / | '_ ` _ \| '__/ __|~
+                          \ V /| | | | | | | | | (__ ~
+                           \_/ |_|_| |_| |_|_|  \___|~
+
+
+==============================================================================
+CONTENTS                                                      *vimrc-contents*
+
+    1.Intro.........................................|vimrc-intro|
+    i.About.........................................|vimrc-about|
+    ii.License......................................|vimrc-license|
+    iii.Warranty....................................|vimrc-warranty|
+
+==============================================================================
+1. Intro                                                         *vimrc-intro*
+
+This configuration system works as a meta-plugin:
+all desired Vim plugins are loaded from *plugins.vim* using vim-plug.
+Overall configuration then follows a normal plugin structure.
+
+This document concerns the methodology behind my specific Vim environment.
+For installation instructions and development information, see
+
+    https://github.com/rxrc/vimrc
+
+==============================================================================
+i. About                                                         *vimrc-about*
+
+This plugin is authored by Evan Sosenko:
+
+    https://evansosenko.com
+
+Find the source and latest version at
+
+    https://github.com/rxrc/vimrc
+
+==============================================================================
+ii. License                                                    *vimrc-license*
+
+This Vim configuration is licensed under the MIT license.
+
+    https://github.com/rxrc/vimrc/blob/master/LICENSE.txt.
+
+==============================================================================
+iii. Warranty                                                 *vimrc-warranty*
+
+This software is provided "as is" and without any express or
+implied warranties, including, without limitation, the implied
+warranties of merchantibility and fitness for a particular
+purpose.
+
+ vim:tw=78:sw=4:ft=help:norl:
