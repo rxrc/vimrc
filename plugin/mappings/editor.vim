@@ -2,6 +2,10 @@
 nnoremap <Leader><Leader> :
 vnoremap <Leader><Leader> :
 
+" Use Ctrl-H and Ctrl-L to navigate command input.
+cnoremap <C-H> <Left>
+cnoremap <C-L> <Right>
+
 " Use Ctrl-K and Ctrl-J to navigate command history.
 cnoremap <C-K> <Up>
 cnoremap <C-J> <Down>
