@@ -92,3 +92,7 @@ nmap <Leader>x gx
 " Shortcuts to open and close tabs.
 nnoremap <Leader><Tab> :<C-U>tabnew<CR>
 nnoremap <Leader><S-Tab> :<C-U>tabclose<CR>
+
+" Shortcut for @:.
+nnoremap <Leader><CR> @:
+vnoremap <Leader><CR> @:
