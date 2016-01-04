@@ -14,9 +14,15 @@ cnoremap <C-L> <Right>
 cnoremap <C-K> <Up>
 cnoremap <C-J> <Down>
 
-" Use : to open command-line window.
+" Mappings to open command-line window.
 nnoremap <Leader>: q:
 vnoremap <Leader>: q:
+
+" Mappings to open command-line window.
+nnoremap <Leader>/ q/
+vnoremap <Leader>/ q/
+nnoremap <Leader>? q?
+vnoremap <Leader>? q?
 
 " Shortcuts for quit.
 nnoremap <silent> Q :<C-U>quit<CR>
