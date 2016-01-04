@@ -31,6 +31,12 @@ vnoremap <silent> Q :<C-U>quit<CR>
 nnoremap <Leader>q q
 vnoremap <Leader>q q
 
+" Swap ` with '.
+nnoremap ` '
+vnoremap ` '
+nnoremap ' `
+vnoremap ' `
+
 " Shortcut for new.
 nnoremap <silent> <Leader>n :<C-U>enew<CR>
 
