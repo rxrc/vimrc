@@ -88,3 +88,7 @@ inoremap <C-P> <C-X><C-S>
 
 " Shortcut to open external links.
 nmap <Leader>x gx
+
+" Shortcuts to open and close tabs.
+nnoremap <Leader><Tab> :<C-U>tabnew<CR>
+nnoremap <Leader><S-Tab> :<C-U>tabclose<CR>
