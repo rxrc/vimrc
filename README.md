@@ -15,6 +15,14 @@ Overall configuration then follows a normal plugin structure.
 
 ## Installation
 
+### Required Packages
+
+- The [fzf] binary (vim-plug is not configured to manage it here).
+- See [vim-fireplace] for the Clojure specific plugin dependences.
+
+[fzf]: https://github.com/junegunn/fzf
+[vim-fireplace]: https://github.com/tpope/vim-fireplace
+
 ### Required Fonts
 
 This configuration uses [Inconsolata-g], and
