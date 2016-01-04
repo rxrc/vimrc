@@ -4,6 +4,8 @@
 [![GitHub license](http://img.shields.io/github/license/rxrc/vimrc.svg)](./LICENSE.txt)
 
 My complete Vim configuration as a Vim plugin.
+For an empty starting config that follows the same organization,
+switch to the `minimal` branch.
 
 ## Description
 
