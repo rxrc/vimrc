@@ -1,10 +1,9 @@
-" Map enter to escape in insert and visual mode.
+" Map enter to escape in insert mode.
 inoremap <CR> <Esc>
-vnoremap <CR> <Esc>
 
-" Double-tap leader to open command-line mode.
-nnoremap <Leader><Leader> :
-vnoremap <Leader><Leader> :
+" Use enter to open command-line mode.
+nnoremap <CR> :
+vnoremap <CR> :
 
 " Use Ctrl-H and Ctrl-L to navigate command input.
 cnoremap <C-H> <Left>
@@ -82,7 +81,7 @@ nnoremap <silent> <Leader>, :<C-U>bprevious<CR>
 nnoremap <silent> <Leader>. :<C-U>bnext<CR>
 
 " Shortcut to toggle folds.
-nnoremap <Leader><Tab> za
+nnoremap <Leader><Leader> za
 
 " Shortcut to open spell popup in insert mode.
 inoremap <C-P> <C-X><C-S>
