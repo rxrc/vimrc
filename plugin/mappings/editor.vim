@@ -1,3 +1,7 @@
+" Map enter to escape in insert and visual mode.
+inoremap <CR> <Esc>
+vnoremap <CR> <Esc>
+
 " Double-tap leader to open command-line mode.
 nnoremap <Leader><Leader> :
 vnoremap <Leader><Leader> :
