@@ -1,4 +1,4 @@
-" Bindings for Unite.vim.
+" Mappings for Unite.vim buffers.
 nnoremap <Leader>b :<C-U>Unite -no-split -buffer-name=buffer
   \ -start-insert buffer<CR>
 nnoremap <Leader>e :<C-U>Unite -no-split -buffer-name=files
