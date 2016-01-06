@@ -11,10 +11,15 @@
 ==============================================================================
 CONTENTS                                                      *vimrc-contents*
 
-    1.Intro.........................................|vimrc-intro|
-    i.About.........................................|vimrc-about|
-    ii.License......................................|vimrc-license|
-    iii.Warranty....................................|vimrc-warranty|
+    1.Intro....................................|vimrc-intro|
+        1.1.Structure..........................|vimrc-structure|
+    2.Plugin Settings..........................|vimrc-plugin-settings|
+    3.Mappings.................................|vimrc-mappings|
+        3.1.Nonstandard Vim mappings...........|vimrc-nonstandard-mappings|
+        3.2.Plugin specific mappings...........|vimrc-plugin-mappings|
+    i.About....................................|vimrc-about|
+    ii.License.................................|vimrc-license|
+    iii.Warranty...............................|vimrc-warranty|
 
 ==============================================================================
 1. Intro                                                         *vimrc-intro*
@@ -27,6 +32,64 @@ This document concerns the methodology behind my specific Vim environment.
 For installation instructions and development information, see
 
     https://github.com/rxrc/vimrc
+
+------------------------------------------------------------------------------
+1.1 Structure                                                *vimrc-structure*
+
+All plugins are loaded in `plugins.vim` using vim-plug.
+Some plugin settings must be set at plugin initialization.
+Those settings are located at the bottom of `plugins.vim`.
+
+All other settings are split into individual files organized
+either by function or plugin.
+
+Standard Vim configuration is contained directly under `plugin`.
+Plugin specific configuration is contained in a correspondingly
+named `.vim` file in some (possible nested) directly under `plugin`.
+Settings are grouped by plugin, or possibly by the function
+of several interrelated plugins.
+
+The `plugin/mappings` directory is reserved for mappings.
+The `plugin/autocompletion` directory contains file type specific
+autocompletion configuration.
+
+Use of `autocmd` within `augroup` is preferred over `ftplugin`
+in order to group related configuration by plugin instead of file type.
+
+==============================================================================
+2. Plugin Settings                                     *vimrc-plugin-settings*
+
+This section provides an overview of plugin specific configuration choices.
+
+==============================================================================
+3. Mappings                                                   *vimrc-mappings*
+
+With minor exceptions, all mappings are defined in individual `.vim` files
+under `plugin/mappings`.
+
+Conventionally, plugin specific mappings go in a file named after
+the corresponding plugin, e.g., `fzf.vim`.
+Alternatively, mappings spanning several interrelated plugs may be
+grouped under a single file, e.g., `autocompletion.vim` contains mappings
+for neocomplete, neosnippet, etc.
+
+The special file `editor.vim` is reserved for standard Vim mappings.
+
+The remainder of this section documents mappings created or modified
+by this plugin. For behavior, refer to either Vim's or
+the corresponding plugin's documentation.
+
+------------------------------------------------------------------------------
+3.1 Nonstandard Vim mappings                      *vimrc-nonstandard-mappings*
+
+This section lists any standard Vim mappings which this plugin remaps,
+and any new mappings to existing Vim functions.
+
+------------------------------------------------------------------------------
+3.2 Plugin specific mappings                           *vimrc-plugin-mappings*
+
+This section list mappings to plugin specific functions,
+and modifications to a plugin's normal provided mappings.
 
 ==============================================================================
 i. About                                                         *vimrc-about*
