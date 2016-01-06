@@ -60,15 +60,28 @@ nnoremap <silent> <Leader>oi :<C-U>nohlsearch<CR>
 " Shortcut to paste from expression register.
 nnoremap <Leader>= "=
 
-" Copy to system clipboard.
-nnoremap <Leader>c "+y
-vnoremap <Leader>c "+y
-nnoremap <Leader>cc "+yy
-nnoremap <silent> <Leader>ca :<C-U>%y+<CR>
+" Adds mappings for the system clipboard.
+function! SystemClipboardMappings(register)
+  " Copy to system clipboard.
+  exec 'nnoremap <Leader>c "' . a:register . 'y'
+  exec 'vnoremap <Leader>c "' . a:register . 'y'
+  exec 'nnoremap <Leader>cc "' . a:register . 'yy'
+  exec 'nnoremap <silent> <Leader>ca :<C-U>%y' . a:register . '<CR>'
 
-" Paste from system clipboard.
-nnoremap <Leader>p "+p
-nnoremap <Leader>P "+P
+  " Paste from system clipboard.
+  exec 'nnoremap <Leader>p "' . a:register . 'p'
+  exec 'nnoremap <Leader>P "' . a:register . 'P'
+
+  " Save the newly mapped register.
+  let g:mapped_system_clipboard = a:register
+endfunction
+call SystemClipboardMappings('+')
+
+" Toggle system clipboard mappings between the + and * registers.
+nnoremap <expr> <Leader>oo
+  \ g:mapped_system_clipboard == '+' ?
+  \ ":<C-U>call SystemClipboardMappings('*')<CR>" :
+  \ ":<C-U>call SystemClipboardMappings('+')<CR>"
 
 " Split frame.
 nnoremap <silent> <Leader>H :<C-U>topleft vsplit<CR>
