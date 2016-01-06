@@ -53,6 +53,7 @@ Plug 'svermeulen/vim-easyclip'
 " Macros
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-unimpaired'
 
 " Buffer
 Plug 'moll/vim-bbye'
