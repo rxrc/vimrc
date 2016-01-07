@@ -1,5 +1,5 @@
 " Toggle paste formatting.
-nmap <Leader>op <Plug>EasyClipToggleFormattedPaste
+nmap cof <Plug>EasyClipToggleFormattedPaste
 
 " Enable substitution operator.
 nmap <silent> : <Plug>SubstituteOverMotionMap

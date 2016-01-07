@@ -55,7 +55,7 @@ nnoremap <silent> <Leader>S :<C-U>write!<CR>
 nnoremap <Leader>r <C-R>
 
 " Clear highlighting until next search.
-nnoremap <silent> <Leader>oi :<C-U>nohlsearch<CR>
+nnoremap <silent> <Leader>o :<C-U>nohlsearch<CR>
 
 " Shortcut to paste from expression register.
 nnoremap <Leader>= :<C-U>put =
@@ -78,7 +78,7 @@ endfunction
 call SystemClipboardMappings('+')
 
 " Toggle system clipboard mappings between the + and * registers.
-nnoremap <expr> <Leader>oo
+nnoremap <expr> cop
   \ g:mapped_system_clipboard == '+' ?
   \ ":<C-U>call SystemClipboardMappings('*')<CR>" :
   \ ":<C-U>call SystemClipboardMappings('+')<CR>"
