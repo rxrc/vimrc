@@ -51,6 +51,9 @@ nnoremap <silent> <C-Q> :<C-U>quitall<CR>
 nnoremap <silent> <Leader>s :<C-U>update<CR>
 nnoremap <silent> <Leader>S :<C-U>write!<CR>
 
+" Shortcut to force reload file.
+nnoremap <silent> <Leader>E :<C-U>edit!<CR>
+
 " Shortcut for redo.
 nnoremap <Leader>r <C-R>
 
