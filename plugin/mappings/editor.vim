@@ -131,6 +131,6 @@ nmap <Leader>x gx
 nnoremap <Leader><Tab> :<C-U>tabnew<CR>
 nnoremap <Leader><S-Tab> :<C-U>tabclose<CR>
 
-" Shortcut for @:.
-nnoremap <Leader><CR> @:
-vnoremap <Leader><CR> @:
+" " Shortcut for @:.
+" nnoremap <Leader>: @;
+" vnoremap <Leader>: @;

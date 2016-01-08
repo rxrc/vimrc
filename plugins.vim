@@ -248,7 +248,7 @@ endif
 " Signature
 
 " Set signature leader.
-let g:SignatureMap = { 'Leader': "q" }
+let g:SignatureMap = { 'Leader': "\<Leader\>;" }
 
 "
 " Commentary

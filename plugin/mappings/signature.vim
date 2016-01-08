@@ -1,2 +1,2 @@
 " Alternate mapping to toggle mark.
-nmap qq q.
+nmap <Leader>;; <Leader>;.
