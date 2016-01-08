@@ -5,6 +5,13 @@ inoremap <CR> <Esc>
 nnoremap <CR> :
 vnoremap <CR> :
 
+" Fix enter behavior in quickfix and command-line mode.
+augroup cr-local-mappings
+  autocmd!
+  autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
+  autocmd CmdwinEnter * nnoremap <CR> <CR>
+augroup END
+
 " Use Ctrl-H and Ctrl-L to navigate command input.
 cnoremap <C-H> <Left>
 cnoremap <C-L> <Right>
