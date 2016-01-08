@@ -39,8 +39,8 @@ nnoremap <Leader>? q?
 vnoremap <Leader>? q?
 
 " Shortcuts for quit.
-nnoremap <silent> Q :<C-U>quit<CR>
-vnoremap <silent> Q :<C-U>quit<CR>
+nnoremap <silent> <Leader><CR> :<C-U>quit<CR>
+vnoremap <silent> <Leader><CR> :<C-U>quit<CR>
 
 " Shortcuts for record.
 nnoremap <Leader>q q
