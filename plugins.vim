@@ -51,6 +51,7 @@ Plug 'justinmk/vim-sneak'
 Plug 'svermeulen/vim-easyclip'
 
 " Macros
+Plug 'bronson/vim-visual-star-search'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-unimpaired'
