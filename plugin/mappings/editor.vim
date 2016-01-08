@@ -10,6 +10,7 @@ augroup cr-local-mappings
   autocmd!
   autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
   autocmd CmdwinEnter * nnoremap <CR> <CR>
+  autocmd CmdwinLeave * nnoremap <CR> :
 augroup END
 
 " Allow escape to enter and exit command-line mode.
