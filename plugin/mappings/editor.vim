@@ -69,8 +69,9 @@ nnoremap <silent> <Leader>S :<C-U>write!<CR>
 " Shortcut to force reload file.
 nnoremap <silent> <Leader>E :<C-U>edit!<CR>
 
-" Shortcut for redo.
-nnoremap <Leader>r <C-R>
+" Map U to redo and <C-U> to U.
+nnoremap U <C-R>
+nnoremap <C-U> U
 
 " Clear highlighting until next search.
 nnoremap <silent> <Leader>o :<C-U>nohlsearch<CR>
