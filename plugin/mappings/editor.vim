@@ -46,6 +46,10 @@ vnoremap <silent> <Leader><CR> :<C-U>quit<CR>
 nnoremap <Leader>q q
 vnoremap <Leader>q q
 
+" Use q and Q for ge and gE.
+nnoremap q ge
+nnoremap Q gE
+
 " Swap ` with '.
 nnoremap ` '
 vnoremap ` '
