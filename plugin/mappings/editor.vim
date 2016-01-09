@@ -137,3 +137,7 @@ nmap <Leader>x gx
 " Shortcuts to open and close tabs.
 nnoremap <Leader><Tab> :<C-U>tabnew<CR>
 nnoremap <Leader><S-Tab> :<C-U>tabclose<CR>
+
+" Make & behave like &&.
+nnoremap <silent> & :<C-U>&&<CR>
+xnoremap <silent> & :<C-U>&&<CR>
