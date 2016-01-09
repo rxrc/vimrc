@@ -48,8 +48,10 @@ nnoremap <Leader>q q
 vnoremap <Leader>q q
 
 " Use q and Q for ge and gE.
-nnoremap q ge
-nnoremap Q gE
+nmap q ge
+vmap q ge
+nmap Q gE
+vmap Q gE
 
 " Swap ` with '.
 nnoremap ` '
