@@ -138,6 +138,16 @@ nmap <Leader>x gx
 nnoremap <Leader><Tab> :<C-U>tabnew<CR>
 nnoremap <Leader><S-Tab> :<C-U>tabclose<CR>
 
+" Shortcuts for beginning and end of line.
+nnoremap <C-E> $
+vnoremap <C-E> $
+nnoremap <C-A> ^
+vnoremap <C-A> ^
+
+" Shortcut for %.
+nnoremap <C-R> %
+vnoremap <C-R> %
+
 " Make & behave like &&.
 nnoremap <silent> & :<C-U>&&<CR>
 xnoremap <silent> & :<C-U>&&<CR>
