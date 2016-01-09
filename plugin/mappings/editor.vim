@@ -151,3 +151,9 @@ vnoremap <C-R> %
 " Make & behave like &&.
 nnoremap <silent> & :<C-U>&&<CR>
 xnoremap <silent> & :<C-U>&&<CR>
+
+" Toggle colored column.
+nnoremap <expr><silent> com
+  \ &colorcolumn == '' ?
+  \ ":<C-U> set colorcolumn=81<CR>" :
+  \ ":<C-U> set colorcolumn=<CR>"
