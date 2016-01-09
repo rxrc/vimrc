@@ -14,6 +14,12 @@ set hidden
 " Show line numbers.
 set number
 
+" Set nonzero scrolloff.
+set scrolloff=3
+
+" Assume fast connection.
+set ttyfast
+
 " Always show status line.
 set laststatus=2
 
