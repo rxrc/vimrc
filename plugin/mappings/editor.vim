@@ -13,6 +13,42 @@ augroup cr-local-mappings
   autocmd CmdwinLeave * nnoremap <CR> :
 augroup END
 
+" Use q and Q for ge and gE.
+nmap q ge
+vmap q ge
+nmap Q gE
+vmap Q gE
+
+" Map U to redo and <C-U> to U.
+nnoremap U <C-R>
+nnoremap <C-U> U
+
+" Swap ` with '.
+nnoremap ` '
+vnoremap ` '
+nnoremap ' `
+vnoremap ' `
+
+" Make & behave like &&.
+nnoremap <silent> & :<C-U>&&<CR>
+xnoremap <silent> & :<C-U>&&<CR>
+
+" Use Ctrl-H and Ctrl-L to navigate command input.
+cnoremap <C-H> <Left>
+cnoremap <C-L> <Right>
+
+" Use Ctrl-K and Ctrl-J to navigate command history.
+cnoremap <C-K> <Up>
+cnoremap <C-J> <Down>
+
+" Add shortcuts for $, ^, and %.
+nnoremap <C-E> $
+vnoremap <C-E> $
+nnoremap <C-A> ^
+vnoremap <C-A> ^
+nnoremap <C-R> %
+vnoremap <C-R> %
+
 " Allow escape to open and close command-line window.
 nnoremap <Esc> q:
 augroup command-line-local-mappings
@@ -23,69 +59,69 @@ augroup command-line-local-mappings
   autocmd CmdwinLeave * vnoremap <Esc> q:
 augroup END
 
-" Use Ctrl-H and Ctrl-L to navigate command input.
-cnoremap <C-H> <Left>
-cnoremap <C-L> <Right>
+" Provide alternate mapping for q since it is overridden above.
+nnoremap <Leader>q q
+vnoremap <Leader>q q
 
-" Use Ctrl-K and Ctrl-J to navigate command history.
-cnoremap <C-K> <Up>
-cnoremap <C-J> <Down>
+" Add shortcut to toggle folds.
+nnoremap <Leader><Leader> za
 
-" Mappings to open command-line window.
+" Add shortcut to open external links.
+nmap <Leader>x gx
+
+" Add shortcuts to cycle through buffers.
+nnoremap <silent> <Leader>, :<C-U>bprevious<CR>
+nnoremap <silent> <Leader>. :<C-U>bnext<CR>
+
+" Add shortcuts to split the frame.
+nnoremap <silent> <Leader>H :<C-U>topleft vsplit<CR>
+nnoremap <silent> <Leader>L :<C-U>botright vsplit<CR>
+nnoremap <silent> <Leader>K :<C-U>topleft split<CR>
+nnoremap <silent> <Leader>J :<C-U>botright split<CR>
+
+" Add shortcuts to split the window.
+nnoremap <silent> <Leader>h :<C-U>leftabove vsplit<CR>
+nnoremap <silent> <Leader>l :<C-U>rightbelow vsplit<CR>
+nnoremap <silent> <Leader>k :<C-U>leftabove split<CR>
+nnoremap <silent> <Leader>j :<C-U>rightbelow split<CR>
+
+" Add shortcuts to open and close tabs.
+nnoremap <Leader><Tab> :<C-U>tabnew<CR>
+nnoremap <Leader><S-Tab> :<C-U>tabclose<CR>
+
+" Add shortcuts to open command-line and search history windows.
 nnoremap <Leader>: q:
 vnoremap <Leader>: q:
-
-" Mappings to open command-line window.
 nnoremap <Leader>/ q/
 vnoremap <Leader>/ q/
 nnoremap <Leader>? q?
 vnoremap <Leader>? q?
 
-" Shortcuts for quit.
-nnoremap <silent> <Leader><CR> :<C-U>quit<CR>
-vnoremap <silent> <Leader><CR> :<C-U>quit<CR>
+" Add shortcut to clear highlighting until next search.
+nnoremap <silent> <Leader>o :<C-U>nohlsearch<CR>
 
-" Shortcuts for record.
-nnoremap <Leader>q q
-vnoremap <Leader>q q
-
-" Use q and Q for ge and gE.
-nmap q ge
-vmap q ge
-nmap Q gE
-vmap Q gE
-
-" Swap ` with '.
-nnoremap ` '
-vnoremap ` '
-nnoremap ' `
-vnoremap ' `
-
-" Shortcut for new.
+" Add shortcut for new.
 nnoremap <silent> <Leader>n :<C-U>enew<CR>
 
-" Shortcuts for force quit.
-nnoremap <silent> <Leader>Q :<C-U>quit!<CR>
-vnoremap <silent> <Leader>Q :<C-U>quit!<CR>
+" Add shortcut to force reload file.
+nnoremap <silent> <Leader>E :<C-U>edit!<CR>
 
-" Shortcut to quit all.
-nnoremap <silent> <C-Q> :<C-U>quitall<CR>
-
-" Shortcuts for update and force write.
+" Add shortcuts for update and force write.
 nnoremap <silent> <Leader>s :<C-U>update<CR>
 nnoremap <silent> <Leader>S :<C-U>write!<CR>
 
-" Shortcut to force reload file.
-nnoremap <silent> <Leader>E :<C-U>edit!<CR>
+" Add shortcuts for quit.
+nnoremap <silent> <Leader><CR> :<C-U>quit<CR>
+vnoremap <silent> <Leader><CR> :<C-U>quit<CR>
 
-" Map U to redo and <C-U> to U.
-nnoremap U <C-R>
-nnoremap <C-U> U
+" Add shortcuts for force quit.
+nnoremap <silent> <Leader>Q :<C-U>quit!<CR>
+vnoremap <silent> <Leader>Q :<C-U>quit!<CR>
 
-" Clear highlighting until next search.
-nnoremap <silent> <Leader>o :<C-U>nohlsearch<CR>
+" Add shortcut to quit all.
+nnoremap <silent> <C-Q> :<C-U>quitall<CR>
 
-" Shortcut to paste from expression register.
+" Add shortcut to paste from the expression register.
 nnoremap <Leader>= :<C-U>put =
 
 " Adds mappings for the system clipboard.
@@ -103,6 +139,8 @@ function! SystemClipboardMappings(register)
   " Save the newly mapped register.
   let g:mapped_system_clipboard = a:register
 endfunction
+
+" Create the system clipboard mappings using the + register.
 call SystemClipboardMappings('+')
 
 " Toggle system clipboard mappings between the + and * registers.
@@ -110,46 +148,6 @@ nnoremap <expr> cop
   \ g:mapped_system_clipboard == '+' ?
   \ ":<C-U>call SystemClipboardMappings('*')<CR>" :
   \ ":<C-U>call SystemClipboardMappings('+')<CR>"
-
-" Split frame.
-nnoremap <silent> <Leader>H :<C-U>topleft vsplit<CR>
-nnoremap <silent> <Leader>L :<C-U>botright vsplit<CR>
-nnoremap <silent> <Leader>K :<C-U>topleft split<CR>
-nnoremap <silent> <Leader>J :<C-U>botright split<CR>
-
-" Split window.
-nnoremap <silent> <Leader>h :<C-U>leftabove vsplit<CR>
-nnoremap <silent> <Leader>l :<C-U>rightbelow vsplit<CR>
-nnoremap <silent> <Leader>k :<C-U>leftabove split<CR>
-nnoremap <silent> <Leader>j :<C-U>rightbelow split<CR>
-
-" Cycle through buffers.
-nnoremap <silent> <Leader>, :<C-U>bprevious<CR>
-nnoremap <silent> <Leader>. :<C-U>bnext<CR>
-
-" Shortcut to toggle folds.
-nnoremap <Leader><Leader> za
-
-" Shortcut to open external links.
-nmap <Leader>x gx
-
-" Shortcuts to open and close tabs.
-nnoremap <Leader><Tab> :<C-U>tabnew<CR>
-nnoremap <Leader><S-Tab> :<C-U>tabclose<CR>
-
-" Shortcuts for beginning and end of line.
-nnoremap <C-E> $
-vnoremap <C-E> $
-nnoremap <C-A> ^
-vnoremap <C-A> ^
-
-" Shortcut for %.
-nnoremap <C-R> %
-vnoremap <C-R> %
-
-" Make & behave like &&.
-nnoremap <silent> & :<C-U>&&<CR>
-xnoremap <silent> & :<C-U>&&<CR>
 
 " Toggle colored column.
 nnoremap <expr><silent> com
