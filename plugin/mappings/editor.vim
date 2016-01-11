@@ -16,9 +16,9 @@ augroup END
 " Use q and Q for ge and gE.
 nmap q ge
 vmap q ge
+omap q ge
 nmap Q gE
 vmap Q gE
-omap q ge
 omap Q gE
 
 " Map U to redo and <C-U> to U.
@@ -54,10 +54,10 @@ cnoremap <C-K> <Up>
 cnoremap <C-J> <Down>
 
 " Add shortcuts for $, ^, and %.
-nnoremap <C-E> $
-vnoremap <C-E> $
 nnoremap <C-A> ^
 vnoremap <C-A> ^
+nnoremap <C-E> $
+vnoremap <C-E> $
 nnoremap <C-R> %
 vnoremap <C-R> %
 
@@ -71,17 +71,17 @@ nnoremap <Leader><Leader> za
 " Add shortcut to open external links.
 nmap <Leader>x gx
 
-" Add shortcuts to split the frame.
-nnoremap <silent> <Leader>H :<C-U>topleft vsplit<CR>
-nnoremap <silent> <Leader>L :<C-U>botright vsplit<CR>
-nnoremap <silent> <Leader>K :<C-U>topleft split<CR>
-nnoremap <silent> <Leader>J :<C-U>botright split<CR>
-
 " Add shortcuts to split the window.
 nnoremap <silent> <Leader>h :<C-U>leftabove vsplit<CR>
 nnoremap <silent> <Leader>l :<C-U>rightbelow vsplit<CR>
 nnoremap <silent> <Leader>k :<C-U>leftabove split<CR>
 nnoremap <silent> <Leader>j :<C-U>rightbelow split<CR>
+
+" Add shortcuts to split the frame.
+nnoremap <silent> <Leader>H :<C-U>topleft vsplit<CR>
+nnoremap <silent> <Leader>L :<C-U>botright vsplit<CR>
+nnoremap <silent> <Leader>K :<C-U>topleft split<CR>
+nnoremap <silent> <Leader>J :<C-U>botright split<CR>
 
 " Add shortcuts to open and close tabs.
 nnoremap <Leader><Tab> :<C-U>tabnew<CR>
