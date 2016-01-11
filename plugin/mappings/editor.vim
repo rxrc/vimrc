@@ -88,8 +88,8 @@ nnoremap <Leader><Tab> :<C-U>tabnew<CR>
 nnoremap <Leader><S-Tab> :<C-U>tabclose<CR>
 
 " Add shortcuts to cycle through tabs.
-nnoremap <silent> <Leader>, gt
-nnoremap <silent> <Leader>. gT
+nnoremap <silent> <Leader>, gT
+nnoremap <silent> <Leader>. gt
 
 " Add shortcuts to open command-line and search history windows.
 nnoremap <Leader>: q:
