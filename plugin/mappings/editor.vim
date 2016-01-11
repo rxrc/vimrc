@@ -13,12 +13,14 @@ augroup cr-local-mappings
   autocmd CmdwinLeave * nnoremap <CR> :
 augroup END
 
-" Allow escape to enter and exit command-line mode.
-nnoremap <Esc> q:<C-W>_
+" Allow escape to open and close command-line window.
+nnoremap <Esc> q:
 augroup command-line-local-mappings
   autocmd!
-  autocmd CmdwinEnter * nnoremap <Esc> :q<CR>
-  autocmd CmdwinLeave * nnoremap <Esc> q:<C-W>_
+  autocmd CmdwinEnter * nnoremap <silent> <Esc> :<C-U>q<CR>
+  autocmd CmdwinLeave * nnoremap <Esc> q:
+  autocmd CmdwinEnter * vnoremap <silent> <Esc> :<C-U>q<CR>
+  autocmd CmdwinLeave * vnoremap <Esc> q:
 augroup END
 
 " Use Ctrl-H and Ctrl-L to navigate command input.
