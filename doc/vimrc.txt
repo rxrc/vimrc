@@ -106,7 +106,7 @@ Note: my keyboard maps `CapsLock` to `RCtrl` and `RCtrl` to `Esc`.
     - <Leader>p and <Leader>P paste from the system clipboard.
     - <Leader>c{motion} yanks to the system clipboard,
       and <Leader>cc yanks the current line to the system clipboard.
-    - <Leader>:, <Leader>/, and <Leader>? will open the corresponding
+    - <Leader>:, <Leader>/, and <Leader>? open the corresponding
       command-line or search window.
 * Shortcuts for windows, tabs, and splits
     - <Leader>{hjkl} splits the window.
@@ -118,7 +118,7 @@ Note: my keyboard maps `CapsLock` to `RCtrl` and `RCtrl` to `Esc`.
     - <C-Q> is a synonym for `:quitall`.
     - <Leader>n is a synonym for `:enew`.
     - <Leader>E is a synonym for `:edit!`.
-    - <Leader>s and <Leader>S are a synonyms for `:update` and `:write!`.
+    - <Leader>s and <Leader>S are synonyms for `:update` and `:write!`.
 * Toggles
     - cop toggles the <Leader>p, <Leader>P, and <Leader>c
       mappings between using the `+` (default) and `*` registers.
@@ -128,13 +128,21 @@ Note: my keyboard maps `CapsLock` to `RCtrl` and `RCtrl` to `Esc`.
 3.1 Nonstandard Vim mappings                      *vimrc-nonstandard-mappings*
 
 This section lists any standard Vim mappings which this plugin remaps,
-and any new mappings to existing Vim functions.
+and any new mappings to existing Vim functions. All mappings are nonrecursive
+unless otherwise noted.
+                                                        *com*
+com                     Toggle system clipboard mappings between using
+                        the + and * registers. See |<Leader>p|, |<Leader>P|,
+                        and |<Leader>c|.
+
+                                                        *cop*
+cop                     Toggle display of colorcolumn.
 
                                                         *q*
-q                       Mapped to the motion ge.
+q                       Mapped to the motion ge (recursive).
 
                                                         *Q*
-Q                       Mapped to the motion gE.
+Q                       Mapped to the motion gE (recursive).
 
                                                         *U*
 U                       Mapped to <C-R> (redo).
@@ -146,7 +154,7 @@ U                       Mapped to <C-R> (redo).
 '                       Mapped to ` (` is swapped with ').
 
                                                         *&*
-&                       Repeat last substitute with same flags (see `:&&`).
+&                       Synonym for `:&&`.
 
                                                         *<CR>*
 <CR>                    Exit insert mode via <Esc>. In normal
@@ -189,6 +197,79 @@ U                       Mapped to <C-R> (redo).
 
                                                         *<C-U>*
 <C-U>                   Mapped to U.
+
+                                                        *<Leader>c*
+                                                        *<Leader>cc*
+<Leader>cc      or      Same as y, but use the system register +.
+<Leader>{motion}        <Leader>cc yanks the current line.
+                        Can toggle between + and * registers using |cop|.
+
+                                                        *<Leader>q*
+                                                        *<Leader>E*
+<Leader>E               Synonym for `:edit!`.
+
+                                                        *<Leader>h* *<Leader>j*
+                                                        *<Leader>k* *<Leader>l*
+<Leader>{hjkl}          Split the window in corresponding direction.
+
+                                                        *<Leader>H* *<Leader>J*
+                                                        *<Leader>K* *<Leader>L*
+<Leader>{HJKL}          Split the frame in corresponding direction.
+
+                                                        *<Leader>n*
+<Leader>n               Synonym for `:enew`.
+
+                                                        *<Leader>o*
+<Leader>o               Synonym for `:nohlsearch`.
+
+                                                        *<Leader>p* *<Leader>P*
+<Leader>{pP}            Same as p and P, but use the system register +.
+                        Can toggle between + and * registers using |cop|.
+
+                                                        *<Leader>q*
+<Leader>q               Mapped to q.
+
+                                                        *<Leader>Q*
+<Leader>Q               Synonym for `:quit!`.
+
+                                                        *<Leader>s*
+<Leader>s               Synonym for `:update`.
+
+                                                        *<Leader>S*
+<Leader>S               Synonym for `:write!`.
+
+                                                        *<Leader>x*
+<Leader>x               Mapped to gx.
+
+                                                        *<Leader>,*
+<Leader>,               Mapped to gT.
+
+                                                        *<Leader>.*
+<Leader>.               Mapped to gt.
+
+                                                        *<Leader>:*
+<Leader>:               Mapped to q:.
+
+                                                        *<Leader>/*
+<Leader>/               Mapped to q/.
+
+                                                        *<Leader>?*
+<Leader>?               Mapped to q?.
+
+                                                        *<Leader>=*
+<Leader>=               Synonym for `:put` `=`
+
+                                                        *<Leader><CR>*
+<Leader><CR>            Synonym for `:quit`.
+
+                                                        *<Leader><Leader>*
+<Leader><Leader>        Mapped to za.
+
+                                                        *<Leader><Tab>*
+<Leader><Tab>           Open a new tab.
+
+                                                        *<Leader><S-Tab>*
+<Leader><S-Tab>         Close the current tab.
 
 ------------------------------------------------------------------------------
 3.2 Plugin specific mappings                           *vimrc-plugin-mappings*
