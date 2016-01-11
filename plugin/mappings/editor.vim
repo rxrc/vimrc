@@ -5,7 +5,7 @@ inoremap <CR> <Esc>
 nnoremap <CR> :
 vnoremap <CR> :
 
-" Fix enter behavior in quickfix and command-line mode.
+" Fix enter behavior in quickfix and command-line windows.
 augroup cr-local-mappings
   autocmd!
   autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
