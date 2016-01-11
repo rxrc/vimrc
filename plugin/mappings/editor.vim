@@ -18,6 +18,8 @@ nmap q ge
 vmap q ge
 nmap Q gE
 vmap Q gE
+omap q ge
+omap Q gE
 
 " Map U to redo and <C-U> to U.
 nnoremap U <C-R>
