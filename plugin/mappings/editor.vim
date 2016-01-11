@@ -33,6 +33,16 @@ vnoremap ' `
 nnoremap <silent> & :<C-U>&&<CR>
 xnoremap <silent> & :<C-U>&&<CR>
 
+" Allow escape to open and close command-line window.
+nnoremap <Esc> q:
+augroup command-line-local-mappings
+  autocmd!
+  autocmd CmdwinEnter * nnoremap <silent> <Esc> :<C-U>q<CR>
+  autocmd CmdwinLeave * nnoremap <Esc> q:
+  autocmd CmdwinEnter * vnoremap <silent> <Esc> :<C-U>q<CR>
+  autocmd CmdwinLeave * vnoremap <Esc> q:
+augroup END
+
 " Use Ctrl-H and Ctrl-L to navigate command input.
 cnoremap <C-H> <Left>
 cnoremap <C-L> <Right>
@@ -48,16 +58,6 @@ nnoremap <C-A> ^
 vnoremap <C-A> ^
 nnoremap <C-R> %
 vnoremap <C-R> %
-
-" Allow escape to open and close command-line window.
-nnoremap <Esc> q:
-augroup command-line-local-mappings
-  autocmd!
-  autocmd CmdwinEnter * nnoremap <silent> <Esc> :<C-U>q<CR>
-  autocmd CmdwinLeave * nnoremap <Esc> q:
-  autocmd CmdwinEnter * vnoremap <silent> <Esc> :<C-U>q<CR>
-  autocmd CmdwinLeave * vnoremap <Esc> q:
-augroup END
 
 " Provide alternate mapping for q since it is overridden above.
 nnoremap <Leader>q q
