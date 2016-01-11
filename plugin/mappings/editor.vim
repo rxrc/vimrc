@@ -69,10 +69,6 @@ nnoremap <Leader><Leader> za
 " Add shortcut to open external links.
 nmap <Leader>x gx
 
-" Add shortcuts to cycle through buffers.
-nnoremap <silent> <Leader>, :<C-U>bprevious<CR>
-nnoremap <silent> <Leader>. :<C-U>bnext<CR>
-
 " Add shortcuts to split the frame.
 nnoremap <silent> <Leader>H :<C-U>topleft vsplit<CR>
 nnoremap <silent> <Leader>L :<C-U>botright vsplit<CR>
@@ -88,6 +84,10 @@ nnoremap <silent> <Leader>j :<C-U>rightbelow split<CR>
 " Add shortcuts to open and close tabs.
 nnoremap <Leader><Tab> :<C-U>tabnew<CR>
 nnoremap <Leader><S-Tab> :<C-U>tabclose<CR>
+
+" Add shortcuts to cycle through tabs.
+nnoremap <silent> <Leader>, gt
+nnoremap <silent> <Leader>. gT
 
 " Add shortcuts to open command-line and search history windows.
 nnoremap <Leader>: q:
