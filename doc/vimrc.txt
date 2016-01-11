@@ -79,11 +79,116 @@ The remainder of this section documents mappings created or modified
 by this plugin. For behavior, refer to either Vim's or
 the corresponding plugin's documentation.
 
+A general overview is given below, while a complete reference
+of all mappings is given in the following subsections.
+
+Note: my keyboard maps `CapsLock` to `RCtrl` and `RCtrl` to `Esc`.
+
+* Critically different mappings
+    - <Leader> is set to <Space> and <LocalLeader> is \.
+    - Enter or <Esc> leaves insert mode.
+    - Enter opens command-line mode from normal or visual mode.
+    - <Esc> toggles the command-line window in normal or visual mode.
+    - U is mapped to redo and <C-U> is mapped to the original U key.
+    - q and Q provide single key mappings for ge and gE.
+    - <Leader>q is mapped to q (since q is now mapped to ge).
+    - ` and ' are swapped.
+    - & is remapped to reuse flags (synonym for `:&&`).
+* Shortcuts for common functions
+    - <C-H>, <C-J>, <C-K>, and <C-L> move between splits,
+      move the cursor, scroll through history, and navigate popups.
+      They serve as general alternatives to the arrow keys when possible.
+    - <C-E>, <C-A>, and <C-R> are alternative mappings for $, ^, and %.
+    - Double tap <Leader> to toggle folds.
+    - <Leader>x is an easier to input shortcut for gx.
+    - <Leader>o clears the highlighting until next search.
+    - <Leader>= inserts from the expression register.
+    - <Leader>p and <Leader>P paste from the system clipboard.
+    - <Leader>c{motion} yanks to the system clipboard,
+      and <Leader>cc yanks the current line to the system clipboard.
+    - <Leader>:, <Leader>/, and <Leader>? will open the corresponding
+      command-line or search window.
+* Shortcuts for windows, tabs, and splits
+    - <Leader>{hjkl} splits the window.
+    - <Leader>{HJKL} splits the frame.
+    - <Leader><Tab> opens a new tab and <Leader><S-Tab> closes the tab.
+    - <Leader>, and <Leader>. cycle through tabs.
+* Shortcuts for buffer manipulation
+    - <Leader><CR> is a synonym for `:quit` and <Leader>Q for `:quit!`.
+    - <C-Q> is a synonym for `:quitall`.
+    - <Leader>n is a synonym for `:enew`.
+    - <Leader>E is a synonym for `:edit!`.
+    - <Leader>s and <Leader>S are a synonyms for `:update` and `:write!`.
+* Toggles
+    - cop toggles the <Leader>p, <Leader>P, and <Leader>c
+      mappings between using the `+` (default) and `*` registers.
+    - com toggles the colorcolumn display.
+
 ------------------------------------------------------------------------------
 3.1 Nonstandard Vim mappings                      *vimrc-nonstandard-mappings*
 
 This section lists any standard Vim mappings which this plugin remaps,
 and any new mappings to existing Vim functions.
+
+                                                        *q*
+q                       Mapped to the motion ge.
+
+                                                        *Q*
+Q                       Mapped to the motion gE.
+
+                                                        *U*
+U                       Mapped to <C-R> (redo).
+
+                                                        *`*
+`                       Mapped to ' (` is swapped with ').
+
+                                                        *'*
+'                       Mapped to ` (` is swapped with ').
+
+                                                        *&*
+&                       Repeat last substitute with same flags (see `:&&`).
+
+                                                        *<CR>*
+<CR>                    Exit insert mode via <Esc>. In normal
+                        or visual mode, open command-line mode.
+                        Otherwise this still behaves like <CR>.
+                        While the command-line and search windows are open,
+                        this still executes the selected command or search:
+                        Use <Leader>: to open command-line mode
+                        from these windows.
+
+                                                        *<Esc>*
+<Esc>                   In normal or visual mode, toggle opening
+                        and closing the command-line window.
+                        Otherwise this still behaves like <Esc>.
+
+                                                        *<C-A>*
+<C-A>                   Mapped to ^.
+
+                                                        *<C-E>*
+<C-E>                   Mapped to $.
+
+                                                        *<C-H>*
+<C-H>                   In command-line mode, move cursor one character left.
+
+                                                        *<C-J>*
+<C-J>                   In command-line mode, navigate history down.
+
+                                                        *<C-K>*
+<C-K>                   In command-line mode, navigate history up.
+
+                                                        *<C-L>*
+<C-L>                   In insert mode and command-line mode,
+                        move cursor one character right.
+
+                                                        *<C-Q>*
+<C-Q>                   Synonym for `:quitall`.
+
+                                                        *<C-R>*
+<C-R>                   Mapped to %.
+
+                                                        *<C-U>*
+<C-U>                   Mapped to U.
 
 ------------------------------------------------------------------------------
 3.2 Plugin specific mappings                           *vimrc-plugin-mappings*
