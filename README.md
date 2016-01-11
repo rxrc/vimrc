@@ -7,6 +7,12 @@ My complete Vim configuration as a Vim plugin.
 For an empty starting config that follows the same organization,
 switch to the `minimal` branch.
 
+Note that versioned released are cut from the `minimal` branch,
+and changes between those releases are documented in the
+[CHANGELOG](./CHANGELOG.md).
+The `master` branch represents my current Vim environment,
+and is intended to remain unversioned.
+
 ## Description
 
 This configuration system works as a meta-plugin:
