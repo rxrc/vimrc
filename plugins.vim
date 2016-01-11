@@ -38,6 +38,10 @@ Plug 'tomasr/molokai'
 Plug 'scrooloose/syntastic'
 Plug 'chrisbra/colorizer'
 
+" Text Objects
+Plug 'kana/vim-textobj-user'
+     \ | Plug 'kana/vim-textobj-entire'
+
 " Whitespace
 Plug 'ntpeters/vim-better-whitespace'
 
