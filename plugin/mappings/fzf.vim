@@ -13,5 +13,5 @@ nnoremap <silent> <Leader>ft :<C-U>FzfTags<CR>
 nnoremap <silent> <Leader>fc :<C-U>FzfBTags<CR>
 nnoremap <silent> <Leader>f<Space> :<C-U>FzfHistory:<CR>
 nnoremap <silent> <Leader>f/ :<C-U>FzfHistory/<CR>
-nnoremap <silent> <Leader>fc :<C-U>FzfCommands<CR>
+nnoremap <silent> <Leader>fv :<C-U>FzfCommands<CR>
 nnoremap <silent> <Leader>fm :<C-U>FzfMaps<CR>
