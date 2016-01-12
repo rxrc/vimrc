@@ -1,2 +1,2 @@
-" Alternate mapping to toggle mark.
+" Add shortcut to toggle mark.
 nmap <Leader>;; <Leader>;.

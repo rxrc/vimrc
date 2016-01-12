@@ -1,4 +1,4 @@
-" Mappings for fugitive.vim commands.
+" Add mappings for fugitive.vim commands.
 nnoremap <Leader>gg :<C-U>Git<Space>
 nnoremap <Leader>gk :<C-U>Gsplit<Space>
 nnoremap <Leader>gj :<C-U>Gvsplit<Space>

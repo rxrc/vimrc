@@ -1,4 +1,4 @@
-" Mappings for ri.vim.
+" Add mappings for ri.vim.
 augroup ri-local-mappings
   autocmd!
   autocmd FileType ruby

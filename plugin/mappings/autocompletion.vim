@@ -1,10 +1,10 @@
 " Start manual completion with Ctrl-Space.
 inoremap <expr> <C-Space> neocomplete#start_manual_complete()
 
-" Tab completion.
+" Enable tab completion.
 imap <expr> <Tab> pumvisible() ? "<C-N>" : "<Tab>"
 
-" Snippet completion and navigation with Ctrl-L.
+" Enable snippet completion and navigation with Ctrl-L.
 imap <expr> <C-L> neosnippet#expandable_or_jumpable() ?
   \ "<Plug>(neosnippet_expand_or_jump)" : "<Right>"
 
@@ -18,6 +18,6 @@ imap <expr> <C-W> pumvisible() ?
 " Complete common sting with Ctrl-H.
 inoremap <expr> <C-H> neocomplete#complete_common_string()
 
-" Popup navigation with Ctrl-J and Ctrl-K.
+" Navigate popup with Ctrl-J and Ctrl-K.
 inoremap <expr> <C-J> pumvisible() ? "<C-N>" : "<C-J>"
 inoremap <expr> <C-K> pumvisible() ? "<C-P>" : "<C-K>"

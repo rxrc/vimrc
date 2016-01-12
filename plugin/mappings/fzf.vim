@@ -1,4 +1,4 @@
-" Mappings for fzf commands.
+" Add mappings for fzf commands.
 nnoremap <silent> <Leader>ff :<C-U>FzfFiles<CR>
 nnoremap <silent> <Leader>fs :<C-U>FzfHistory<CR>
 nnoremap <silent> <Leader>fa :<C-U>FzfAg<CR>

@@ -1,4 +1,4 @@
-" Mappings for fireplace.vim.
+" Add mappings for fireplace.vim.
 augroup fireplace-local-mappings
   autocmd!
   autocmd FileType clojure nnoremap <Leader>d :<C-U>Doc<Space>
