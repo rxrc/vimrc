@@ -47,6 +47,8 @@ Plug 'ntpeters/vim-better-whitespace'
 
 " Parentheses
 Plug 'luochen1990/rainbow'
+Plug 'jiangmiao/auto-pairs'
+
 
 " Sneak
 Plug 'justinmk/vim-sneak'
