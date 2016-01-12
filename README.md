@@ -20,7 +20,7 @@ all desired Vim plugins are loaded from `plugins.vim` using [vim-plug].
 Overall configuration then follows a normal plugin structure.
 
 For documentation of the methodology behind my specific
-Vim environment, including usage tips,
+Vim environment, including tips, usage, and a reference of custom mappings,
 see `:help rxrc/vimrc` or view [vimrc.txt](./doc/vimrc.txt) directly.
 
 [vim-plug]: https://github.com/junegunn/vim-plug
