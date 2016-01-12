@@ -13,7 +13,10 @@ CONTENTS                                                      *vimrc-contents*
 
     1.Intro....................................|vimrc-intro|
         1.1.Structure..........................|vimrc-structure|
-    2.Plugin Settings..........................|vimrc-plugin-settings|
+    2.Plugin settings..........................|vimrc-plugin-settings|
+        2.1.Autocompletion settings............|vimrc-autocompletion-settings|
+        2.2.Unite settings.....................|vimrc-unite-settings|
+        2.3.vimflier settings..................|vimrc-vimflier-settings|
     3.Mappings.................................|vimrc-mappings|
         3.1.Nonstandard Vim mappings...........|vimrc-nonstandard-mappings|
         3.2.Plugin specific mappings...........|vimrc-plugin-mappings|
@@ -57,9 +60,43 @@ Use of `autocmd` within `augroup` is preferred over `ftplugin`
 in order to group related configuration by plugin instead of file type.
 
 ==============================================================================
-2. Plugin Settings                                     *vimrc-plugin-settings*
+2. Plugin settings                                     *vimrc-plugin-settings*
 
 This section provides an overview of plugin specific configuration choices.
+
+A general feature and usage overview is given below.
+Plugins with more involved configurations are given their own subsection.
+
+TODO: Fill in.
+
+------------------------------------------------------------------------------
+2.1 Autocompletion settings                    *vimrc-autocompletion-settings*
+
+TODO: Fill in.
+
+Note: the following mappings are not listed under |vimrc-mappings|.
+
+    - <C-Space> starts manual completion.
+    - <Tab> navigates down completion popup.
+    - <C-J> and <C-K> navigate the popup in either direction.
+    - <C-L> inserts and then navigates snippets.
+    - <C-H> completes common string.
+    - <CR> closes the popup (keep completion).
+    - <C-W> smart-closes the popup (cancel completion).
+
+------------------------------------------------------------------------------
+2.2 Unite settings                                      *vimrc-unite-settings*
+
+Note: the following mappings are not listed under |vimrc-mappings|.
+
+TODO: Fill in.
+
+------------------------------------------------------------------------------
+2.3 vimflier settings                                *vimrc-vimflier-settings*
+
+Note: the following mappings are not listed under |vimrc-mappings|.
+
+TODO: Fill in.
 
 ==============================================================================
 3. Mappings                                                   *vimrc-mappings*
@@ -84,7 +121,10 @@ of all mappings is given in the following subsections.
 
 Note: my keyboard maps `CapsLock` to `RCtrl` and `RCtrl` to `Esc`.
 
-* Critically different mappings
+A mapping that depends on a plugin will contain the [Plugin Name]
+in square brackets.
+
+Critically different mappings
     - <Leader> is set to <Space> and <LocalLeader> is \.
     - Enter or <Esc> leaves insert mode.
     - Enter opens command-line mode from normal or visual mode.
@@ -92,12 +132,21 @@ Note: my keyboard maps `CapsLock` to `RCtrl` and `RCtrl` to `Esc`.
     - U is mapped to redo and <C-U> is mapped to the original U key.
     - q and Q provide single key mappings for ge and gE.
     - <Leader>q is mapped to q (since q is now mapped to ge).
+    - ; is the [EasyClip] substitution operator.
     - ` and ' are swapped.
     - & is remapped to reuse flags (synonym for `:&&`).
-* Shortcuts for common functions
+    - [Sneak] takes over s and S.
+    - [EasyClip] takes over m.
+    - Marks are handled by [Signature] with <Leader>;.
+      Use <Leader>;; to toggle marks.
+    - Autocompletion with [neocomplete] and [neosnippet]:
+      see |vimrc-autocompletion-settings|.
+
+Shortcuts for common functions
     - <C-H>, <C-J>, <C-K>, and <C-L> move between splits,
       move the cursor, scroll through history, and navigate popups.
       They serve as general alternatives to the arrow keys when possible.
+      [Vim Tmux Navigator] implements split navigation.
     - <C-E>, <C-A>, and <C-R> are alternative mappings for $, ^, and %.
     - Double tap <Leader> to toggle folds.
     - <Leader>x is an easier to input shortcut for gx.
@@ -108,28 +157,51 @@ Note: my keyboard maps `CapsLock` to `RCtrl` and `RCtrl` to `Esc`.
       and <Leader>cc yanks the current line to the system clipboard.
     - <Leader>:, <Leader>/, and <Leader>? open the corresponding
       command-line or search window.
-* Shortcuts for windows, tabs, and splits
+    - [Commentary]: toggle commenting with \\.
+    - [Emmet] leader is <C-O> and expander is <C-O>o.
+
+ Shortcuts for windows, tabs, and splits
     - <Leader>{hjkl} splits the window.
     - <Leader>{HJKL} splits the frame.
     - <Leader><Tab> opens a new tab and <Leader><S-Tab> closes the tab.
     - <Leader>, and <Leader>. cycle through tabs.
-* Shortcuts for buffer manipulation
+
+Shortcuts for buffer manipulation
     - <Leader><CR> is a synonym for `:quit` and <Leader>Q for `:quit!`.
     - <C-Q> is a synonym for `:quitall`.
     - <Leader>n is a synonym for `:enew`.
     - <Leader>E is a synonym for `:edit!`.
     - <Leader>s and <Leader>S are synonyms for `:update` and `:write!`.
-* Toggles
+    - [Bbye]: close and force close buffers with <Leader>w and <Leader>W.
+
+Interfaces
+    - [Ag]: <Leader>A will search with `:Ag`.
+    - [Unite] buffers are mapped to <Leader>{abey}.
+      See also |vimrc-unite-settings|.
+    - [fzf] functions all begin with <Leader>f.
+    - [fugitive] functions all begin with <Leader>g.
+    - [vimflier]: open and focus with <Leader>i and toggle with <Leader>I.
+      See also |vimrc-vimflier-settings|.
+    - [Undotree]: open and focus with <Leader>u and toggle with <Leader>U.
+    - [Tagbar]: open and focus with <Leader>t and toggle with <Leader>T.
+    - For some file types, d and D will provide an interface to
+      documentation lookup.
+      Mapped for [ri] and [fireplace].
+
+Toggles
+    - cof toggles [EasyClip] paste formatting.
     - cop toggles the <Leader>p, <Leader>P, and <Leader>c
       mappings between using the `+` (default) and `*` registers.
     - com toggles the colorcolumn display.
+    - coz toggles [Unicode] name or glyph completion.
 
 ------------------------------------------------------------------------------
 3.1 Nonstandard Vim mappings                      *vimrc-nonstandard-mappings*
 
 This section lists any standard Vim mappings which this plugin remaps,
-and any new mappings to existing Vim functions. All mappings are nonrecursive
-unless otherwise noted.
+and any new mappings to existing Vim functions.
+All mappings are nonrecursive unless otherwise noted.
+
                                                         *com*
 com                     Toggle system clipboard mappings between using
                         the + and * registers. See |<Leader>p|, |<Leader>P|,
@@ -274,8 +346,66 @@ U                       Mapped to <C-R> (redo).
 ------------------------------------------------------------------------------
 3.2 Plugin specific mappings                           *vimrc-plugin-mappings*
 
-This section list mappings to plugin specific functions,
+This section lists mappings to plugin specific functions,
 and modifications to a plugin's normal provided mappings.
+
+Each mapping's dependent plugin is prefixed
+by the [Plugin Name] in square brackets.
+
+                                                        *cof*
+cof                     [EasyClip] Toggle paste formatting.
+
+                                                        *coz*
+coz                     [Unicode] Toggle unicode name or glyph completion.
+
+                                                        *;* *;;* *;s*
+;               or      [EasyClip] Substitution operator.
+;{;s}
+
+                                                        *\\*
+\\                      [Commentary] Mapped to gcc.
+
+                                                        *<C-O>* *<C-O>o*
+<C-O>           or      [Emmet] Leader key is <C-O>.
+<C-O>o                          Expander key is <C-O>o.
+
+                                                        *<Leader>a* *<Leader>b*
+                                                        *<Leader>e* *<Leader>y*
+<Leader>{abey}          [Unite] Open a Unite.vim buffer: [a]g (grep)
+                                [b]uffers, fil[e]s, or [y]anks.
+
+                                                        *<Leader>A*
+<Leader>A               [Ag] Prompt to search with `:Ag`.
+
+                                                        *<Leader>d* *<Leader>D*
+<Leader>{dD}            [ri] Prompt to search for documentation:
+                             result window split horizontally (d)
+                             or vertically (D).
+
+                        [fireplace] Prompt to lookup documentation with
+                                    `:Doc` or `:FindDoc`.
+
+                                                        *<Leader>f*
+<Leader>f{acdefhjklmqstv/} or
+<Leader>f<Space>        [fzf] Open a fzf search, e.g.,
+                              <Leader>ff is a synonym for `:FzfFiles`.
+                              Use <Leader>fm to lookup the other mappings.
+
+                                                        *<Leader>g*
+<Leader>g{abcdeghjklmrsw}
+                        [fugitive] Synonyms for git wrapper commands..
+                                       Use <Leader>fm to lookup the mappings.
+
+                                                        *<Leader>w* *<Leader>W*
+<Leader>{wW}            [Bbye] Close the buffer but not the window:
+                               w is a synonym for `:Bdelete` and
+                               W is a synonym for `:Bdelete!`.
+
+                                                        *<Leader>;*
+                                                        *<Leader>;;*
+<Leader>;{signature-mapping} or
+<Leader>;;              [Signature] <Leader>; is the signature leader.
+                                    <Leader>;; will toggle marks (<Leader>;.).
 
 ==============================================================================
 i. About                                                         *vimrc-about*
