@@ -24,6 +24,9 @@ function! s:unite_settings()
   " Enable navigation with Ctrl-J and Ctrl-K in insert mode.
   imap <buffer> <C-J> <Plug>(unite_select_next_line)
   imap <buffer> <C-K> <Plug>(unite_select_previous_line)
+
+  " Escape should exit buffer from normal mode.
+  nmap <buffer> <Esc> q
 endfunction
 
 " Apply unite buffer settings when opening unite buffer.
