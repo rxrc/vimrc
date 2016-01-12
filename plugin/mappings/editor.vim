@@ -45,6 +45,9 @@ augroup command-line-local-mappings
   autocmd CmdwinLeave * vnoremap <Esc> q:
 augroup END
 
+" Use Ctrl-L to move right in insert mode.
+inoremap <C-L> <Right>
+
 " Use Ctrl-H and Ctrl-L to navigate command input.
 cnoremap <C-H> <Left>
 cnoremap <C-L> <Right>

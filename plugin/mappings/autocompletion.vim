@@ -6,7 +6,7 @@ imap <expr> <Tab> pumvisible() ? "<C-N>" : "<Tab>"
 
 " Enable snippet completion and navigation with Ctrl-L.
 imap <expr> <C-L> neosnippet#expandable_or_jumpable() ?
-  \ "<Plug>(neosnippet_expand_or_jump)" : "<Right>"
+  \ "<Plug>(neosnippet_expand_or_jump)" : "<C-L>"
 
 " Close popup on enter.
 inoremap <expr> <CR> neocomplete#close_popup() . "<CR>"
@@ -16,7 +16,7 @@ imap <expr> <C-W> pumvisible() ?
   \ neocomplete#smart_close_popup() . "<C-H>" : "<C-W>"
 
 " Complete common sting with Ctrl-H.
-inoremap <expr> <C-H> neocomplete#complete_common_string()
+inoremap <expr> <C-M> neocomplete#complete_common_string()
 
 " Navigate popup with Ctrl-J and Ctrl-K.
 inoremap <expr> <C-J> pumvisible() ? "<C-N>" : "<C-J>"
