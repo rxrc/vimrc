@@ -250,7 +250,8 @@ U                       Mapped to <C-R> (redo).
 <C-E>                   Mapped to $.
 
                                                         *<C-H>*
-<C-H>                   In command-line mode, move cursor one character left.
+<C-H>                   In insert mode and command-line mode,
+                        move cursor one character right.
 
                                                         *<C-J>*
 <C-J>                   In command-line mode, navigate history down.
