@@ -46,9 +46,8 @@ Plug 'kana/vim-textobj-user'
 Plug 'ntpeters/vim-better-whitespace'
 
 " Parentheses
-Plug 'luochen1990/rainbow'
 Plug 'jiangmiao/auto-pairs'
-
+Plug 'luochen1990/rainbow'
 
 " Sneak
 Plug 'justinmk/vim-sneak'
@@ -221,6 +220,13 @@ Plug 'danchoi/ri.vim',
 "
 " Initialization Settings
 "
+
+"
+" Auto Pairs
+
+" Only remap <BS> and not <C-H>.
+let g:AutoPairsMapBS = 0
+inoremap <silent> <BS> <C-R>=AutoPairsDelete()<CR>
 
 "
 " Rainbow Parentheses
