@@ -16,7 +16,7 @@ CONTENTS                                                      *vimrc-contents*
     2.Plugin settings..........................|vimrc-plugin-settings|
         2.1.Autocompletion settings............|vimrc-autocompletion-settings|
         2.2.Unite settings.....................|vimrc-unite-settings|
-        2.3.vimflier settings..................|vimrc-vimflier-settings|
+        2.3.vimfiler settings..................|vimrc-vimfiler-settings|
     3.Mappings.................................|vimrc-mappings|
         3.1.Nonstandard Vim mappings...........|vimrc-nonstandard-mappings|
         3.2.Plugin specific mappings...........|vimrc-plugin-mappings|
@@ -92,7 +92,7 @@ Note: the following mappings are not listed under |vimrc-mappings|.
 TODO: Fill in.
 
 ------------------------------------------------------------------------------
-2.3 vimflier settings                                *vimrc-vimflier-settings*
+2.3 vimfiler settings                                *vimrc-vimfiler-settings*
 
 Note: the following mappings are not listed under |vimrc-mappings|.
 
@@ -180,8 +180,8 @@ Interfaces
       See also |vimrc-unite-settings|.
     - [fzf] functions all begin with <Leader>f.
     - [fugitive] functions all begin with <Leader>g.
-    - [vimflier]: open and focus with <Leader>i and toggle with <Leader>I.
-      See also |vimrc-vimflier-settings|.
+    - [vimfiler]: open and focus with <Leader>i and toggle with <Leader>I.
+      See also |vimrc-vimfiler-settings|.
     - [Undotree]: open and focus with <Leader>u and toggle with <Leader>U.
     - [Tagbar]: open and focus with <Leader>t and toggle with <Leader>T.
     - For some file types, d and D will provide an interface to
