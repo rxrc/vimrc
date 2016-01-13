@@ -72,7 +72,8 @@ TODO: Fill in.
 ------------------------------------------------------------------------------
 2.1 Autocompletion settings                    *vimrc-autocompletion-settings*
 
-TODO: Fill in.
+Autocompletion is handled by neocomplete and neosnippet.
+File type specific settings are defined under `plugin/autocompletion`.
 
 Note: the following mappings are not listed under |vimrc-mappings|.
 
