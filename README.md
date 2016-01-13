@@ -31,7 +31,7 @@ see `:help rxrc/vimrc` or view [vimrc.txt](./doc/vimrc.txt) directly.
 
 - The [fzf] binary (vim-plug is not configured to manage it here).
   Additionally, [urxvt] is configured as the fzf launcher for Gvim.
-- [The Silver Searcher] (aka Ag).
+- [The Silver Searcher], aka Ag.
 - See [vim-fireplace] for the Clojure specific plugin dependences.
 
 [fzf]: https://github.com/junegunn/fzf
