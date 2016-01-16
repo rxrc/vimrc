@@ -5,6 +5,9 @@ inoremap <CR> <Esc>
 nnoremap <CR> :
 vnoremap <CR> :
 
+" Use shift-enter to split line in normal mode.
+nnoremap <S-CR> i<CR><Esc>
+
 " Fix enter behavior in quickfix and command-line windows.
 augroup cr-local-mappings
   autocmd!
