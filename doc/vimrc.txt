@@ -148,7 +148,7 @@ Shortcuts for common functions
       move the cursor, scroll through history, and navigate popups.
       They serve as general alternatives to the arrow keys when possible.
       [Vim Tmux Navigator] implements split navigation.
-    - <C-E>, <C-A>, and <C-R> are alternative mappings for $, ^, and %.
+    - <C-R> is an alternative mapping for %.
     - Double tap <Leader> to toggle folds.
     - <Leader>x is an easier to input shortcut for gx.
     - <Leader>o clears the highlighting until next search.
@@ -243,12 +243,6 @@ U                       Mapped to <C-R> (redo).
 <Esc>                   In normal or visual mode, toggle opening
                         and closing the command-line window.
                         Otherwise this still behaves like <Esc>.
-
-                                                        *<C-A>*
-<C-A>                   Mapped to ^.
-
-                                                        *<C-E>*
-<C-E>                   Mapped to $.
 
                                                         *<C-H>*
 <C-H>                   In insert mode and command-line mode,

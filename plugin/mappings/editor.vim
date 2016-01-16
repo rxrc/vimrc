@@ -60,11 +60,7 @@ cnoremap <C-L> <Right>
 cnoremap <C-K> <Up>
 cnoremap <C-J> <Down>
 
-" Add shortcuts for $, ^, and %.
-nnoremap <C-A> ^
-vnoremap <C-A> ^
-nnoremap <C-E> $
-vnoremap <C-E> $
+" Add shortcut for %.
 nnoremap <C-R> %
 vnoremap <C-R> %
 
