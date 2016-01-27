@@ -160,7 +160,7 @@ Shortcuts for common functions
       command-line or search window.
     - [EasyClip] mM is mapped to m$.
     - [Commentary]: toggle commenting with \\.
-    - [Emmet] leader is <C-O> and expander is <C-O>o.
+    - [Emmet] leader is <C-E> and expander is <C-O>.
 
  Shortcuts for windows, tabs, and splits
     - <Leader>{hjkl} splits the window.
@@ -368,9 +368,11 @@ mM                      [EasyClip] Mapped to m$ (move text until end of line).
                                                         *\\*
 \\                      [Commentary] Mapped to gcc.
 
-                                                        *<C-O>* *<C-O>o*
-<C-O>           or      [Emmet] Leader key is <C-O>.
-<C-O>o                          Expander key is <C-O>o.
+                                                        *<C-E>*
+<C-E>                   [Emmet] In insert mode, emmet leader key.
+
+                                                        *<C-O>*
+<C-O>                   [Emmet] In insert mode, Emmet expander key.
 
                                                         *<Leader>a* *<Leader>b*
                                                         *<Leader>e* *<Leader>y*
