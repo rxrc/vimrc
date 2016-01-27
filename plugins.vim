@@ -173,7 +173,7 @@ Plug 'bitc/vim-hdevtools',
 
 " HTML
 Plug 'mattn/emmet-vim',
-     \ { 'for': ['html', 'css'] }
+     \ { 'for': ['css', 'html', 'liquid'] }
 
 " Jade
 Plug 'digitaltoad/vim-jade',
