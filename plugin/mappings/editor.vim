@@ -38,14 +38,14 @@ vnoremap ' `
 nnoremap <silent> & :<C-U>&&<CR>
 xnoremap <silent> & :<C-U>&&<CR>
 
-" Allow escape to open and close command-line window.
-nnoremap <Esc> q:
+" Allow shift-escape to open and close command-line window.
+nnoremap <S-Esc> q:
 augroup command-line-local-mappings
   autocmd!
-  autocmd CmdwinEnter * nnoremap <silent> <Esc> :<C-U>q<CR>
-  autocmd CmdwinLeave * nnoremap <Esc> q:
-  autocmd CmdwinEnter * vnoremap <silent> <Esc> :<C-U>q<CR>
-  autocmd CmdwinLeave * vnoremap <Esc> q:
+  autocmd CmdwinEnter * nnoremap <silent> <S-Esc> :<C-U>q<CR>
+  autocmd CmdwinLeave * nnoremap <S-Esc> q:
+  autocmd CmdwinEnter * vnoremap <silent> <S-Esc> :<C-U>q<CR>
+  autocmd CmdwinLeave * vnoremap <S-Esc> q:
 augroup END
 
 " Use Ctrl-H and Ctrl-L to navigate insert mode.

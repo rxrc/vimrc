@@ -127,9 +127,9 @@ in square brackets.
 
 Critically different mappings
     - <Leader> is set to <Space> and <LocalLeader> is \.
-    - Enter or <Esc> leaves insert mode.
+    - Enter (or <Esc>) leaves insert mode.
     - Enter opens command-line mode from normal or visual mode.
-    - <Esc> toggles the command-line window in normal or visual mode.
+    - <S-Esc> toggles the command-line window in normal or visual mode.
     - U is mapped to redo and <C-U> is mapped to the original U key.
     - q and Q provide single key mappings for ge and gE.
     - <Leader>q is mapped to q (since q is now mapped to ge).
@@ -240,10 +240,9 @@ U                       Mapped to <C-R> (redo).
                         Use <Leader>: to open command-line mode
                         from these windows.
 
-                                                        *<Esc>*
-<Esc>                   In normal or visual mode, toggle opening
+                                                        *<S-Esc>*
+<S-Esc>                 In normal or visual mode, toggle opening
                         and closing the command-line window.
-                        Otherwise this still behaves like <Esc>.
 
                                                         *<C-H>*
 <C-H>                   In insert mode and command-line mode,
