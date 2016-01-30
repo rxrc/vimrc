@@ -232,13 +232,13 @@ inoremap <silent> <BS> <C-R>=AutoPairsDelete()<CR>
 " Rainbow Parentheses
 
 " Enable rainbow parentheses.
-let g:rainbow_active = 1 " must be set here
+let g:rainbow_active = 1
 
 "
 " Sneak
 
 " Use Sneak streak mode.
-let g:sneak#streak = 1 " must be set here
+let g:sneak#streak = 1
 
 "
 " neocomplete
