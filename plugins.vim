@@ -222,6 +222,12 @@ Plug 'danchoi/ri.vim',
 "
 
 "
+" Colorizer
+
+" Enable colors for specific file types.
+let g:colorizer_auto_filetype='css,html,scss,sass'
+
+"
 " Auto Pairs
 
 " Only remap <BS> and not <C-H>.
