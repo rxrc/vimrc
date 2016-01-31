@@ -13,9 +13,11 @@ let g:promptline_theme = 'airline'
 " Set colorscheme.
 if has('gui_running')
   let g:airline#extensions#tmuxline#enabled = 0
+  let g:airline_theme = 'molokai'
   colorscheme molokai
   set background=dark
 else
+  let g:airline_theme = 'solarized'
   set background=dark
   colorscheme solarized
 endif
