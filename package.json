@@ -8,8 +8,8 @@
     "url": "https://github.com/rxrc/vimrc.git"
   },
   "scripts": {
-    "dev": "gulp dev",
-    "nodev": "gulp nodev"
+    "start": "gulp dev",
+    "stop": "gulp nodev"
   },
   "keywords": [
     "vim",
