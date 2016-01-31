@@ -4,6 +4,9 @@ set mousemodel=popup_setpos
 " Set focus to follow mouse.
 set mousefocus
 
+" Use terminal style tabs.
+set guioptions-=e
+
 " Hide most gui elements.
 set guioptions-=m " remove menu bar
 set guioptions-=T " remove toolbar
