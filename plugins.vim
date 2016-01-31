@@ -173,6 +173,9 @@ Plug 'bitc/vim-hdevtools',
      \ { 'for': 'haskell' }
 
 " HTML
+Plug 'othree/html5.vim',
+     \ { 'for': ['css', 'html', 'liquid'] }
+
 Plug 'mattn/emmet-vim',
      \ { 'for': ['css', 'html', 'liquid'] }
 
