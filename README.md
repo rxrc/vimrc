@@ -1,6 +1,6 @@
 # Vim Configuration
 
-[![Github Releases](https://img.shields.io/github/release/rxrc/vimrc.svg)](https://github.com/rxrc/vimrc/releases)
+[![Github releases](https://img.shields.io/github/release/rxrc/vimrc.svg)](https://github.com/rxrc/vimrc/releases)
 [![GitHub license](http://img.shields.io/github/license/rxrc/vimrc.svg)](./LICENSE.txt)
 
 My complete Vim configuration as a Vim plugin.
