@@ -19,7 +19,8 @@ Plug 'tpope/vim-sensible'
 Plug 'editorconfig/editorconfig-vim'
 
 " Prompt and Statusline
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'edkolev/promptline.vim'
 Plug 'edkolev/tmuxline.vim'
 
