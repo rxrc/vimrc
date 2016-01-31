@@ -188,6 +188,9 @@ Plug 'pangloss/vim-javascript',
 Plug 'lervag/vimtex',
      \ { 'for': 'tex' }
 
+" Liquid
+Plug 'tpope/vim-liquid'
+
 " Node.js
 Plug 'moll/vim-node',
      \ { 'for': 'javascript' }
