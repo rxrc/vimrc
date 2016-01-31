@@ -164,16 +164,16 @@ $ npm install
 Enter development mode with
 
 ```
-$ npm run dev
+$ npm start
 ```
 
 If you modify `plugins.vim`,
 run `npm run dev` again to reconfigure the plugins.
 
-To switch out of development mode run
+Switch out of development mode with
 
 ```
-$ npm run nodev
+$ npm stop
 ```
 
 [Gulp]: http://gulpjs.com/
