@@ -128,6 +128,8 @@ in square brackets.
 Critically different mappings
     - <Leader> is set to <Space> and <LocalLeader> is \.
     - Enter (or <Esc>) leaves insert mode.
+    - Use <S-CR> to insert a newline (split the line)
+      in normal or insert mode.
     - Enter opens command-line mode from normal or visual mode.
     - <S-Esc> toggles the command-line window in normal or visual mode.
     - U is mapped to redo and <C-R> is mapped to the original U key.
@@ -238,6 +240,9 @@ U                       Mapped to <C-R> (redo).
                         this still executes the selected command or search:
                         Use <Leader>: to open command-line mode
                         from these windows.
+
+                                                        *<S-CR>*
+<S-CR>                  Insert a newline in normal or insert mode.
 
                                                         *<S-Esc>*
 <S-Esc>                 In normal or visual mode, toggle opening
