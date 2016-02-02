@@ -46,7 +46,8 @@ Plug 'kana/vim-textobj-user'
 " Whitespace
 Plug 'ntpeters/vim-better-whitespace'
 
-" Parentheses
+" Parentheses and Context
+Plug 'alvan/vim-closetag'
 Plug 'jiangmiao/auto-pairs'
 Plug 'luochen1990/rainbow'
 
@@ -164,9 +165,6 @@ Plug 'bitc/vim-hdevtools',
 " HTML
 Plug 'mattn/emmet-vim',
      \ { 'for': ['css', 'html', 'liquid', 'sass', 'scss'] }
-
-Plug 'alvan/vim-closetag',
-     \ { 'for': ['html', 'liquid'] }
 
 " LaTeX
 Plug 'lervag/vimtex',
