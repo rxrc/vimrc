@@ -211,6 +211,11 @@ let g:colorizer_auto_filetype='css,html,scss,sass'
 "
 " Auto Pairs
 
+" Remap <C-CR> and <S-CR> not <CR>.
+let g:AutoPairsMapCR = 0
+inoremap <silent> <C-CR> <CR><C-R>=AutoPairsReturn()<CR>
+imap <S-CR> <C-CR>
+
 " Only remap <BS> and not <C-H>.
 let g:AutoPairsMapBS = 0
 inoremap <silent> <BS> <C-R>=AutoPairsDelete()<CR>

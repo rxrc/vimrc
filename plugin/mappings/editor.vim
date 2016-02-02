@@ -1,12 +1,13 @@
 " Map enter to escape in insert mode.
 inoremap <CR> <Esc>
 
+" Use ctrl-enter or shift-enter to split lines in normal mode.
+nmap <C-CR> i<C-CR>
+nmap <S-CR> i<C-CR>
+
 " Use enter to open command-line mode.
 nnoremap <CR> :
 vnoremap <CR> :
-
-" Use shift-enter to split line in normal mode.
-nnoremap <S-CR> i<CR><Esc>
 
 " Fix enter behavior in quickfix and command-line windows.
 augroup cr-local-mappings
