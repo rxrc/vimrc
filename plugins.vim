@@ -165,6 +165,9 @@ Plug 'bitc/vim-hdevtools',
 Plug 'mattn/emmet-vim',
      \ { 'for': ['css', 'html', 'liquid', 'sass', 'scss'] }
 
+Plug 'alvan/vim-closetag',
+     \ { 'for': ['html', 'liquid'] }
+
 " LaTeX
 Plug 'lervag/vimtex',
      \ { 'for': 'tex' }
