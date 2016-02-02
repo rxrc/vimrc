@@ -15,9 +15,6 @@ inoremap <expr> <CR> neocomplete#close_popup() . "<CR>"
 imap <expr> <C-W> pumvisible() ?
   \ neocomplete#smart_close_popup() . "<C-H>" : "<C-W>"
 
-" Complete common sting with Ctrl-H.
-inoremap <expr> <C-M> neocomplete#complete_common_string()
-
 " Navigate popup with Ctrl-J and Ctrl-K.
 inoremap <expr> <C-J> pumvisible() ? "<C-N>" : "<C-J>"
 inoremap <expr> <C-K> pumvisible() ? "<C-P>" : "<C-K>"

@@ -81,7 +81,6 @@ Note: the following mappings are not listed under |vimrc-mappings|.
     - <Tab> navigates down completion popup.
     - <C-J> and <C-K> navigate the popup in either direction.
     - <C-L> inserts and then navigates snippets.
-    - <C-M> completes common string.
     - <CR> closes the popup (keep completion).
     - <C-W> smart-closes the popup (cancel completion).
 
