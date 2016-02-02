@@ -163,7 +163,7 @@ Plug 'bitc/vim-hdevtools',
 
 " HTML
 Plug 'mattn/emmet-vim',
-     \ { 'for': ['css', 'html', 'liquid'] }
+     \ { 'for': ['css', 'html', 'liquid', 'sass', 'scss'] }
 
 " LaTeX
 Plug 'lervag/vimtex',
