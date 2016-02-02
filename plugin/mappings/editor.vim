@@ -24,9 +24,9 @@ nmap Q gE
 vmap Q gE
 omap Q gE
 
-" Map U to redo and <C-U> to U.
+" Map U to redo and <C-R> to U.
 nnoremap U <C-R>
-nnoremap <C-U> U
+nnoremap <C-R> U
 
 " Swap ` with '.
 nnoremap ` '
@@ -59,10 +59,6 @@ cnoremap <C-L> <Right>
 " Use Ctrl-K and Ctrl-J to navigate command history.
 cnoremap <C-K> <Up>
 cnoremap <C-J> <Down>
-
-" Add shortcut for %.
-nnoremap <C-R> %
-vnoremap <C-R> %
 
 " Provide alternate mapping for q since it is overridden above.
 nnoremap <Leader>q q

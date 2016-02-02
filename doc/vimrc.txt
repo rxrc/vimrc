@@ -130,7 +130,7 @@ Critically different mappings
     - Enter (or <Esc>) leaves insert mode.
     - Enter opens command-line mode from normal or visual mode.
     - <S-Esc> toggles the command-line window in normal or visual mode.
-    - U is mapped to redo and <C-U> is mapped to the original U key.
+    - U is mapped to redo and <C-R> is mapped to the original U key.
     - q and Q provide single key mappings for ge and gE.
     - <Leader>q is mapped to q (since q is now mapped to ge).
     - ; is the [EasyClip] substitution operator.
@@ -148,7 +148,6 @@ Shortcuts for common functions
       move the cursor, scroll through history, and navigate popups.
       They serve as general alternatives to the arrow keys when possible.
       [Vim Tmux Navigator] implements split navigation.
-    - <C-R> is an alternative mapping for %.
     - Double tap <Leader> to toggle folds.
     - <Leader>x is an easier to input shortcut for gx.
     - <Leader>o clears the highlighting until next search.
@@ -262,10 +261,7 @@ U                       Mapped to <C-R> (redo).
 <C-Q>                   Synonym for `:quitall`.
 
                                                         *<C-R>*
-<C-R>                   Mapped to %.
-
-                                                        *<C-U>*
-<C-U>                   Mapped to U.
+<C-R>                   Mapped to U.
 
                                                         *<Leader>c*
                                                         *<Leader>cc*
