@@ -128,6 +128,9 @@ Plug 'dsawardekar/portkey'
 " Language Interfaces
 "
 
+" Vim-polyglot
+Plug 'sheerun/vim-polyglot'
+
 " Clojure
 Plug 'tpope/vim-fireplace',
      \ { 'for': 'clojure' }
@@ -150,49 +153,21 @@ Plug 'venantius/vim-cljfmt',
 Plug 'venantius/vim-eastwood',
      \ { 'for': 'clojure' }
 
-" CoffeeScript
-Plug 'kchmck/vim-coffee-script',
-     \ { 'for': 'coffee' }
-
 " Ember
 Plug 'dsawardekar/ember.vim',
      \ { 'for': ['javascript', 'handlebars.ember'] }
-
-Plug 'heartsentwined/vim-ember-script',
-     \ { 'for': 'ember-script' }
-
-Plug 'heartsentwined/vim-emblem',
-     \ { 'for': 'emblem' }
-
-" Go
-Plug 'fatih/vim-go',
-     \ { 'for': ['go', 'gohtmltmpl'] }
 
 " Haskell
 Plug 'bitc/vim-hdevtools',
      \ { 'for': 'haskell' }
 
 " HTML
-Plug 'othree/html5.vim',
-     \ { 'for': ['css', 'html', 'liquid'] }
-
 Plug 'mattn/emmet-vim',
      \ { 'for': ['css', 'html', 'liquid'] }
-
-" Jade
-Plug 'digitaltoad/vim-jade',
-     \ { 'for': 'jade' }
-
-" JavaScript
-Plug 'pangloss/vim-javascript',
-     \ { 'for': 'javascript' }
 
 " LaTeX
 Plug 'lervag/vimtex',
      \ { 'for': 'tex' }
-
-" Liquid
-Plug 'tpope/vim-liquid'
 
 " Node.js
 Plug 'moll/vim-node',
@@ -209,10 +184,6 @@ Plug 'davidhalter/jedi-vim',
      \ { 'for': 'python' }
      \ | Plug 'lambdalisue/vim-pyenv',
               \ { 'for': 'python' }
-
-" React
-Plug 'mxw/vim-jsx',
-     \ { 'for': 'javascript.jsx' }
 
 " Ruby
 Plug 'tpope/vim-rbenv',
@@ -286,6 +257,12 @@ let g:commentary_map_backslash = 0
 
 " Set fzf command prefix.
 let g:fzf_command_prefix = 'Fzf'
+
+"
+" Vim-polyglot
+
+" Disable select language packs.
+let g:polyglot_disabled = ['latex']
 
 "
 " Ruby
