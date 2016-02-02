@@ -34,6 +34,7 @@ Plug 'tpope/vim-projectionist'
 " Themes and Colors
 Plug 'altercation/vim-colors-solarized'
 Plug 'tomasr/molokai'
+Plug 'jnurmine/zenburn'
 
 " Syntax
 Plug 'scrooloose/syntastic'

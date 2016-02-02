@@ -13,8 +13,9 @@ let g:promptline_theme = 'airline'
 " Set colorscheme.
 if has('gui_running')
   let g:airline#extensions#tmuxline#enabled = 0
-  let g:airline_theme = 'molokai'
-  colorscheme molokai
+  let g:airline_theme = 'zenburn'
+  let g:zenburn_high_Contrast = 1
+  colorscheme zenburn
   set background=dark
 else
   let g:airline_theme = 'solarized'
