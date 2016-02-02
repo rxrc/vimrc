@@ -1,3 +1,2 @@
-" Remap <Leader>un to avoid overloading <Leader>u.
-unmap <Leader>un
+" Add shortcut to toggle unicode name or glyph completion.
 nmap coz <Plug>(UnicodeSwapCompleteName)
