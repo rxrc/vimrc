@@ -1,5 +1,6 @@
 " Start manual completion with Ctrl-Space.
 inoremap <expr> <C-Space> neocomplete#start_manual_complete()
+imap <NUL> <C-Space>
 
 " Enable tab completion.
 imap <expr> <Tab> pumvisible() ? "<C-N>" : "<Tab>"
