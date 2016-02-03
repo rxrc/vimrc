@@ -50,8 +50,8 @@ augroup command-line-local-mappings
 augroup END
 
 " Use Ctrl-H and Ctrl-L to navigate insert mode.
+" Ctrl-L is mapped in autocompletion.vim.
 inoremap <C-H> <Left>
-inoremap <C-L> <Right>
 
 " Use Ctrl-H and Ctrl-L to navigate command input.
 cnoremap <C-H> <Left>
