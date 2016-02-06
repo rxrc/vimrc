@@ -165,7 +165,7 @@ Plug 'bitc/vim-hdevtools',
 
 " HTML
 Plug 'mattn/emmet-vim',
-     \ { 'for': ['css', 'html', 'liquid', 'sass', 'scss'] }
+     \ { 'for': ['css', 'html', 'html.handlebars', 'liquid', 'sass', 'scss'] }
 
 " LaTeX
 Plug 'lervag/vimtex',
@@ -205,7 +205,7 @@ Plug 'danchoi/ri.vim',
 " Colorizer
 
 " Enable colors for specific file types.
-let g:colorizer_auto_filetype='css,html,scss,sass'
+let g:colorizer_auto_filetype='css,html,html.handlebars,scss,sass'
 
 "
 " Auto Pairs
