@@ -165,7 +165,8 @@ Plug 'bitc/vim-hdevtools',
 
 " HTML
 Plug 'mattn/emmet-vim',
-     \ { 'for': ['css', 'html', 'html.handlebars', 'liquid', 'sass', 'scss'] }
+     \ { 'for': ['css', 'html', 'html.handlebars',
+     \           'javascript.jsx', 'liquid', 'sass', 'scss'] }
 
 " LaTeX
 Plug 'lervag/vimtex',
