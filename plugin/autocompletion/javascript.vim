@@ -1,5 +1,5 @@
-" Use Node omni completion.
+" Use JavaScript omni completion.
 augroup omni-javascript
   autocmd!
-  autocmd FileType javascript setlocal omnifunc=nodejscomplete#CompleteJS
+  autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 augroup END

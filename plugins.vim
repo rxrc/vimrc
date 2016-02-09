@@ -175,9 +175,6 @@ Plug 'lervag/vimtex',
 Plug 'moll/vim-node',
      \ { 'for': 'javascript' }
 
-Plug 'ahayman/vim-nodejs-complete',
-     \ { 'for': 'javascript' }
-
 " Python
 Plug 'tmhedberg/simpylfold',
      \ { 'for': 'python' }
