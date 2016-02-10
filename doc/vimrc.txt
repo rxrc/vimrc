@@ -178,6 +178,7 @@ Shortcuts for buffer manipulation
 
 Interfaces
     - [Ag]: <Leader>A will search with `:Ag`.
+    - [Autoformat]: <Leader>+ will run `:Autoformat`.
     - [Unite] buffers are mapped to <Leader>{abey}.
       See also |vimrc-unite-settings|.
     - [fzf] functions all begin with <Leader>f.
@@ -381,6 +382,9 @@ mM                      [EasyClip] Mapped to m$ (move text until end of line).
 
                                                         *<Leader>A*
 <Leader>A               [Ag] Prompt to search with `:Ag`.
+
+                                                        *<Leader>+*
+<Leader>+               [Autoformat] Synonym for `:Autoformat`.
 
                                                         *<Leader>d* *<Leader>D*
 <Leader>{dD}            [ri] Prompt to search for documentation:
