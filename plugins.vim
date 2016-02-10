@@ -49,7 +49,7 @@ Plug 'ntpeters/vim-better-whitespace'
 
 " Parentheses and Context
 Plug 'alvan/vim-closetag'
-Plug 'jiangmiao/auto-pairs'
+Plug 'cohama/lexima.vim'
 Plug 'luochen1990/rainbow'
 
 " Sneak
@@ -207,18 +207,6 @@ Plug 'danchoi/ri.vim',
 
 " Enable colors for specific file types.
 let g:colorizer_auto_filetype='css,html,html.handlebars,scss,sass'
-
-"
-" Auto Pairs
-
-" Remap <C-CR> and <S-CR> not <CR>.
-let g:AutoPairsMapCR = 0
-inoremap <silent> <C-CR> <CR><C-R>=AutoPairsReturn()<CR>
-imap <S-CR> <C-CR>
-
-" Only remap <BS> and not <C-H>.
-let g:AutoPairsMapBS = 0
-inoremap <silent> <BS> <C-R>=AutoPairsDelete()<CR>
 
 "
 " Rainbow Parentheses
