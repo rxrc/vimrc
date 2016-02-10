@@ -79,6 +79,9 @@ Plug 'shougo/neocomplete.vim'
 Plug 'shougo/neosnippet'
 Plug 'shougo/neosnippet-snippets'
 
+" Autoformat
+Plug 'chiel92/vim-autoformat'
+
 " Marks
 Plug 'kshenoy/vim-signature'
 
