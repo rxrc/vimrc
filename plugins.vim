@@ -260,6 +260,9 @@ let g:fzf_command_prefix = 'Fzf'
 " Disable select language packs.
 let g:polyglot_disabled = ['latex']
 
+" Load jsx syntax for normal javascript files.
+let g:jsx_ext_required = 0
+
 "
 " Ruby
 
