@@ -209,6 +209,12 @@ Plug 'danchoi/ri.vim',
 let g:colorizer_auto_filetype='css,html,html.handlebars,scss,sass'
 
 "
+" closetag.vim
+
+" Enable closetag.vim for specific file types.
+let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.js,*.jsx,*.hbs"
+
+"
 " Rainbow Parentheses
 
 " Enable rainbow parentheses.
