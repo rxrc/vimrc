@@ -7,6 +7,7 @@ let mapleader = "\<Space>"
 let maplocalleader = "\\"
 
 " Libraries
+Plug 'konfekt/fastfold'
 Plug 'shougo/vimproc.vim',
      \ { 'do': 'make \|\| gmake' }
 
