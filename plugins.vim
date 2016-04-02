@@ -199,6 +199,10 @@ Plug 'tpope/vim-bundler',
 Plug 'danchoi/ri.vim',
      \ { 'for': 'ruby' }
 
+" Sass
+Plug 'gcorne/vim-sass-lint',
+     \ { 'for': ['scss', 'sass'] }
+
 "
 " Initialization Settings
 "
