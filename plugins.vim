@@ -228,8 +228,10 @@ let g:rainbow_active = 1
 "
 " Sneak
 
+" TODO: Enable streak mode when spell issue is fixed:
+"       https://github.com/justinmk/vim-sneak/issues/110
 " Use Sneak streak mode.
-let g:sneak#streak = 1
+" let g:sneak#streak = 1
 
 "
 " neocomplete
