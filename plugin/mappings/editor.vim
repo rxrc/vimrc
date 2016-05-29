@@ -137,6 +137,12 @@ function! SystemClipboardMappings(register)
   exec 'nnoremap <Leader>C "' . a:register . 'Y'
   exec 'nnoremap <Leader>cc "' . a:register . 'yy'
 
+  " Move to system clipboard.
+  exec 'nnoremap <Leader>m "' . a:register . 'd'
+  exec 'vnoremap <Leader>m "' . a:register . 'd'
+  exec 'nnoremap <Leader>M "' . a:register . 'D'
+  exec 'nnoremap <Leader>mm "' . a:register . 'dd'
+
   " Paste from system clipboard.
   exec 'nnoremap <Leader>p "' . a:register . 'p'
   exec 'nnoremap <Leader>P "' . a:register . 'P'

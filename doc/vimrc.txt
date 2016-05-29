@@ -138,7 +138,7 @@ Critically different mappings
     - ` and ' are swapped.
     - & is remapped to reuse flags (synonym for `:&&`).
     - [Sneak] takes over s and S.
-    - [EasyClip] takes over m.
+    - [EasyClip] takes over m and M (<Leader>' is mapped to M).
     - Marks are handled by [Signature] with <Leader>;.
       Use <Leader>;; to toggle marks.
     - Autocompletion with [neocomplete] and [neosnippet]:
@@ -157,6 +157,9 @@ Shortcuts for common functions
     - <Leader>c{motion} yanks to the system clipboard,
       <Leader>C yanks to end of line to the system clipboard,
       and <Leader>cc yanks the current line to the system clipboard.
+    - <Leader>m{motion} deletes and yanks to the system clipboard,
+      <Leader>M deletes and yanks to end of line to the system clipboard,
+      and <Leader>mm deletes and yanks the current line to the system clipboard.
     - <Leader>:, <Leader>/, and <Leader>? open the corresponding
       command-line or search window.
     - [EasyClip] M is mapped to m$.
@@ -289,6 +292,14 @@ U                       Mapped to <C-R> (redo).
                                                         *<Leader>K* *<Leader>L*
 <Leader>{HJKL}          Split the frame in corresponding direction.
 
+                                                        *<Leader>m*
+                                                        *<Leader>M*
+                                                        *<Leader>mm*
+<Leader>mm       or     Same as m, but move to the system register +.
+<Leader>M        or     <Leader>mm moves the current line.
+<Leader>m{motion}       <Leader>M moves to the end of line.
+                        Can toggle between + and * registers using |cop|.
+
                                                         *<Leader>n*
 <Leader>n               Synonym for `:enew`.
 
@@ -313,6 +324,9 @@ U                       Mapped to <C-R> (redo).
 
                                                         *<Leader>x*
 <Leader>x               Mapped to gx.
+
+                                                        *<Leader>'*
+<Leader>'               Mapped to M.
 
                                                         *<Leader>,*
 <Leader>,               Mapped to gT.
