@@ -155,6 +155,7 @@ Shortcuts for common functions
     - <Leader>= inserts from the expression register.
     - <Leader>p and <Leader>P paste from the system clipboard.
     - <Leader>c{motion} yanks to the system clipboard,
+      <Leader>C yanks to end of line to the system clipboard,
       and <Leader>cc yanks the current line to the system clipboard.
     - <Leader>:, <Leader>/, and <Leader>? open the corresponding
       command-line or search window.
@@ -269,9 +270,11 @@ U                       Mapped to <C-R> (redo).
 <C-R>                   Mapped to U.
 
                                                         *<Leader>c*
+                                                        *<Leader>C*
                                                         *<Leader>cc*
-<Leader>cc      or      Same as y, but use the system register +.
-<Leader>{motion}        <Leader>cc yanks the current line.
+<Leader>cc       or     Same as y, but use the system register +.
+<Leader>C        or     <Leader>cc yanks the current line.
+<Leader>c{motion}       <Leader>C yanks to the end of line.
                         Can toggle between + and * registers using |cop|.
 
                                                         *<Leader>q*
