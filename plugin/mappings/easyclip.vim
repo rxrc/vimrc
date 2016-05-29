@@ -6,5 +6,5 @@ nmap <silent> : <Plug>SubstituteOverMotionMap
 nmap :: <Plug>SubstituteLine
 xmap :s <Plug>XEasyClipPaste
 
-" Use mM to move until end of line.
-nmap mM m$
+" Use M to move until end of line.
+nmap M m$

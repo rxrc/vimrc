@@ -158,7 +158,7 @@ Shortcuts for common functions
       and <Leader>cc yanks the current line to the system clipboard.
     - <Leader>:, <Leader>/, and <Leader>? open the corresponding
       command-line or search window.
-    - [EasyClip] mM is mapped to m$.
+    - [EasyClip] M is mapped to m$.
     - [Commentary]: toggle commenting with \\.
     - [Emmet] leader is <C-E> and expander is <C-O>.
 
@@ -359,8 +359,8 @@ cof                     [EasyClip] Toggle paste formatting.
                                                         *coz*
 coz                     [Unicode] Toggle unicode name or glyph completion.
 
-                                                        *mM*
-mM                      [EasyClip] Mapped to m$ (move text until end of line).
+                                                        *M*
+M                       [EasyClip] Mapped to m$ (move text until end of line).
 
                                                         *;* *;;* *;s*
 ;               or      [EasyClip] Substitution operator.
