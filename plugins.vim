@@ -80,6 +80,8 @@ Plug 'shougo/neocomplete.vim'
 Plug 'shougo/neosnippet'
 Plug 'rxrc/neosnippet-snippets',
      \ { 'branch': 'rxrc' }
+Plug 'rxrc/vim-snippets',
+     \ { 'branch': 'rxrc' }
 
 " Autoformat
 Plug 'chiel92/vim-autoformat'
@@ -249,6 +251,15 @@ endif
 if !exists('g:neocomplete#force_omni_input_patterns')
   let g:neocomplete#force_omni_input_patterns = {}
 endif
+
+"
+" neosnippet
+
+" Set snippet paths.
+let snippets_directory = [
+  \ '../neocomplcache-snippets/neosnippets',
+  \ '../vim-snippets/snippets']
+let g:neosnippet#snippets_directory = join(snippets_directory, ',')
 
 "
 " Signature
