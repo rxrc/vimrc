@@ -78,7 +78,8 @@ Plug 'shougo/neoyank.vim'
 " Autocompletion
 Plug 'shougo/neocomplete.vim'
 Plug 'shougo/neosnippet'
-Plug 'shougo/neosnippet-snippets'
+Plug 'rxrc/neosnippet-snippets',
+     \ { 'branch': 'rxrc' }
 
 " Autoformat
 Plug 'chiel92/vim-autoformat'
