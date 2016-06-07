@@ -420,7 +420,7 @@ M                       [EasyClip] Mapped to m$ (move text until end of line).
                                                         *<Leader>g*
 <Leader>g{abcdeghjklmrsw}
                         [fugitive] Synonyms for git wrapper commands..
-                                       Use <Leader>fm to lookup the mappings.
+                                   Use <Leader>fm to lookup the mappings.
 
                                                         *<Leader>w* *<Leader>W*
 <Leader>{wW}            [Bbye] Close the buffer but not the window:
