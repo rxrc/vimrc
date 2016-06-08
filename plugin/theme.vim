@@ -18,9 +18,22 @@ if has('gui_running')
   colorscheme zenburn
   set background=dark
 else
-  let g:airline_theme = 'solarized'
-  set background=dark
-  colorscheme solarized
+  if empty($VIM_COLOR)
+    let g:airline_theme = 'solarized'
+    colorscheme solarized
+  elseif $VIM_COLOR =~# "^base16-"
+    let g:airline_theme = 'base16'
+  endif
+
+  if empty($VIM_BACKGROUND)
+    set background=dark
+  else
+    if $VIM_BACKGROUND == 'light'
+      set background=light
+    else
+      set background=dark
+    endif
+  endif
 endif
 
 " Set font.
