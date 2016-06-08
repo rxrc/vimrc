@@ -41,3 +41,9 @@ set nofoldenable
 
 " Open splits below by default.
 set splitbelow
+
+" Set language specific overrides.
+augroup php-indent-size
+  autocmd!
+  autocmd FileType php setlocal shiftwidth=4 softtabstop=4
+augroup END
