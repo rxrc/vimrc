@@ -22,7 +22,7 @@ else
     let g:airline_theme = 'solarized'
     colorscheme solarized
   elseif $VIM_COLOR =~# "^base16-"
-    let g:airline_theme = 'base16'
+    let g:airline_theme = substitute($VIM_COLOR, '-', '_', '')
   endif
 
   if empty($VIM_BACKGROUND)
