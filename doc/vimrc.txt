@@ -166,7 +166,7 @@ Shortcuts for common functions
     - [Commentary]: toggle commenting with \\.
     - [Emmet] leader is <C-E> and expander is <C-O>.
 
- Shortcuts for windows, tabs, and splits
+Shortcuts for windows, tabs, and splits
     - <Leader>{hjkl} splits the window.
     - <Leader>{HJKL} splits the frame.
     - <Leader><Tab> opens a new tab and <Leader><S-Tab> closes the tab.

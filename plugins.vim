@@ -10,7 +10,6 @@ let maplocalleader = "\\"
 Plug 'konfekt/fastfold'
 Plug 'shougo/vimproc.vim',
      \ { 'do': 'make \|\| gmake' }
-
 Plug 'tpope/vim-repeat'
 
 " Sensible Defaults
