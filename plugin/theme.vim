@@ -32,5 +32,5 @@ endif
 
 " Set font.
 if has('gui_running')
-  set guifont=Inconsolata\-g\ 11
+  set guifont=Inconsolata\-g\ for\ Powerline\ 11
 endif
