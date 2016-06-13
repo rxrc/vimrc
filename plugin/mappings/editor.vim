@@ -49,15 +49,15 @@ augroup command-line-local-mappings
   autocmd CmdwinLeave * vnoremap <S-Esc> q:
 augroup END
 
-" Use Ctrl-H and Ctrl-L to navigate insert mode.
-" Ctrl-L is mapped in autocompletion.vim.
+" Use ctrl-h and ctrl-l to navigate insert mode.
+" Ctrl-l is mapped in autocompletion.vim.
 inoremap <C-H> <Left>
 
-" Use Ctrl-H and Ctrl-L to navigate command input.
+" Use ctrl-h and ctrl-l to navigate command input.
 cnoremap <C-H> <Left>
 cnoremap <C-L> <Right>
 
-" Use Ctrl-K and Ctrl-J to navigate command history.
+" Use ctrl-k and ctrl-j to navigate command history.
 cnoremap <C-K> <Up>
 cnoremap <C-J> <Down>
 
