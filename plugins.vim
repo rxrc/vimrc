@@ -211,6 +211,18 @@ Plug 'gcorne/vim-sass-lint',
 "
 
 "
+" Powerline
+
+" Disable Powerline.
+let g:powerline_loaded = 1
+
+"
+" vim-airline
+
+" Use Powerline fonts for vim-airline.
+let g:airline_powerline_fonts = 1
+
+"
 " Colorizer
 
 " Enable colors for specific file types.

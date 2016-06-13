@@ -1,12 +1,6 @@
 " Set maximum terminal color space.
 set t_Co=256
 
-" Disable Powerline.
-let g:powerline_loaded = 1
-
-" Use Powerline fonts for vim-airline.
-let g:airline_powerline_fonts = 1
-
 " Set promptline.vim theme.
 let g:promptline_theme = 'airline'
 
