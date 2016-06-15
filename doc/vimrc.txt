@@ -422,6 +422,12 @@ M                       [EasyClip] Mapped to m$ (move text until end of line).
                         [fugitive] Synonyms for git wrapper commands..
                                    Use <Leader>fm to lookup the mappings.
 
+                                                        *<Leader>t* *<Leader>T*
+<Leader>{tT}            [Tagbar] Focus Tagbar panel with t, toggle with T.
+
+                                                        *<Leader>u* *<Leader>U*
+<Leader>{uU}            [undotree] Focus undotree panel with u, toggle with U.
+
                                                         *<Leader>w* *<Leader>W*
 <Leader>{wW}            [Bbye] Close the buffer but not the window:
                                w is a synonym for `:Bdelete` and
