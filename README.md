@@ -3,6 +3,12 @@
 [![Github releases](https://img.shields.io/github/release/rxrc/vimrc.svg)](https://github.com/rxrc/vimrc/releases)
 [![GitHub license](http://img.shields.io/github/license/rxrc/vimrc.svg)](./LICENSE.txt)
 
+**Depreciated in favor of nvimrc!**
+
+I've migrated this configuration to Neovim: [rxrc/nvimrc].
+
+[rxrc/nvimrc]: https://github.com/rxrc/nvimrc
+
 **If you are creating a new config, use [makenew/nvimrc].**
 
 If you still need to make a legacy Vim config,
