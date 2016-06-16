@@ -3,6 +3,13 @@
 [![Github releases](https://img.shields.io/github/release/rxrc/vimrc.svg)](https://github.com/rxrc/vimrc/releases)
 [![GitHub license](http://img.shields.io/github/license/rxrc/vimrc.svg)](./LICENSE.txt)
 
+**If you are creating a new config, use [makenew/nvimrc].**
+
+If you still need to make a legacy Vim config,
+the `minimal` branch remains a stable starting point.
+
+[makenew/nvimrc]: https://github.com/makenew/nvimrc
+
 My complete Vim configuration as a Vim plugin.
 
 ## Description
